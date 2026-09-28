@@ -8,6 +8,7 @@ import { VerificationNote } from "@/components/Verification";
 import { mods } from "@/data/mods";
 import { tools } from "@/data/tools";
 import { getVersion, versions } from "@/data/versions";
+import { pageMetadata } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -18,7 +19,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/play/versions/[version]">): Promise<Metadata> {
   const v = getVersion((await params).version);
   if (!v) return {};
-  return { title: `Diablo II ${v.version}: ${v.headline}`, description: v.whyItMatters };
+  return pageMetadata({ title: `Diablo II ${v.version}: ${v.headline}`, description: v.whyItMatters, path: `/play/versions/${v.version}` });
 }
 
 export default async function VersionPage({ params }: PageProps<"/play/versions/[version]">) {

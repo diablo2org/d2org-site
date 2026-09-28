@@ -10,12 +10,13 @@ import { getMod, mods } from "@/data/mods";
 import { getServer } from "@/data/servers";
 import type { Mod } from "@/lib/types";
 import styles from "@/components/Directory.module.css";
+import { pageMetadata, softwareSchema } from "@/lib/seo";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return mods.map((m) => ({ slug: m.slug })); }
 export async function generateMetadata({ params }: PageProps<"/mods/[slug]">): Promise<Metadata> {
   const m = getMod((await params).slug);
-  return m ? { title: m.name, description: m.summary } : {};
+  return m ? pageMetadata({ title: m.name, description: m.summary, path: `/mods/${m.slug}`, keywords: [m.name, "Diablo II mod", ...(m.tags ?? [])] }) : {};
 }
 const STYLE: Record<Mod["style"], string> = { "vanilla-plus": "Vanilla-plus", overhaul: "Overhaul", "total-conversion": "Total conversion", utility: "Utility" };
 export default async function ModPage({ params }: PageProps<"/mods/[slug]">) {
@@ -24,6 +25,7 @@ export default async function ModPage({ params }: PageProps<"/mods/[slug]">) {
   const f = m.features ?? {};
   const realm = getServer(m.slug);
   return <EntryLayout
+    schema={softwareSchema(m, `/mods/${m.slug}`, "Game modification")}
     eyebrow={`Mod · ${STYLE[m.style]}`} name={m.name} summary={m.summary} status={m.status}
     refKey={`mod:${m.slug}`} verification={m} file="data/mods.ts"
     crumbs={[{ href: "/", label: "Home" }, { href: "/mods", label: "Mods" }]}

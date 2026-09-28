@@ -11,12 +11,13 @@ import { VersionSupport } from "@/components/VersionBadge";
 import { mods } from "@/data/mods";
 import { getServer, servers } from "@/data/servers";
 import styles from "../servers.module.css";
+import { BreadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return servers.map((s) => ({ slug: s.slug })); }
 export async function generateMetadata({ params }: PageProps<"/servers/[slug]">): Promise<Metadata> {
   const s = getServer((await params).slug);
-  return s ? { title: `${s.name} private server`, description: s.summary } : {};
+  return s ? pageMetadata({ title: `${s.name} private server`, description: s.summary, path: `/servers/${s.slug}`, keywords: [s.name, "Diablo II private server", ...(s.tags ?? [])] }) : {};
 }
 
 const SCALE = [
@@ -33,6 +34,7 @@ export default async function ServerPage({ params }: PageProps<"/servers/[slug]"
   const playStyle = SCALE.find((step) => step.key === s.vanillaSimilarity)!;
 
   return <div className={styles.surface}>
+    <BreadcrumbJsonLd crumbs={[{ href: "/", label: "Home" }, { href: "/servers", label: "Servers" }]} current={s.name} />
     <header className={`${styles.hero} ${styles.profileHero}`}>
       <div className={styles.width}>
         <nav aria-label="Breadcrumb" className={styles.breadcrumb}><Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/servers">Servers</Link><span aria-hidden="true">/</span><span>{s.name}</span></nav>

@@ -56,6 +56,8 @@ export function getArticles(section: Section): Article[] {
       const { data, content } = matter(raw);
       return {
         ...(data as ArticleMeta),
+        // YAML parses bare dates into Date objects; keep them as YYYY-MM-DD strings.
+        updated: data.updated instanceof Date ? data.updated.toISOString().slice(0, 10) : data.updated,
         section,
         slug,
         href: `${SECTIONS[section].base}/${slug}`,

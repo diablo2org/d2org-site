@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Lato } from "next/font/google";
 import localFont from "next/font/local";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { JsonLd, siteKeywords } from "@/lib/seo";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -32,14 +33,20 @@ const geistMono = Geist_Mono({
   weight: ["400", "500"],
 });
 
+// Colours the browser UI on mobile and the side stripe of Discord link embeds.
+export const viewport: Viewport = { themeColor: "#94271f" };
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+  applicationName: site.name,
+  keywords: siteKeywords,
   title: {
     default: `${site.name}: ${site.tagline}`,
     template: `%s · ${site.name}`,
   },
   description: site.description,
-  openGraph: { siteName: site.name, type: "website" },
+  openGraph: { siteName: site.name, type: "website", locale: "en" },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -69,6 +76,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
+        <JsonLd
+          data={{
+            "@graph": [
+              { "@type": "WebSite", "@id": `${site.url}/#website`, name: site.name, url: site.url, description: site.description, inLanguage: "en", publisher: { "@id": `${site.url}/#organization` } },
+              { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: site.url, sameAs: [site.discordUrl] },
+            ],
+          }}
+        />
         <SiteHeader />
         <main id="main" className="flex-1">
           {children}

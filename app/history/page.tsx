@@ -3,11 +3,14 @@ import { LinkCard } from "@/components/Cards";
 import { PageHeader, Section } from "@/components/PageHeader";
 import { TopicList } from "@/components/Planned";
 import { getArticles } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "History",
-  description: "The history of Diablo II: patches, the realm economy, the community and the long fight over hacks and bots.",
-};
+  description:
+    "The history of Diablo II: patches, the realm economy, the community and the long fight over hacks and bots.",
+  path: "/history",
+});
 
 const economy = ["Stones of Jordan as currency", "High runes", "Dupes", "Bugged items", "White items", "Hex items", "Ith weapons", "1.08 uniques", "The rune economy"];
 const community = [

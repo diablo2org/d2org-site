@@ -6,6 +6,7 @@ import { entryLinks } from "@/components/EntryLinks";
 import { FactList } from "@/components/FactList";
 import { communities, communityKinds, getCommunity } from "@/data/communities";
 import { resolve } from "@/lib/relationships";
+import { pageMetadata } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -15,7 +16,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps<"/community/[slug]">): Promise<Metadata> {
   const c = getCommunity((await params).slug);
-  return c ? { title: c.name, description: c.summary } : {};
+  return c ? pageMetadata({ title: c.name, description: c.summary, path: `/community/${c.slug}`, keywords: [c.name, ...(c.tags ?? [])] }) : {};
 }
 
 const COVERS = { legacy: "Legacy Diablo II", resurrected: "Diablo II Resurrected", both: "Legacy and Resurrected" };

@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { PageHeader, Section } from "@/components/PageHeader";
 import { TopicList } from "@/components/Planned";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Archive",
-  description: "Preserving old Diablo II guides, tools, documentation and community history.",
-};
+  description:
+    "Preserving old Diablo II guides, tools, documentation and community history.",
+  path: "/archive",
+});
 
 const kinds = [
   "Old modding documents",

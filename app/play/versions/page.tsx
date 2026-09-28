@@ -5,12 +5,14 @@ import { mods } from "@/data/mods";
 import { tools } from "@/data/tools";
 import { versions } from "@/data/versions";
 import { GAME_VERSIONS } from "@/lib/types";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Diablo II versions explained",
   description:
     "Every major legacy Diablo II patch from 1.00 to 1.14d, what changed, and which version to use for mods, tools and multiplayer.",
-};
+  path: "/play/versions",
+});
 
 export default function VersionsPage() {
   const supportCount = (v: string) =>

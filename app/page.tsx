@@ -8,8 +8,10 @@ import { mods } from "@/data/mods";
 import { mainServers } from "@/data/servers";
 import { tools } from "@/data/tools";
 import { getArticles } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
+import { site } from "@/lib/site";
 
-const discordUrl = "https://discord.gg/3EqeBFZ5JD";
+export const metadata = pageMetadata({ title: `${site.name}: ${site.tagline}`, absoluteTitle: true, description: site.description, path: "/" });
 
 const paths = [
   { href: "/play", title: "Play Diablo II", body: "Installation & setup guides", image: "items/7cr.png" },
@@ -48,7 +50,7 @@ export default function Home() {
             <p className="hero-description">Everything you need to play, mod and explore the original Diablo II and Lord of Destruction.</p>
             <div className="hero-actions">
               <Link href="/play/getting-started" className="diablo-button">Start playing</Link>
-              <a href={discordUrl} className="diablo-button" target="_blank" rel="noopener noreferrer">Join Discord</a>
+              <a href={site.discordUrl} className="diablo-button" target="_blank" rel="noopener noreferrer">Join Discord</a>
               <Link href="/mods" className="diablo-button secondary">Explore mods</Link>
             </div>
             <p className="community-note">An independent, community-built resource.</p>

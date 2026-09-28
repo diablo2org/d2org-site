@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import { CommunityCard } from "@/components/Cards";
 import { PageHeader, Section } from "@/components/PageHeader";
 import { communities } from "@/data/communities";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Communities",
-  description: "The sites where Diablo II knowledge lives: the Phrozen Keep, the Arreat Summit, the Amazon Basin, d2jsp and more.",
-};
+  description:
+    "The sites where Diablo II knowledge lives: the Phrozen Keep, the Arreat Summit, the Amazon Basin, d2jsp and more.",
+  path: "/community",
+});
 
 export default function CommunitiesPage() {
   return (

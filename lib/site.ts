@@ -7,7 +7,7 @@ export const site = {
   /** GitHub repo for "Edit this page" links, e.g. https://github.com/org/repo */
   repoUrl: process.env.NEXT_PUBLIC_REPO_URL,
   repoBranch: process.env.NEXT_PUBLIC_REPO_BRANCH ?? "main",
-  discordUrl: "https://discord.gg/CEZ7PsH",
+  discordUrl: "https://discord.gg/3EqeBFZ5JD",
 };
 
 export const nav = [

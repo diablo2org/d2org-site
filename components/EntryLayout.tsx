@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import type { ReactNode } from "react";
+import { BreadcrumbJsonLd, JsonLd } from "@/lib/seo";
 import type { ProjectStatus as Status, Ref, Verification } from "@/lib/types";
 import { EntryLinks, type EntryLink } from "./EntryLinks";
 import type { Crumb } from "./PageHeader";
@@ -10,7 +11,7 @@ import { VerificationNote } from "./Verification";
 import styles from "./Directory.module.css";
 
 /** Consistent project identity, reading column, compatibility and provenance. */
-export function EntryLayout({ eyebrow, name, summary, status, crumbs, refKey, verification, file, sidebar, links = [], meta = [], facts = [], children }: {
+export function EntryLayout({ eyebrow, name, summary, status, crumbs, refKey, verification, file, sidebar, links = [], meta = [], facts = [], schema, children }: {
   eyebrow: string;
   name: string;
   summary: string;
@@ -23,11 +24,15 @@ export function EntryLayout({ eyebrow, name, summary, status, crumbs, refKey, ve
   links?: EntryLink[];
   meta?: (string | false | undefined)[];
   facts?: [label: string, value: ReactNode][];
+  /** schema.org data describing the entry itself. */
+  schema?: Record<string, unknown>;
   children: ReactNode;
 }) {
   const directory = crumbs[1] ?? crumbs[0];
   const primary = links.find((link) => link.primary) ?? links[0];
   return <div className={styles.surface}>
+    <BreadcrumbJsonLd crumbs={crumbs} current={name} />
+    {schema && <JsonLd data={schema} />}
     <header className={`${styles.hero} ${styles.entryHero}`}>
       <div className={styles.width}>
         <nav className={styles.breadcrumb} aria-label="Breadcrumb">

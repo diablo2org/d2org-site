@@ -3,11 +3,14 @@ import { DirectoryHeader } from "@/components/DirectoryHeader";
 import { ToolsDirectory } from "@/components/ToolsDirectory";
 import { tools } from "@/data/tools";
 import styles from "@/components/Directory.module.css";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Tools",
-  description: "Find graphics wrappers, save tools, plugins, launchers and modding utilities for legacy Diablo II. Filter by game version and compare compatibility.",
-};
+  description:
+    "Find graphics wrappers, save tools, plugins, launchers and modding utilities for legacy Diablo II. Filter by game version and compare compatibility.",
+  path: "/tools",
+});
 
 export default function ToolsPage() {
   return <div className={styles.surface}>

@@ -23,11 +23,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/archive",
     "/community",
     ...communities.map((c) => `/community/${c.slug}`),
-    ...getAllArticles().map((a) => a.href),
     ...mods.map((m) => `/mods/${m.slug}`),
     ...servers.map((s) => `/servers/${s.slug}`),
     ...tools.map((t) => `/tools/${t.slug}`),
     ...versions.map((v) => `/play/versions/${v.version}`),
   ];
-  return paths.map((p) => ({ url: new URL(p, site.url).toString() }));
+  return [
+    ...paths.map((p) => ({ url: new URL(p, site.url).toString() })),
+    // Articles carry an updated date; other pages don't track one, so they leave lastModified out.
+    ...getAllArticles().map((a) => ({ url: new URL(a.href, site.url).toString(), lastModified: a.updated })),
+  ];
 }

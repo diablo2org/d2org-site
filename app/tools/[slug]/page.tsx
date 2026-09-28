@@ -8,12 +8,13 @@ import { FactList, osList, yesNo } from "@/components/FactList";
 import { VersionSupport } from "@/components/VersionBadge";
 import { getTool, toolCategories, tools } from "@/data/tools";
 import styles from "@/components/Directory.module.css";
+import { pageMetadata, softwareSchema } from "@/lib/seo";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return tools.map((t) => ({ slug: t.slug })); }
 export async function generateMetadata({ params }: PageProps<"/tools/[slug]">): Promise<Metadata> {
   const t = getTool((await params).slug);
-  return t ? { title: t.name, description: t.summary } : {};
+  return t ? pageMetadata({ title: t.name, description: t.summary, path: `/tools/${t.slug}`, keywords: [t.name, ...(t.tags ?? [])] }) : {};
 }
 export default async function ToolPage({ params }: PageProps<"/tools/[slug]">) {
   const t = getTool((await params).slug);
@@ -26,6 +27,7 @@ export default async function ToolPage({ params }: PageProps<"/tools/[slug]">) {
   ] : [];
 
   return <EntryLayout
+    schema={softwareSchema(t, `/tools/${t.slug}`, "Diablo II tool")}
     eyebrow={category} name={t.name} summary={t.summary} status={t.status}
     refKey={`tool:${t.slug}`} verification={t} file="data/tools.ts"
     crumbs={[{ href: "/", label: "Home" }, { href: "/tools", label: "Tools" }, { href: `/tools#${t.category}`, label: category }]}

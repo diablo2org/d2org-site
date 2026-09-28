@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { BreadcrumbJsonLd } from "@/lib/seo";
 
 export interface Crumb {
   href: string;
@@ -21,6 +22,8 @@ export function PageHeader({
 }) {
   return (
     <header className="page-banner relative overflow-hidden border-b border-stone-700 py-12 sm:py-20">
+      {/* The current page needs a plain-text name, so rich titles leave it out of the trail. */}
+      {crumbs && <BreadcrumbJsonLd crumbs={crumbs} current={typeof title === "string" ? title : undefined} />}
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {crumbs && crumbs.length > 0 && (
           <nav aria-label="Breadcrumb" className="mb-5">

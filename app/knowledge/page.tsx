@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import { LinkCard } from "@/components/Cards";
 import { PageHeader, Section } from "@/components/PageHeader";
 import { getArticles } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Knowledge",
-  description: "Game mechanics, technical reference, guides and history for legacy Diablo II.",
-};
+  description:
+    "Game mechanics, technical reference, guides and history for legacy Diablo II.",
+  path: "/knowledge",
+});
 
 export default function KnowledgePage() {
   const guides = getArticles("guides");

@@ -3,11 +3,14 @@ import Link from "next/link";
 import { PageHeader, Section } from "@/components/PageHeader";
 import { TopicList } from "@/components/Planned";
 import { getArticle } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Modding",
-  description: "A structured path for learning to mod legacy Diablo II, from how the game's files work to adding monsters and levels.",
-};
+  description:
+    "A structured path for learning to mod legacy Diablo II, from how the game's files work to adding monsters and levels.",
+  path: "/modding",
+});
 
 export default function ModdingPage() {
   const href = (slug: string) => getArticle("modding", slug)?.href;

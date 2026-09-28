@@ -4,11 +4,14 @@ import { LinkCard } from "@/components/Cards";
 import { PageHeader, Section } from "@/components/PageHeader";
 import { versions } from "@/data/versions";
 import { getArticles } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Play",
-  description: "Go from zero to playing legacy Diablo II on Windows, Linux or Steam Deck.",
-};
+  description:
+    "Go from zero to playing legacy Diablo II on Windows, Linux or Steam Deck.",
+  path: "/play",
+});
 
 export default function PlayPage() {
   const guides = getArticles("play");

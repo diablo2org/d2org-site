@@ -4,11 +4,14 @@ import { ArrowUpRight } from "lucide-react";
 import { ServerDirectory } from "@/components/ServerDirectory";
 import { servers } from "@/data/servers";
 import styles from "./servers.module.css";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Private servers",
-  description: "Compare legacy Diablo II private servers by play style, ladder, custom content, launcher and more.",
-};
+  description:
+    "Compare legacy Diablo II private servers by play style, ladder, custom content, launcher and more.",
+  path: "/servers",
+});
 
 export default function ServersPage() {
   return (

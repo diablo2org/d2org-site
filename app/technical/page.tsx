@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { PageHeader, Section } from "@/components/PageHeader";
 import { TopicList } from "@/components/Planned";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Technical reference",
-  description: "Diablo II data files, file formats and game internals, for modders and developers.",
-};
+  description:
+    "Diablo II data files, file formats and game internals, for modders and developers.",
+  path: "/technical",
+});
 
 const dataFiles = ["skills.txt", "weapons.txt", "armor.txt", "uniqueitems.txt", "setitems.txt", "monstats.txt", "levels.txt", "cubemain.txt"];
 const formats = [

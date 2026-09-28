@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { PageHeader, Section } from "@/components/PageHeader";
 import { TopicList } from "@/components/Planned";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Mechanics",
-  description: "How Diablo II actually works: attack speed, breakpoints, resistances, treasure classes, item generation and more.",
-};
+  description:
+    "How Diablo II actually works: attack speed, breakpoints, resistances, treasure classes, item generation and more.",
+  path: "/mechanics",
+});
 
 const groups = [
   { title: "Combat", items: ["Attack speed", "Faster cast rate", "Faster hit recovery", "Blocking", "Defense", "Resistances", "Crushing Blow", "Deadly Strike", "Open Wounds", "Immunities"] },

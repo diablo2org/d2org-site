@@ -10,6 +10,7 @@ import { PageHeader } from "./PageHeader";
 import { RelatedLinks } from "./Related";
 import { VersionSupport } from "./VersionBadge";
 import { VerificationNote } from "./Verification";
+import { absoluteUrl, JsonLd, pageMetadata, publisher } from "@/lib/seo";
 
 const SECTION_REF: Record<Section, RefKind> = {
   play: "play",
@@ -29,7 +30,7 @@ export function articleParams(section: Section) {
 export function articleMetadata(section: Section, slug: string): Metadata {
   const a = getArticle(section, slug);
   if (!a) return {};
-  return { title: a.title, description: a.summary, alternates: { canonical: a.href } };
+  return pageMetadata({ title: a.title, description: a.summary, path: a.href, type: "article", modified: a.updated, keywords: a.keywords });
 }
 
 /** Headings in the MDX body, for the on-page contents list. */
@@ -53,6 +54,20 @@ export async function ArticlePage({ section, slug }: { section: Section; slug: s
 
   return (
     <article>
+      <JsonLd
+        data={{
+          "@type": "Article",
+          headline: a.title,
+          description: a.summary,
+          url: absoluteUrl(a.href),
+          mainEntityOfPage: absoluteUrl(a.href),
+          dateModified: a.updated,
+          inLanguage: "en",
+          about: { "@type": "VideoGame", name: "Diablo II" },
+          author: publisher,
+          publisher,
+        }}
+      />
       <PageHeader eyebrow={sec.label} title={a.title} lead={a.summary} crumbs={crumbs}>
         {a.updated && <p className="text-sm text-stone-500">Updated {formatDate(a.updated)}</p>}
       </PageHeader>
