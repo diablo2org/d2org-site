@@ -44,6 +44,11 @@ export function SiteFooter() {
           <p className="font-display text-2xl font-normal text-stone-100">diablo2.org</p>
           <p className="mt-3 text-sm leading-relaxed text-stone-400">{site.tagline} Play it. Mod it. Understand it. Keep it alive.</p>
           <p className="mt-4 text-sm">
+            <Link href="/about" className="text-gold-300 hover:text-ember-400">
+              About diablo2.org
+            </Link>
+          </p>
+          <p className="mt-4 text-sm">
             <a href={site.discordUrl} className="inline-flex items-center gap-1.5 text-gold-300 hover:text-ember-400">
               Join the diablo2.org Discord <ArrowUpRight className="size-3.5" />
             </a>

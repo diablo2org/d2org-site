@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/history",
     "/archive",
     "/community",
+    "/about",
     ...communities.map((c) => `/community/${c.slug}`),
     ...mods.map((m) => `/mods/${m.slug}`),
     ...servers.map((s) => `/servers/${s.slug}`),
