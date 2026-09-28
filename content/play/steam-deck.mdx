@@ -1,0 +1,40 @@
+---
+title: Playing Diablo II on Steam Deck
+summary: Installing legacy Diablo II on the Steam Deck through Proton, getting a sharp picture on the 1280×800 screen, and setting up controls.
+order: 4
+updated: 2026-09-26
+versions: ["1.13c", "1.14d"]
+keywords: ["steam deck", "proton", "handheld", "controller", "steamos"]
+related: ["play:linux", "tool:d2dx", "guide:modern-diablo-2-graphics"]
+---
+
+The Steam Deck runs legacy Diablo II well. The game isn't on Steam, so you add it yourself in Desktop Mode.
+
+## Install the game
+
+1. Switch to **Desktop Mode** and download the Diablo II and Lord of Destruction installers from your Battle.net account.
+2. In Steam, choose **Games → Add a Non-Steam Game** and add the Diablo II installer.
+3. Open the new entry's **Properties → Compatibility**, tick **Force the use of a specific Steam Play compatibility tool**, and choose a Proton version.
+4. Launch it and install. Then change the entry's target to the installed `Game.exe`, and install Lord of Destruction the same way.
+
+Proton creates a separate prefix for each non-Steam game, so the installer and the game need to share the same Steam entry. Pointing one entry at the installer, then at `Game.exe`, keeps them together.
+
+## Get a sharp picture
+
+The game renders at 800×600, which doesn't fit the Deck's 1280×800 screen cleanly. A modern renderer such as [D2DX](/tools/d2dx) scales the image properly and adds higher frame rates. Add `-3dfx` to the launch options to use it. The [graphics guide](/guides/modern-diablo-2-graphics) covers the options.
+
+## Controls
+
+Legacy Diablo II has no controller support. Use Steam Input:
+
+- Map the right trackpad to the mouse, and the triggers to left and right click.
+- Bind skills, potions and the map to the face buttons and back grips.
+- Community controller layouts are available from the Steam controller configuration screen. Browse them before building one from scratch.
+
+## Back to Gaming Mode
+
+Once the game runs in Desktop Mode, the same Steam entry appears in Gaming Mode. Give it artwork and a clear name so it's easy to find.
+
+<Callout type="note">
+Steam Deck setups vary with Proton versions. If you have a tested setup, please add it to this page.
+</Callout>

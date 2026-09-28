@@ -1,0 +1,38 @@
+---
+title: How Diablo II mods work
+summary: The files that make up Diablo II, what each kind controls, and which ones mods change.
+order: 1
+updated: 2026-09-26
+versions: ["1.13c"]
+notVersions: ["1.14d"]
+keywords: ["mpq", "txt", "bin", "dll", "modding basics", "data files", "excel"]
+related: ["version:1.13c", "tool:mpq-editor", "tool:afj-sheet-edit", "tool:d2moo", "community:phrozen-keep", "tool:d2se", "tool:plugy"]
+---
+
+Almost everything about Diablo II's items, skills, monsters and levels comes from data files, not from the game's code. That's why it became one of the most-modded games of its era. You can change a great deal without writing any code.
+
+## The pieces
+
+**MPQ archives.** The game's assets and data ship inside MPQ files, Blizzard's archive format. `d2data.mpq` and `d2exp.mpq` hold most of the data. Mods usually add their own MPQ, or place loose files in the game folder and launch with `-direct`. Open and extract them with [Ladik's MPQ Editor](/tools/mpq-editor).
+
+**TXT files.** Tab-separated tables that define the game's rules, one row per item, skill, monster or level. Modders often call them "excel files", because the game's own internal folder is `data\global\excel`. Edit them in [AFJ Sheet Edit](/tools/afj-sheet-edit) or [D2ExcelPlus](/tools/d2excel). Microsoft Excel works, but modders have long had trouble with how it saves these files. Examples include `weapons.txt`, `skills.txt` and `monstats.txt`.
+
+**BIN files.** The compiled form of the TXT tables that the game actually loads. Launch with `-txt` and the game rebuilds the BIN files from your edited TXT files.
+
+**Graphics and audio.** Sprites in DC6 and DCC formats (convert them with [DC6CON](/tools/dc6con) or [SixDice](/tools/sixdice)), animation layouts in COF files, and level tiles and layouts in DT1 and DS1 files. Changing these needs dedicated tools.
+
+**DLLs.** Up to 1.13d, the game's code lives in separate DLLs such as `D2Common.dll`, `D2Game.dll` and `D2Client.dll`. Code mods and plugins patch these or load alongside them. Some changes, such as new mechanics, need code.
+
+**Save files.** Characters are `.d2s` files. Save editors and muling tools read and write these.
+
+## Why 1.13c?
+
+In 1.14, Blizzard merged the game's DLLs into `Game.exe`. Code mods and plugins written for the separate DLLs stopped working, and most of the modding community stayed on 1.13c. That's why these guides target 1.13c.
+
+<Callout type="tip">
+You can change a surprising amount by editing TXT files alone: item stats, drop rates, skill damage, monster levels, cube recipes and more. It's the right place to start.
+</Callout>
+
+## Where to go next
+
+The next steps in the learning path set up a modding environment and make your first change. They're being written now.

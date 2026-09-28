@@ -1,0 +1,42 @@
+---
+title: Running Diablo II on Linux
+summary: Playing legacy Diablo II through Wine, Lutris or Proton, and the problems you're likely to hit.
+order: 3
+updated: 2026-09-26
+versions: ["1.13c", "1.14d"]
+keywords: ["linux", "wine", "lutris", "proton", "bottles"]
+related: ["play:steam-deck", "play:windows", "tool:d2dx", "tool:cnc-ddraw"]
+---
+
+Diablo II is a 32-bit Windows game with modest requirements, and it has run under Wine for a long time. You have three common routes.
+
+## Wine
+
+Create a separate Wine prefix for Diablo II so its settings don't affect anything else, then run the Blizzard installers inside it.
+
+```sh
+export WINEPREFIX="$HOME/.wine-d2"
+wine ~/Downloads/Installer.exe
+```
+
+Run the Lord of Destruction installer in the same prefix afterwards.
+
+## Lutris
+
+Lutris manages Wine versions and prefixes for you. Community install scripts for Diablo II exist. Check that the script targets legacy Diablo II rather than Resurrected before running it.
+
+## Steam with Proton
+
+Add the installer to Steam as a non-Steam game, force a Proton version in its compatibility settings, and run it. After installation, point the shortcut at `Game.exe` instead of the installer. This is the same method used on the [Steam Deck](/play/steam-deck).
+
+## Renderers under Wine
+
+The game's own DirectDraw and Direct3D modes can misbehave under Wine. Glide wrappers such as [D2DX](/tools/d2dx) are a common choice. [cnc-ddraw](/tools/cnc-ddraw) also documents Wine support. Load the wrapper's DLL as a native override, for example `WINEDLLOVERRIDES="glide3x=n,b"` for a Glide wrapper.
+
+## Mods and launchers
+
+Mod launchers are Windows programs too, and most run under the same Wine prefix. Each project's own community is the best source for Linux notes. We'll link them from the mod pages as they're verified.
+
+<Callout type="note">
+This page is a starting point. We want tested notes covering specific distributions, Wine versions and renderers.
+</Callout>

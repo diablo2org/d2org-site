@@ -1,0 +1,626 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-26T09:56:40.413981+00:00",
+  "title": "Design System: diablo2.org",
+  "extensions": {
+    "colorMeta": {
+      "stone-950": {
+        "role": "neutral",
+        "displayName": "Stone 950",
+        "tonalRamp": [
+          "oklch(15% 0.0024 106.70)",
+          "oklch(26.43% 0.0024 106.70)",
+          "oklch(37.86% 0.0024 106.70)",
+          "oklch(49.29% 0.0024 106.70)",
+          "oklch(60.71% 0.0024 106.70)",
+          "oklch(72.14% 0.0024 106.70)",
+          "oklch(83.57% 0.0024 106.70)",
+          "oklch(95% 0.0024 106.70)"
+        ]
+      },
+      "stone-900": {
+        "role": "neutral",
+        "displayName": "Stone 900",
+        "tonalRamp": [
+          "oklch(15% 0.0020 106.61)",
+          "oklch(26.43% 0.0020 106.61)",
+          "oklch(37.86% 0.0020 106.61)",
+          "oklch(49.29% 0.0020 106.61)",
+          "oklch(60.71% 0.0020 106.61)",
+          "oklch(72.14% 0.0020 106.61)",
+          "oklch(83.57% 0.0020 106.61)",
+          "oklch(95% 0.0020 106.61)"
+        ]
+      },
+      "stone-800": {
+        "role": "neutral",
+        "displayName": "Stone 800",
+        "tonalRamp": [
+          "oklch(15% 0.0064 78.20)",
+          "oklch(26.43% 0.0064 78.20)",
+          "oklch(37.86% 0.0064 78.20)",
+          "oklch(49.29% 0.0064 78.20)",
+          "oklch(60.71% 0.0064 78.20)",
+          "oklch(72.14% 0.0064 78.20)",
+          "oklch(83.57% 0.0064 78.20)",
+          "oklch(95% 0.0064 78.20)"
+        ]
+      },
+      "stone-700": {
+        "role": "neutral",
+        "displayName": "Stone 700",
+        "tonalRamp": [
+          "oklch(15% 0.0119 78.13)",
+          "oklch(26.43% 0.0119 78.13)",
+          "oklch(37.86% 0.0119 78.13)",
+          "oklch(49.29% 0.0119 78.13)",
+          "oklch(60.71% 0.0119 78.13)",
+          "oklch(72.14% 0.0119 78.13)",
+          "oklch(83.57% 0.0119 78.13)",
+          "oklch(95% 0.0119 78.13)"
+        ]
+      },
+      "stone-600": {
+        "role": "neutral",
+        "displayName": "Stone 600",
+        "tonalRamp": [
+          "oklch(15% 0.0168 78.10)",
+          "oklch(26.43% 0.0168 78.10)",
+          "oklch(37.86% 0.0168 78.10)",
+          "oklch(49.29% 0.0168 78.10)",
+          "oklch(60.71% 0.0168 78.10)",
+          "oklch(72.14% 0.0168 78.10)",
+          "oklch(83.57% 0.0168 78.10)",
+          "oklch(95% 0.0168 78.10)"
+        ]
+      },
+      "stone-500": {
+        "role": "neutral",
+        "displayName": "Stone 500",
+        "tonalRamp": [
+          "oklch(15% 0.0290 80.17)",
+          "oklch(26.43% 0.0290 80.17)",
+          "oklch(37.86% 0.0290 80.17)",
+          "oklch(49.29% 0.0290 80.17)",
+          "oklch(60.71% 0.0290 80.17)",
+          "oklch(72.14% 0.0290 80.17)",
+          "oklch(83.57% 0.0290 80.17)",
+          "oklch(95% 0.0290 80.17)"
+        ]
+      },
+      "stone-400": {
+        "role": "neutral",
+        "displayName": "Stone 400",
+        "tonalRamp": [
+          "oklch(15% 0.0285 80.19)",
+          "oklch(26.43% 0.0285 80.19)",
+          "oklch(37.86% 0.0285 80.19)",
+          "oklch(49.29% 0.0285 80.19)",
+          "oklch(60.71% 0.0285 80.19)",
+          "oklch(72.14% 0.0285 80.19)",
+          "oklch(83.57% 0.0285 80.19)",
+          "oklch(95% 0.0285 80.19)"
+        ]
+      },
+      "stone-300": {
+        "role": "neutral",
+        "displayName": "Stone 300",
+        "tonalRamp": [
+          "oklch(15% 0.0243 82.11)",
+          "oklch(26.43% 0.0243 82.11)",
+          "oklch(37.86% 0.0243 82.11)",
+          "oklch(49.29% 0.0243 82.11)",
+          "oklch(60.71% 0.0243 82.11)",
+          "oklch(72.14% 0.0243 82.11)",
+          "oklch(83.57% 0.0243 82.11)",
+          "oklch(95% 0.0243 82.11)"
+        ]
+      },
+      "stone-200": {
+        "role": "neutral",
+        "displayName": "Stone 200",
+        "tonalRamp": [
+          "oklch(15% 0.0220 83.26)",
+          "oklch(26.43% 0.0220 83.26)",
+          "oklch(37.86% 0.0220 83.26)",
+          "oklch(49.29% 0.0220 83.26)",
+          "oklch(60.71% 0.0220 83.26)",
+          "oklch(72.14% 0.0220 83.26)",
+          "oklch(83.57% 0.0220 83.26)",
+          "oklch(95% 0.0220 83.26)"
+        ]
+      },
+      "stone-100": {
+        "role": "neutral",
+        "displayName": "Stone 100",
+        "tonalRamp": [
+          "oklch(15% 0.0143 84.58)",
+          "oklch(26.43% 0.0143 84.58)",
+          "oklch(37.86% 0.0143 84.58)",
+          "oklch(49.29% 0.0143 84.58)",
+          "oklch(60.71% 0.0143 84.58)",
+          "oklch(72.14% 0.0143 84.58)",
+          "oklch(83.57% 0.0143 84.58)",
+          "oklch(95% 0.0143 84.58)"
+        ]
+      },
+      "gold-300": {
+        "role": "primary",
+        "displayName": "Gold 300",
+        "tonalRamp": [
+          "oklch(15% 0.0690 84.85)",
+          "oklch(26.43% 0.0690 84.85)",
+          "oklch(37.86% 0.0690 84.85)",
+          "oklch(49.29% 0.0690 84.85)",
+          "oklch(60.71% 0.0690 84.85)",
+          "oklch(72.14% 0.0690 84.85)",
+          "oklch(83.57% 0.0690 84.85)",
+          "oklch(95% 0.0690 84.85)"
+        ]
+      },
+      "gold-400": {
+        "role": "primary",
+        "displayName": "Gold 400",
+        "tonalRamp": [
+          "oklch(15% 0.1133 79.41)",
+          "oklch(26.43% 0.1133 79.41)",
+          "oklch(37.86% 0.1133 79.41)",
+          "oklch(49.29% 0.1133 79.41)",
+          "oklch(60.71% 0.1133 79.41)",
+          "oklch(72.14% 0.1133 79.41)",
+          "oklch(83.57% 0.1133 79.41)",
+          "oklch(95% 0.1133 79.41)"
+        ]
+      },
+      "gold-500": {
+        "role": "primary",
+        "displayName": "Gold 500",
+        "tonalRamp": [
+          "oklch(15% 0.1230 64.61)",
+          "oklch(26.43% 0.1230 64.61)",
+          "oklch(37.86% 0.1230 64.61)",
+          "oklch(49.29% 0.1230 64.61)",
+          "oklch(60.71% 0.1230 64.61)",
+          "oklch(72.14% 0.1230 64.61)",
+          "oklch(83.57% 0.1230 64.61)",
+          "oklch(95% 0.1230 64.61)"
+        ]
+      },
+      "gold-700": {
+        "role": "primary",
+        "displayName": "Gold 700",
+        "tonalRamp": [
+          "oklch(15% 0.0675 65.64)",
+          "oklch(26.43% 0.0675 65.64)",
+          "oklch(37.86% 0.0675 65.64)",
+          "oklch(49.29% 0.0675 65.64)",
+          "oklch(60.71% 0.0675 65.64)",
+          "oklch(72.14% 0.0675 65.64)",
+          "oklch(83.57% 0.0675 65.64)",
+          "oklch(95% 0.0675 65.64)"
+        ]
+      },
+      "ember-400": {
+        "role": "secondary",
+        "displayName": "Ember 400",
+        "tonalRamp": [
+          "oklch(15% 0.1634 34.11)",
+          "oklch(26.43% 0.1634 34.11)",
+          "oklch(37.86% 0.1634 34.11)",
+          "oklch(49.29% 0.1634 34.11)",
+          "oklch(60.71% 0.1634 34.11)",
+          "oklch(72.14% 0.1634 34.11)",
+          "oklch(83.57% 0.1634 34.11)",
+          "oklch(95% 0.1634 34.11)"
+        ]
+      },
+      "blood-500": {
+        "role": "secondary",
+        "displayName": "Blood 500",
+        "tonalRamp": [
+          "oklch(15% 0.1461 28.64)",
+          "oklch(26.43% 0.1461 28.64)",
+          "oklch(37.86% 0.1461 28.64)",
+          "oklch(49.29% 0.1461 28.64)",
+          "oklch(60.71% 0.1461 28.64)",
+          "oklch(72.14% 0.1461 28.64)",
+          "oklch(83.57% 0.1461 28.64)",
+          "oklch(95% 0.1461 28.64)"
+        ]
+      },
+      "cobalt-300": {
+        "role": "secondary",
+        "displayName": "Cobalt 300",
+        "tonalRamp": [
+          "oklch(15% 0.0609 240.97)",
+          "oklch(26.43% 0.0609 240.97)",
+          "oklch(37.86% 0.0609 240.97)",
+          "oklch(49.29% 0.0609 240.97)",
+          "oklch(60.71% 0.0609 240.97)",
+          "oklch(72.14% 0.0609 240.97)",
+          "oklch(83.57% 0.0609 240.97)",
+          "oklch(95% 0.0609 240.97)"
+        ]
+      },
+      "q-set": {
+        "role": "tertiary",
+        "displayName": "Q Set",
+        "tonalRamp": [
+          "oklch(15% 0.0890 138.83)",
+          "oklch(26.43% 0.0890 138.83)",
+          "oklch(37.86% 0.0890 138.83)",
+          "oklch(49.29% 0.0890 138.83)",
+          "oklch(60.71% 0.0890 138.83)",
+          "oklch(72.14% 0.0890 138.83)",
+          "oklch(83.57% 0.0890 138.83)",
+          "oklch(95% 0.0890 138.83)"
+        ]
+      },
+      "q-magic": {
+        "role": "tertiary",
+        "displayName": "Q Magic",
+        "tonalRamp": [
+          "oklch(15% 0.0772 264.24)",
+          "oklch(26.43% 0.0772 264.24)",
+          "oklch(37.86% 0.0772 264.24)",
+          "oklch(49.29% 0.0772 264.24)",
+          "oklch(60.71% 0.0772 264.24)",
+          "oklch(72.14% 0.0772 264.24)",
+          "oklch(83.57% 0.0772 264.24)",
+          "oklch(95% 0.0772 264.24)"
+        ]
+      },
+      "q-unique": {
+        "role": "tertiary",
+        "displayName": "Q Unique",
+        "tonalRamp": [
+          "oklch(15% 0.0841 78.66)",
+          "oklch(26.43% 0.0841 78.66)",
+          "oklch(37.86% 0.0841 78.66)",
+          "oklch(49.29% 0.0841 78.66)",
+          "oklch(60.71% 0.0841 78.66)",
+          "oklch(72.14% 0.0841 78.66)",
+          "oklch(83.57% 0.0841 78.66)",
+          "oklch(95% 0.0841 78.66)"
+        ]
+      },
+      "q-rare": {
+        "role": "tertiary",
+        "displayName": "Q Rare",
+        "tonalRamp": [
+          "oklch(15% 0.1245 99.45)",
+          "oklch(26.43% 0.1245 99.45)",
+          "oklch(37.86% 0.1245 99.45)",
+          "oklch(49.29% 0.1245 99.45)",
+          "oklch(60.71% 0.1245 99.45)",
+          "oklch(72.14% 0.1245 99.45)",
+          "oklch(83.57% 0.1245 99.45)",
+          "oklch(95% 0.1245 99.45)"
+        ]
+      },
+      "q-broken": {
+        "role": "tertiary",
+        "displayName": "Q Broken",
+        "tonalRamp": [
+          "oklch(15% 0.1417 27.44)",
+          "oklch(26.43% 0.1417 27.44)",
+          "oklch(37.86% 0.1417 27.44)",
+          "oklch(49.29% 0.1417 27.44)",
+          "oklch(60.71% 0.1417 27.44)",
+          "oklch(72.14% 0.1417 27.44)",
+          "oklch(83.57% 0.1417 27.44)",
+          "oklch(95% 0.1417 27.44)"
+        ]
+      },
+      "page-ground": {
+        "role": "neutral",
+        "displayName": "Page Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0042 106.88)",
+          "oklch(26.43% 0.0042 106.88)",
+          "oklch(37.86% 0.0042 106.88)",
+          "oklch(49.29% 0.0042 106.88)",
+          "oklch(60.71% 0.0042 106.88)",
+          "oklch(72.14% 0.0042 106.88)",
+          "oklch(83.57% 0.0042 106.88)",
+          "oklch(95% 0.0042 106.88)"
+        ]
+      },
+      "hero-lettering": {
+        "role": "primary",
+        "displayName": "Hero Lettering",
+        "tonalRamp": [
+          "oklch(15% 0.0718 85.62)",
+          "oklch(26.43% 0.0718 85.62)",
+          "oklch(37.86% 0.0718 85.62)",
+          "oklch(49.29% 0.0718 85.62)",
+          "oklch(60.71% 0.0718 85.62)",
+          "oklch(72.14% 0.0718 85.62)",
+          "oklch(83.57% 0.0718 85.62)",
+          "oklch(95% 0.0718 85.62)"
+        ]
+      },
+      "action-text": {
+        "role": "primary",
+        "displayName": "Action Text",
+        "tonalRamp": [
+          "oklch(15% 0.0583 83.99)",
+          "oklch(26.43% 0.0583 83.99)",
+          "oklch(37.86% 0.0583 83.99)",
+          "oklch(49.29% 0.0583 83.99)",
+          "oklch(60.71% 0.0583 83.99)",
+          "oklch(72.14% 0.0583 83.99)",
+          "oklch(83.57% 0.0583 83.99)",
+          "oklch(95% 0.0583 83.99)"
+        ]
+      },
+      "action-top": {
+        "role": "secondary",
+        "displayName": "Action Top",
+        "tonalRamp": [
+          "oklch(15% 0.1035 31.77)",
+          "oklch(26.43% 0.1035 31.77)",
+          "oklch(37.86% 0.1035 31.77)",
+          "oklch(49.29% 0.1035 31.77)",
+          "oklch(60.71% 0.1035 31.77)",
+          "oklch(72.14% 0.1035 31.77)",
+          "oklch(83.57% 0.1035 31.77)",
+          "oklch(95% 0.1035 31.77)"
+        ]
+      },
+      "action-bottom": {
+        "role": "secondary",
+        "displayName": "Action Bottom",
+        "tonalRamp": [
+          "oklch(15% 0.0695 31.01)",
+          "oklch(26.43% 0.0695 31.01)",
+          "oklch(37.86% 0.0695 31.01)",
+          "oklch(49.29% 0.0695 31.01)",
+          "oklch(60.71% 0.0695 31.01)",
+          "oklch(72.14% 0.0695 31.01)",
+          "oklch(83.57% 0.0695 31.01)",
+          "oklch(95% 0.0695 31.01)"
+        ]
+      },
+      "action-hover": {
+        "role": "secondary",
+        "displayName": "Action Hover",
+        "tonalRamp": [
+          "oklch(15% 0.1077 33.59)",
+          "oklch(26.43% 0.1077 33.59)",
+          "oklch(37.86% 0.1077 33.59)",
+          "oklch(49.29% 0.1077 33.59)",
+          "oklch(60.71% 0.1077 33.59)",
+          "oklch(72.14% 0.1077 33.59)",
+          "oklch(83.57% 0.1077 33.59)",
+          "oklch(95% 0.1077 33.59)"
+        ]
+      },
+      "action-border": {
+        "role": "primary",
+        "displayName": "Action Border",
+        "tonalRamp": [
+          "oklch(15% 0.0874 70.12)",
+          "oklch(26.43% 0.0874 70.12)",
+          "oklch(37.86% 0.0874 70.12)",
+          "oklch(49.29% 0.0874 70.12)",
+          "oklch(60.71% 0.0874 70.12)",
+          "oklch(72.14% 0.0874 70.12)",
+          "oklch(83.57% 0.0874 70.12)",
+          "oklch(95% 0.0874 70.12)"
+        ]
+      },
+      "panel-border": {
+        "role": "primary",
+        "displayName": "Panel Border",
+        "tonalRamp": [
+          "oklch(15% 0.0380 70.86)",
+          "oklch(26.43% 0.0380 70.86)",
+          "oklch(37.86% 0.0380 70.86)",
+          "oklch(49.29% 0.0380 70.86)",
+          "oklch(60.71% 0.0380 70.86)",
+          "oklch(72.14% 0.0380 70.86)",
+          "oklch(83.57% 0.0380 70.86)",
+          "oklch(95% 0.0380 70.86)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Monastery display",
+        "purpose": "Homepage hero title; mobile clamp is documented in DESIGN.md."
+      },
+      "headline": {
+        "displayName": "Engraved headline",
+        "purpose": "Home section headings, with smaller context-specific variants."
+      },
+      "title": {
+        "displayName": "Directory title",
+        "purpose": "Project cards."
+      },
+      "body": {
+        "displayName": "Condensed UI",
+        "purpose": "Navigation, summaries, metadata, and controls."
+      },
+      "article": {
+        "displayName": "Reading serif",
+        "purpose": "Long-form MDX articles."
+      },
+      "label": {
+        "displayName": "Navigation label",
+        "purpose": "Tracked uppercase desktop navigation."
+      },
+      "button": {
+        "displayName": "Engraved action",
+        "purpose": "Primary and secondary hero actions."
+      },
+      "version": {
+        "displayName": "Version string",
+        "purpose": "Precise technical labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "action-bevel",
+        "value": "inset 0 0 0 3px #230e0966, inset 0 1px 0 #f2bc7759",
+        "purpose": "Inset box shadow on both hero action variants."
+      },
+      {
+        "name": "hero-lettering",
+        "value": "0 4px 16px #000",
+        "purpose": "Text shadow on the hero title."
+      },
+      {
+        "name": "banner-lettering",
+        "value": "0 3px 10px #0008",
+        "purpose": "Text shadow on engraved interior headings."
+      },
+      {
+        "name": "mobile-menu",
+        "value": "0 16px 32px #0009",
+        "purpose": "Box shadow separating the navigation overlay."
+      }
+    ],
+    "motion": [
+      {
+        "name": "color-feedback",
+        "value": "180ms",
+        "purpose": "Custom header links, actions, route tiles, guide steps, and text links."
+      },
+      {
+        "name": "sanctuary-light",
+        "value": "1.4s cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "One brightness reveal from .6 to 1, only when reduced motion is not requested."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "interior-sm-min",
+        "value": "640px"
+      },
+      {
+        "name": "home-mobile-max",
+        "value": "767px"
+      },
+      {
+        "name": "grid-md-min",
+        "value": "768px"
+      },
+      {
+        "name": "mobile-menu-max",
+        "value": "1023px"
+      },
+      {
+        "name": "interior-lg-min",
+        "value": "1024px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1199px"
+      },
+      {
+        "name": "wide-art-min",
+        "value": "1600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Beveled oxblood action for the main next step.",
+      "html": "<a href=\"#\" class=\"ds-primary\">Start playing <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:15px;min-height:49px;min-width:174px;padding:14px 22px;border:1px solid #a37844;border-radius:0;box-shadow:inset 0 0 0 3px #230e0966,inset 0 1px 0 #f2bc7759;color:#f4dfb6;font-family:var(--font-display,Cinzel,Georgia,serif);font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;transition:background-color 180ms,border-color 180ms;background:linear-gradient(#70291d,#461a13)}.ds-primary:hover{background:#813626;border-color:#e1b776}.ds-primary:focus-visible{outline:2px solid var(--color-gold-400,#dcad5c);outline-offset:5px;}"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Dark companion action sharing the primary geometry.",
+      "html": "<a href=\"#\" class=\"ds-secondary\">Explore mods</a>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;justify-content:center;gap:15px;min-height:49px;min-width:174px;padding:14px 22px;border:1px solid #a37844;border-radius:0;box-shadow:inset 0 0 0 3px #230e0966,inset 0 1px 0 #f2bc7759;color:#f4dfb6;font-family:var(--font-display,Cinzel,Georgia,serif);font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;transition:background-color 180ms,border-color 180ms;background:rgb(14 13 10 / .76);border-color:#695137}.ds-secondary:hover{background:#302519;border-color:#c49a5f}.ds-secondary:focus-visible{outline:2px solid var(--color-gold-400,#dcad5c);outline-offset:5px;}"
+    },
+    {
+      "name": "Search field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Full-width search field with gold focus border.",
+      "html": "<input class=\"ds-search\" type=\"search\" aria-label=\"Search\" placeholder=\"Try 1.13c widescreen, or steam deck\"/>",
+      "css": ".ds-search{width:100%;border-radius:4px;border:1px solid var(--color-stone-600,#4b453c);background:var(--color-stone-900,#10100f);padding:14px 16px;color:var(--color-stone-100,#f3eee4);font-family:var(--font-sans,\"Barlow Semi Condensed\",system-ui,sans-serif);font-size:18px}.ds-search::placeholder{color:var(--color-stone-500,#9b907e)}.ds-search:focus,.ds-search:focus-visible{border-color:var(--color-gold-500,#b97528);outline:none}"
+    },
+    {
+      "name": "Compatible version",
+      "kind": "chip",
+      "refersTo": "version-badge",
+      "description": "A monospace supported-version link; render as a span inside a card link.",
+      "html": "<a class=\"ds-version\" href=\"#\">1.13c</a>",
+      "css": ".ds-version{display:inline-flex;align-items:center;border-radius:4px;border:1px solid var(--color-stone-600,#4b453c);background:var(--color-stone-800,#211f1c);color:var(--color-stone-200,#e1d9ca);padding:4px 6px;font-family:var(--font-mono,\"Geist Mono\",monospace);font-size:.78rem;line-height:1;text-decoration:none;transition:color 150ms,border-color 150ms}.ds-version:hover{border-color:var(--color-gold-700,#654421);color:var(--color-gold-300,#f0d8a7)}.ds-version:focus-visible{outline:2px solid var(--color-gold-400,#dcad5c);outline-offset:5px;}"
+    },
+    {
+      "name": "Directory card",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "An engraved link surface for factual project records.",
+      "html": "<a class=\"ds-card\" href=\"#\"><span class=\"ds-card-meta\">Mod / Vanilla-plus</span><h3 class=\"ds-card-title\">Project name</h3><p class=\"ds-card-copy\">A concise project summary with compatibility and status recorded alongside it.</p><span class=\"ds-card-version\">1.13c</span></a>",
+      "css": ".ds-card{position:relative;display:flex;flex-direction:column;padding:24px;border:1px solid #473724;background:linear-gradient(135deg,#201a12,#13120f 70%);text-decoration:none;color:var(--color-stone-300,#c5bcac);font-family:var(--font-sans,\"Barlow Semi Condensed\",system-ui,sans-serif);transition:color 150ms,background-color 150ms,border-color 150ms}.ds-card:before,.ds-card:after{position:absolute;content:\"\";width:7px;height:7px;color:#a1804d;pointer-events:none}.ds-card:before{left:3px;top:3px;border-top:1px solid;border-left:1px solid}.ds-card:after{right:3px;bottom:3px;border-bottom:1px solid;border-right:1px solid}.ds-card:hover{background:#251e14;border-color:var(--color-gold-700,#654421)}.ds-card:focus-visible{outline:2px solid var(--color-gold-400,#dcad5c);outline-offset:5px;}.ds-card-meta{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--color-stone-400,#aca18f)}.ds-card-title{margin:20px 0 0;font-family:var(--font-display,Cinzel,Georgia,serif);font-size:20px;font-weight:600;line-height:1.375;color:var(--color-gold-300,#f0d8a7)}.ds-card:hover .ds-card-title{color:var(--color-stone-100,#f3eee4)}.ds-card-copy{margin:12px 0 16px;font-size:16px;line-height:1.625}.ds-card-version{align-self:flex-start;padding:4px 6px;border:1px solid var(--color-stone-600,#4b453c);border-radius:4px;background:var(--color-stone-800,#211f1c);color:var(--color-stone-200,#e1d9ca);font-family:var(--font-mono,\"Geist Mono\",monospace);font-size:.78rem;line-height:1}"
+    },
+    {
+      "name": "Desktop navigation",
+      "kind": "nav",
+      "refersTo": "desktop-nav",
+      "description": "Tracked navigation with a gold active underline.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main\"><a href=\"#\" aria-current=\"page\">Play</a><a href=\"#\">Mods</a><a href=\"#\">Servers</a><a href=\"#\">Tools</a></nav>",
+      "css": ".ds-nav{display:flex;gap:23px;background:#0e0e0c;border-block:1px solid #433321;padding-inline:16px}.ds-nav a{position:relative;display:flex;align-items:center;min-height:80px;color:#b8ac97;font-family:var(--font-sans,\"Barlow Semi Condensed\",system-ui,sans-serif);font-size:13px;font-weight:500;letter-spacing:.075em;text-transform:uppercase;text-decoration:none;transition:color 180ms}.ds-nav a:hover,.ds-nav a[aria-current]{color:#f0d8a7}.ds-nav a[aria-current]:after{content:\"\";position:absolute;bottom:0;inset-inline:0;height:2px;background:#bb8e4b}.ds-nav a:focus-visible{outline:2px solid var(--color-gold-400,#dcad5c);outline-offset:5px;}"
+    },
+    {
+      "name": "Navigation path",
+      "kind": "nav",
+      "refersTo": "path-link",
+      "description": "Bordered route tile with a compact two-level label.",
+      "html": "<a class=\"ds-path\" href=\"#\"><svg width=\"29\" height=\"29\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" aria-hidden=\"true\"><path d=\"M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z\"/></svg><span><span class=\"ds-path-title\">Discover mods</span><span class=\"ds-path-copy\">A familiar world. New possibilities.</span></span><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-path{display:flex;align-items:center;gap:17px;padding:27px 20px;border:1px solid #3b3022;background:linear-gradient(#1c1913,#13120f);color:#b79862;text-decoration:none;transition:background-color 180ms}.ds-path:hover{background:#292115}.ds-path:focus-visible{outline:2px solid var(--color-gold-400,#dcad5c);outline-offset:5px;}.ds-path>svg{flex-shrink:0}.ds-path>svg:last-child{margin-left:auto}.ds-path-title{display:block;color:#dfc99e;font-family:var(--font-display,Cinzel,Georgia,serif);font-size:14px;font-weight:500}.ds-path-copy{display:block;margin-top:5px;color:#aa9e88;font-family:var(--font-sans,\"Barlow Semi Condensed\",system-ui,sans-serif);font-size:13px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Monastery Gateway",
+    "overview": "The visual world is a dark monastery gateway: weathered stone, blackened iron, antique gold lettering, and restrained oxblood actions. The user requested a Diablo website identity; classic Diablo II was the stated implementation assumption after the optional era question went unanswered. This document records that built direction, not a separately approved visual comp.\n\nCinematic artwork introduces the world; precise typography and restrained ornament carry the reference material. Display lettering feels engraved, UI copy stays compact and scannable, and long articles use a warmer book serif. Dark tonal layers and thin metal-colored borders provide structure without turning every content block into a raised panel.",
+    "keyCharacteristics": [
+      "Original gothic environment and still-life artwork, served locally as optimized WebP.",
+      "Antique gold Cinzel titles, condensed Barlow UI, Source Serif 4 reading text.",
+      "Squared iron-and-oxblood controls with fine bevels, corner marks, and diamond rules.",
+      "Compatibility, project status, and source metadata remain legible within the atmosphere."
+    ],
+    "rules": [
+      {
+        "name": "The Reading Surface Rule",
+        "body": "Illustration establishes atmosphere at entrances; reading and comparison happen on quiet dark surfaces.",
+        "section": "colors"
+      },
+      {
+        "name": "The Engraved Hierarchy Rule",
+        "body": "Reserve Cinzel for headings and deliberate actions; use the reading and UI families for sustained information.",
+        "section": "typography"
+      },
+      {
+        "name": "The Still World Rule",
+        "body": "The artwork may reveal once, then remains still; hover feedback changes color without displacing the interface.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use Cinzel for display and section titles, Barlow Semi Condensed for UI, Source Serif 4 for articles, and Geist Mono for version strings.",
+      "Do keep text over imagery on a dark shade and verify the mobile crop independently.",
+      "Do retain visible focus, textual status labels, and reduced-motion behavior.",
+      "Do preserve original raster provenance next to every shipped image.",
+      "Do keep directory cards, compatibility badges, and verification notes factual and easy to scan."
+    ],
+    "donts": [
+      "Don't use decorative display lettering for long article paragraphs.",
+      "Don't replace the square iron surfaces with pill cards or soft floating panels.",
+      "Don't place detailed illustration behind dense reference text.",
+      "Don't introduce looping ambient motion; the shipped hero settles after one light reveal.",
+      "Don't imply that generated illustrations or the custom mark are official Blizzard assets."
+    ]
+  }
+}

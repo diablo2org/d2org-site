@@ -1,0 +1,56 @@
+---
+title: Running Diablo II on Windows 10 and 11
+summary: Fixes for the common problems when running legacy Diablo II on modern Windows, including colours, resolution, DPI scaling and the mouse.
+order: 2
+updated: 2026-09-26
+versions: ["1.13c", "1.14d"]
+keywords: ["windows 11", "windows 10", "compatibility", "crash", "black screen", "colours", "dpi", "windowed", "mouse"]
+related: ["play:getting-started", "guide:modern-diablo-2-graphics", "tool:d2dx", "tool:d2gl", "tool:cnc-ddraw", "version:1.14d"]
+---
+
+Patch 1.14d, which Blizzard's installers give you, was released specifically to improve compatibility with modern Windows. On a current Windows 10 or 11 machine it usually runs without extra work. Most problems come from older patches, from mods pinned to 1.13c, or from how Windows scales and renders a 2000-era game.
+
+## Start with the simple checks
+
+- Make sure you installed both Diablo II and Lord of Destruction, and that you're launching `Game.exe` (or `Diablo II.exe`) from the install folder.
+- Don't install into `C:\Program Files` if you plan to use mods or tools. Games there can't write to their own folder without elevated permissions, and many tools expect to. A folder such as `C:\Games\Diablo II` avoids the problem.
+- Leave compatibility mode off at first. Turn it on only if you have a specific problem it fixes.
+
+## Useful launch options
+
+Add these to the end of the shortcut's target, after the closing quote.
+
+| Option | Effect |
+| --- | --- |
+| `-w` | Windowed mode |
+| `-3dfx` | Use the Glide renderer, needed for Glide wrappers such as D2DX |
+| `-ns` | No sound |
+| `-direct` | Load files from the game folder instead of the MPQs, used by some mods |
+| `-txt` | Recompile data tables from TXT files, used when modding |
+
+## Wrong colours or a garbled screen
+
+Older patches running in DirectDraw mode can show wrong or flickering colours on modern Windows. The game expects 8-bit colour, which modern display drivers handle poorly.
+
+The most reliable fix is to stop using the game's built-in DirectDraw renderer. Install a wrapper such as [D2DX](/tools/d2dx), [D2GL](/tools/d2gl) or [cnc-ddraw](/tools/cnc-ddraw). The [graphics guide](/guides/modern-diablo-2-graphics) explains which to pick.
+
+## Blurry or tiny window, and DPI scaling
+
+On high-DPI displays Windows may scale the game window and blur it, or leave it very small.
+
+1. Right-click `Game.exe` and open **Properties → Compatibility → Change high DPI settings**.
+2. Tick **Override high DPI scaling behavior** and set it to **Application**.
+
+A modern renderer is the better long-term fix. Most can scale the image to your screen with integer or smooth scaling.
+
+## Mouse problems
+
+In windowed mode the cursor can leave the game window, which is awkward when you're clicking near the edges. Several renderers can confine the cursor to the window. Check the options in the one you use.
+
+## Still stuck
+
+Note your patch version (shown in the bottom-right of the main menu), your renderer and the exact symptom. Those three details answer most support questions in community channels.
+
+<Callout type="note">
+This page needs testing notes from real Windows 11 setups. If you've fixed a problem not covered here, please contribute it.
+</Callout>

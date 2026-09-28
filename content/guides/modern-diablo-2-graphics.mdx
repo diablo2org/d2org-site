@@ -1,0 +1,58 @@
+---
+title: Making Diablo II look good on a modern PC
+summary: How Diablo II draws the screen, what goes wrong on modern hardware, and which renderer to use for sharp scaling, widescreen and high frame rates.
+order: 1
+updated: 2026-09-26
+versions: ["1.13c", "1.14d"]
+keywords: ["graphics", "renderer", "widescreen", "high fps", "glide", "wrapper", "shaders", "resolution", "integer scaling", "hd"]
+related: ["tool:d2dx", "tool:d2gl", "tool:sgd2freeres", "tool:svens-glide-wrapper", "tool:nglide", "tool:cnc-ddraw", "tool:d2opengl", "tool:basemod", "play:windows", "play:steam-deck"]
+---
+
+Diablo II is a 2D game drawn at 640×480, or 800×600 with Lord of Destruction. On a modern monitor that means a small window, or a blurry stretched image, plus the problems described in [Windows 10 & 11](/play/windows). The fix is to replace the part of the game that draws to the screen.
+
+## How the game renders
+
+The game has three video modes. You choose between them with the video test on older patches, or with launch options.
+
+- **DirectDraw** is the default software renderer. It works everywhere, but it's the mode most prone to colour problems on modern Windows.
+- **Direct3D** adds a few lighting effects. It has no real advantage today.
+- **Glide** was written for 3dfx Voodoo cards. It was the best-looking mode in 2000 and the best-supported target for modern wrappers. Launch with `-3dfx` to select it.
+
+A **wrapper** is a DLL that pretends to be one of these interfaces and translates the game's drawing calls to a modern API. The game thinks it's talking to a Voodoo card. The wrapper actually draws with Direct3D 11, OpenGL or Vulkan, and can scale and filter the result.
+
+## What a modern renderer gives you
+
+- **Proper scaling.** Integer scaling keeps pixels sharp. Smooth scaling fills more of the screen at some cost to sharpness.
+- **High frame rates.** The game logic runs at 25 frames per second. Some renderers interpolate motion between game frames so movement looks smooth on a high-refresh display. The game's speed doesn't change.
+- **Widescreen.** Extending the visible area is harder than scaling, because the game only draws what fits its 800×600 view. Renderers that support widescreen patch the game to draw more.
+- **Shaders.** Optional filters such as CRT effects, sharpening or colour grading.
+
+## Choosing one
+
+<RendererTable />
+
+- **[D2DX](/tools/d2dx)** is a good default for vanilla and most singleplayer setups. Drop in the DLL, launch with `-3dfx`, and you get sharp scaling and smooth motion. It's no longer actively developed, but it's widely used.
+- **[D2GL](/tools/d2gl)** is the most featureful option, with shaders, HD text and many settings. It's a good fit if you want to tune the look.
+- **[cnc-ddraw](/tools/cnc-ddraw)** fixes DirectDraw mode without switching to Glide. It's useful when a mod or setup expects DirectDraw.
+- **[Sven's Glide Wrapper](/tools/svens-glide-wrapper)** and **[nGlide](/tools/nglide)** are older, simpler Glide wrappers. Sven's was the standard for years and still turns up in mod install guides. nGlide is a general-purpose wrapper for any Glide game.
+
+If you want a larger view of the game world rather than a scaled-up picture, add a resolution mod. [SGD2FreeRes](/tools/sgd2freeres) supports 1.09d to 1.14d and works with all the wrappers above. [D2MultiRes](/tools/multires) is an older option that only works on 1.12a.
+
+If you play a mod or private server, check its launcher first. Most bundle a renderer and expect you to use it.
+
+<Callout type="warning">
+Widescreen changes what's visible on screen. On private servers it may be restricted or provided only through the server's own launcher. Check the rules before adding anything yourself.
+</Callout>
+
+## Installing a Glide wrapper
+
+The steps are similar for most wrappers:
+
+1. Download the release from the project's own page. Links are on each tool's page.
+2. Copy its `glide3x.dll` (and any config file) into the Diablo II folder.
+3. Add `-3dfx` to your shortcut's target. If you use widescreen or other features, set them in the wrapper's config file.
+4. Launch. If the game fails to start, remove the DLL to return to the default renderer.
+
+## Screenshots
+
+We'd like side-by-side comparisons of each renderer at the same scene and settings. Contributions are welcome.
