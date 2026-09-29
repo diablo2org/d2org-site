@@ -117,12 +117,13 @@ export const mods: Mod[] = [
     name: "Annihilus",
     style: "vanilla-plus",
     summary:
-      "A mod in development since 2014 that stays close to Lord of Destruction while reworking every unique and adding a rift-based endgame.",
+      "A mod in development since 2014 that stays close to Lord of Destruction while reworking every unique. The live version is Annihilus Legacy. A full overhaul, Souls of the Rift, is in closed beta.",
     description:
-      "Annihilus aims to modernise Diablo II without losing what made it work. Every unique has been reworked, and the endgame adds Unstable Rifts, Riftstone maps with adjustable difficulty, and the Crucible, a randomised 100-level dungeon. It is played online on the Annihilus realm.",
-    status: "unknown",
+      "Annihilus aims to modernise Diablo II without losing what made it work. Every unique has been reworked, and the endgame adds Unstable Rifts, Riftstone maps with adjustable difficulty, and the Crucible, a randomised 100-level dungeon. It is played online on the Annihilus realm. The game currently played there is Annihilus Legacy. Souls of the Rift, a rebuild that removes skill synergies and adds a crafting system based on Rift Energies, has been in closed beta since at least 2022, open to supporters at the Rare tier or higher on Patreon as of September 2025.",
+    status: "active",
     website: "https://annihilus.net",
     discord: "https://discord.gg/annihilus",
+    patreon: "https://www.patreon.com/annihilus",
     firstRelease: "2015",
     versions: ["1.13d"],
     os: ["windows"],
@@ -137,8 +138,11 @@ export const mods: Mod[] = [
     sources: [
       { label: "annihilus.net", url: "https://annihilus.net" },
       { label: "Annihilus Patreon", url: "https://www.patreon.com/annihilus" },
+      { label: "Annihilus launch trailer (July 2022)", url: "https://www.youtube.com/watch?v=ETBy81nxhv8" },
+      { label: "Closed beta patch overview (September 2025)", url: "https://www.youtube.com/watch?v=uTMrEL59zfo" },
+      { label: "Annihilus Legacy patch 6.20 (May 2026)", url: "https://www.youtube.com/watch?v=oDauzsffLnc" },
     ],
-    tags: ["annihilus", "rifts", "crucible", "riftstones"],
+    tags: ["annihilus", "annihilus legacy", "souls of the rift", "rifts", "crucible", "riftstones"],
     related: ["server:annihilus", "version:1.13d"],
   },
 ];

@@ -198,10 +198,11 @@ export const servers: Server[] = [
     style: "Vanilla-plus with a rift endgame",
     vanillaSimilarity: "vanilla-plus",
     summary:
-      "A long-running mod and realm that keeps the Lord of Destruction base and reworks every unique, with a rift and Crucible endgame, new bosses and higher resolution.",
-    status: "unknown",
+      "A long-running mod and realm. The live game, Annihilus Legacy, keeps the Lord of Destruction base with reworked uniques and a Crucible endgame. A full overhaul, Souls of the Rift, is in closed beta for Patreon supporters.",
+    status: "active",
     website: "https://annihilus.net",
     discord: "https://discord.gg/annihilus",
+    patreon: "https://www.patreon.com/annihilus",
     versions: ["1.13d"],
     os: ["windows"],
     customContent: true,
@@ -216,11 +217,16 @@ export const servers: Server[] = [
       "New areas, monsters and bosses.",
       "Higher resolution and faster experience gain.",
     ],
+    history:
+      "Annihilus has been in development since 2014. The original game, now called Annihilus Legacy, is still played and patched. Souls of the Rift is a rebuild that removes skill synergies and adds a crafting system based on Rift Energies. It has been in closed beta since at least 2022, and in September 2025 beta access came with the Rare tier or higher on Patreon.",
     sources: [
       { label: "annihilus.net", url: "https://annihilus.net" },
       { label: "Annihilus Patreon", url: "https://www.patreon.com/annihilus" },
+      { label: "Annihilus launch trailer (July 2022)", url: "https://www.youtube.com/watch?v=ETBy81nxhv8" },
+      { label: "Closed beta patch overview (September 2025)", url: "https://www.youtube.com/watch?v=uTMrEL59zfo" },
+      { label: "Annihilus Legacy patch 6.20 (May 2026)", url: "https://www.youtube.com/watch?v=oDauzsffLnc" },
     ],
-    tags: ["annihilus", "rifts", "crucible", "vanilla-plus"],
+    tags: ["annihilus", "annihilus legacy", "souls of the rift", "rifts", "crucible", "vanilla-plus"],
     related: ["mod:annihilus", "guide:private-servers-explained"],
   },
   {
