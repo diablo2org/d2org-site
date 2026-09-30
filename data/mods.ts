@@ -91,7 +91,7 @@ export const mods: Mod[] = [
     summary:
       "A 1.13c mod built around character balance and build diversity, with hundreds of new uniques, crystal-based crafting and post-Baal sub-classes.",
     description:
-      "Resurgence keeps the original feel of Lord of Destruction while reworking itemisation and skills so more builds are viable. Rare and crafted items can roll high-tier affixes, crafting uses crystals instead of runes, and Nephalem's Valour charms add three specialisation paths per class after Baal. It works in singleplayer, but most players are on its online ladder. Resurgence grew out of the SlashDiablo mod team, and its community runs through Discord.",
+      "Resurgence keeps the original feel of Lord of Destruction while reworking itemisation and skills so more builds are viable. Rare and crafted items can roll high-tier affixes, crafting uses crystals instead of runes, and Nephalem's Valour charms add three specialisation paths per class after Baal. It works in singleplayer, but most players are on its online ladder. Resurgence grew out of the SlashDiablo mod team, and its community runs through Discord, where news is posted; the website is rarely updated. Version 2.0, a significant overhaul, is due in 2026.",
     status: "active",
     website: "https://resurgence.slashgaming.net",
     discord: "https://discord.gg/0cDYwWrMLIImycvz",

@@ -152,7 +152,7 @@ export const servers: Server[] = [
       "Nephalem's Valour sub-classes: three specialisation paths per class, unlocked after Baal.",
     ],
     history:
-      "Resurgence grew out of the SlashDiablo mod team. Fog, a member of that team, ran SlashDiablo Events, weekend events for SlashDiablo players on a separate server, before spinning off to build Resurgence. SlashDiablo's owner, Meanski, is an admin on Resurgence, and the two communities remain closely linked.",
+      "Resurgence grew out of the SlashDiablo mod team. Fog, a member of that team, ran SlashDiablo Events, weekend events for SlashDiablo players on a separate server, before spinning off to build Resurgence. SlashDiablo's owner, Meanski, is an admin on Resurgence, and the two communities remain closely linked. Version 2.0, a significant overhaul, is due in 2026. The website is rarely updated, so check Discord for current news.",
     sources: [{ label: "resurgence.slashgaming.net", url: "https://resurgence.slashgaming.net" }],
     tags: ["resurgence", "vanilla-plus", "ladder", "build diversity", "crafting"],
     related: ["mod:resurgence", "server:slashdiablo", "guide:private-servers-explained"],
