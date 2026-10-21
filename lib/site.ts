@@ -16,6 +16,7 @@ export const nav = [
   { href: "/servers", label: "Servers" },
   { href: "/tools", label: "Tools" },
   { href: "/modding", label: "Modding" },
+  { href: "/downloads", label: "Downloads" },
   { href: "/knowledge", label: "Knowledge" },
   { href: "/archive", label: "Archive" },
 ] as const;

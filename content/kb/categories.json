@@ -1,0 +1,301 @@
+[
+  {
+    "slug": "file-guides",
+    "title": "File guides (1.10 to 1.14)",
+    "group": "file-guides",
+    "game": "legacy",
+    "appliesTo": "1.10 to 1.14",
+    "keepId": 4,
+    "keepName": "File Guides (1.10 - 1.14)",
+    "description": "Column by column explanation of the various v1.10x to 1.14x TXT files."
+  },
+  {
+    "slug": "general-tutorials",
+    "title": "General tutorials",
+    "group": "tutorials",
+    "game": "legacy",
+    "keepId": 5,
+    "keepName": "General Tutorials",
+    "description": "Detailed explanations on how to achieve a variety of goals through D2 modding."
+  },
+  {
+    "slug": "articles",
+    "title": "Articles",
+    "group": "community",
+    "game": "legacy",
+    "keepId": 7,
+    "keepName": "Articles",
+    "description": "Selection of documents and reports on various subjects."
+  },
+  {
+    "slug": "faq",
+    "title": "Frequently asked questions",
+    "group": "community",
+    "game": "legacy",
+    "keepId": 8,
+    "keepName": "Frequently Asked Questions",
+    "description": "Due to the sheer amount of emails we receive here at the Keep, a lot of which are asking similar questions, we have decided to set up this FAQ section which will hopefully answer as many of your common problems as possible."
+  },
+  {
+    "slug": "humor",
+    "title": "Humor",
+    "group": "community",
+    "game": "legacy",
+    "keepId": 9,
+    "keepName": "Humor",
+    "description": "An arsenal of D2-related humor."
+  },
+  {
+    "slug": "interviews",
+    "title": "Interviews",
+    "group": "community",
+    "game": "legacy",
+    "keepId": 10,
+    "keepName": "Interviews",
+    "description": "Interviews with various figures of note in the Diablo modding community."
+  },
+  {
+    "slug": "mod-reviews",
+    "title": "Mod reviews",
+    "group": "community",
+    "game": "legacy",
+    "keepId": 11,
+    "keepName": "Mod Reviews",
+    "description": "A well-rounded look at released mod projects."
+  },
+  {
+    "slug": "game-mechanics",
+    "title": "Game mechanics",
+    "group": "reference",
+    "game": "legacy",
+    "keepId": 19,
+    "keepName": "Game Mechanics"
+  },
+  {
+    "slug": "file-formats",
+    "title": "File formats",
+    "group": "reference",
+    "game": "legacy",
+    "keepId": 20,
+    "keepName": "File Formats"
+  },
+  {
+    "slug": "charts-and-tables",
+    "title": "Charts and tables",
+    "group": "reference",
+    "game": "legacy",
+    "keepId": 21,
+    "keepName": "References Charts and Tables"
+  },
+  {
+    "slug": "dll-editing",
+    "title": "DLL editing",
+    "group": "reference",
+    "game": "legacy",
+    "keepId": 22,
+    "keepName": "DLL Editing"
+  },
+  {
+    "slug": "naming-resources",
+    "title": "Naming resources",
+    "group": "community",
+    "game": "legacy",
+    "keepId": 23,
+    "keepName": "Naming Resources"
+  },
+  {
+    "slug": "keep-updates",
+    "title": "Keep updates",
+    "group": "community",
+    "game": "legacy",
+    "keepId": 24,
+    "keepName": "Keep Updates",
+    "description": "The Phrozen Keep's news updates from the first 3 years of the site's existance."
+  },
+  {
+    "slug": "file-guides-1-09",
+    "title": "File guides (1.09)",
+    "group": "file-guides",
+    "game": "legacy",
+    "appliesTo": "1.09",
+    "keepId": 26,
+    "keepName": "File Guides (1.09x)",
+    "description": "Column by column explanation of the various v1.09 TXT files."
+  },
+  {
+    "slug": "tutorials-1-09",
+    "title": "Tutorials (1.09)",
+    "group": "tutorials",
+    "game": "legacy",
+    "appliesTo": "1.09",
+    "keepId": 27,
+    "keepName": "Tutorials (1.09x)",
+    "description": "Tutorials dealing with the v1.09 patch"
+  },
+  {
+    "slug": "mod-concepts",
+    "title": "Mod concepts",
+    "group": "community",
+    "game": "legacy",
+    "keepId": 29,
+    "keepName": "Mod Concepts"
+  },
+  {
+    "slug": "historical-references",
+    "title": "Historical references",
+    "group": "reference",
+    "game": "legacy",
+    "keepId": 30,
+    "keepName": "Historical References"
+  },
+  {
+    "slug": "tutorials-cube-recipes",
+    "title": "Cube recipes",
+    "group": "tutorials",
+    "game": "legacy",
+    "appliesTo": "1.10 and later",
+    "keepId": 31,
+    "keepName": "Tutorials (1.1x) - Cube Recipes",
+    "description": "Tutorials on editing and creating cube recipes"
+  },
+  {
+    "slug": "tutorials-code-editing",
+    "title": "Code editing",
+    "group": "tutorials",
+    "game": "legacy",
+    "appliesTo": "1.10 and later",
+    "keepId": 32,
+    "keepName": "Tutorials (1.1x) - Code Editing",
+    "description": "Tutorials on editing game code with a hex editor or disassembler/debugger."
+  },
+  {
+    "slug": "tutorials-mod-setup",
+    "title": "Mod setup",
+    "group": "tutorials",
+    "game": "legacy",
+    "appliesTo": "1.10 and later",
+    "keepId": 33,
+    "keepName": "Tutorials (1.1x) - Diablo Mod Setup",
+    "description": "Tutorials on setting up and running mods in various formats."
+  },
+  {
+    "slug": "tutorials-skill-mechanics",
+    "title": "Skill mechanics",
+    "group": "tutorials",
+    "game": "legacy",
+    "appliesTo": "1.10 and later",
+    "keepId": 34,
+    "keepName": "Tutorials (1.1x) - Skill Mechanics",
+    "description": "Tutorials on creating and editing character and monster skills."
+  },
+  {
+    "slug": "tutorials-item-mechanics",
+    "title": "Item mechanics",
+    "group": "tutorials",
+    "game": "legacy",
+    "appliesTo": "1.10 and later",
+    "keepId": 35,
+    "keepName": "Tutorials (1.1x) - Item Mechanics",
+    "description": "Tutorials on creating items and editing their properties."
+  },
+  {
+    "slug": "tutorials-graphics-and-sound",
+    "title": "Graphics and sound files",
+    "group": "tutorials",
+    "game": "legacy",
+    "appliesTo": "1.10 and later",
+    "keepId": 36,
+    "keepName": "Tutorials (1.1x) - Graphic and Sound Files",
+    "description": "Tutorials on creating, editing and converting formats for sounds, static image and animation files."
+  },
+  {
+    "slug": "tutorials-ui-mechanics",
+    "title": "User interface mechanics",
+    "group": "tutorials",
+    "game": "legacy",
+    "appliesTo": "1.10 and later",
+    "keepId": 37,
+    "keepName": "Tutorials (1.1x) - User Interface Mechanics",
+    "description": "Tutorials for manipulating the User Interface functions and properties."
+  },
+  {
+    "slug": "tutorials-unit-mechanics",
+    "title": "Unit mechanics",
+    "group": "tutorials",
+    "game": "legacy",
+    "appliesTo": "1.10 and later",
+    "keepId": 38,
+    "keepName": "Tutorials (1.1x) - Unit Mechanics",
+    "description": "Tutorials for manipulating monsters, NPCs and interactive objects."
+  },
+  {
+    "slug": "tutorials-map-making",
+    "title": "Map making",
+    "group": "tutorials",
+    "game": "legacy",
+    "appliesTo": "1.10 and later",
+    "keepId": 39,
+    "keepName": "Tutorials (1.1x) - Map Making",
+    "description": "Tutorials on creating and editing maps, controlling their application in the game, and populating them with random and fixed unit."
+  },
+  {
+    "slug": "file-guides-1-08",
+    "title": "File guides (1.08)",
+    "group": "file-guides",
+    "game": "legacy",
+    "appliesTo": "1.08",
+    "keepId": 40,
+    "keepName": "File Guides (1.08)",
+    "description": "Column by column explanation of the various v1.08 TXT files."
+  },
+  {
+    "slug": "file-guides-1-00-1-06",
+    "title": "File guides (1.00 to 1.06)",
+    "group": "file-guides",
+    "game": "legacy",
+    "appliesTo": "1.00 to 1.06",
+    "keepId": 41,
+    "keepName": "File Guides (1.00-1.06x)",
+    "description": "Column by column explanation of the various v1.00 up to 1.06x TXT files."
+  },
+  {
+    "slug": "tutorials-1-08",
+    "title": "Tutorials (1.08)",
+    "group": "tutorials",
+    "game": "legacy",
+    "appliesTo": "1.08",
+    "keepId": 42,
+    "keepName": "Tutorials (1.08)",
+    "description": "Tutorials dealing with the v1.08 patch"
+  },
+  {
+    "slug": "tutorials-1-00-1-06",
+    "title": "Tutorials (1.00 to 1.06)",
+    "group": "tutorials",
+    "game": "legacy",
+    "appliesTo": "1.00 to 1.06",
+    "keepId": 43,
+    "keepName": "Tutorials (1.00-1.06x)",
+    "description": "Tutorials dealing with the v1.00 to 1.06x patches"
+  },
+  {
+    "slug": "json-file-guides-d2r",
+    "title": "JSON file guides (D2R)",
+    "group": "file-guides",
+    "game": "d2r",
+    "appliesTo": "D2R / 1.15",
+    "keepId": 45,
+    "keepName": "JSON File Guides (D2:R/1.15)",
+    "description": "File guides for the D2:R/1.15x JSON files."
+  },
+  {
+    "slug": "tutorials-d2r",
+    "title": "Tutorials (D2R)",
+    "group": "tutorials",
+    "game": "d2r",
+    "appliesTo": "D2R / 1.15",
+    "keepId": 46,
+    "keepName": "Tutorials (D2:R/1.15)",
+    "description": "Tutorials on how to alter aspects for D2:R/1.15x"
+  }
+]

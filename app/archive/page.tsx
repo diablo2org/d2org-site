@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { LinkCard } from "@/components/Cards";
 import { PageHeader, Section } from "@/components/PageHeader";
+import { downloadStats, formatBytes } from "@/lib/downloads";
+import { getKbArticles } from "@/lib/kb";
 import { TopicList } from "@/components/Planned";
 import { pageMetadata } from "@/lib/seo";
 
@@ -26,6 +29,7 @@ const kinds = [
 const record = ["Original author", "Original URL", "Approximate date", "Source", "Mirror status", "Notes"];
 
 export default function ArchivePage() {
+  const files = downloadStats();
   return (
     <>
       <PageHeader
@@ -34,6 +38,16 @@ export default function ArchivePage() {
         lead="Guides, tools and documentation from sites that no longer exist. Where we can't legally or safely mirror a file, we link to the original source, Archive.org or a trusted mirror."
         crumbs={[{ href: "/", label: "Home" }]}
       />
+      <Section title="The Phrozen Keep" lead="The home of Diablo II modding since 2000. Its knowledge base and download library now live here.">
+        <div className="grid gap-4 md:grid-cols-2">
+          <LinkCard href="/knowledge" eyebrow={`${getKbArticles().length} articles`} title="Knowledge base">
+            File guides, tutorials, references and interviews from 25 years of the Keep, with every author credited.
+          </LinkCard>
+          <LinkCard href="/downloads" eyebrow={`${files.recovered.toLocaleString("en-GB")} of ${files.total.toLocaleString("en-GB")} files recovered`} title="Downloads">
+            {`Mods, tools, plugins and patches uploaded since ${files.oldest?.slice(0, 4)}: ${formatBytes(files.bytes)}, each with a checksum.`}
+          </LinkCard>
+        </div>
+      </Section>
       <div className="mx-auto grid max-w-6xl gap-x-10 px-4 sm:px-6 lg:grid-cols-[1.4fr_1fr] [&>section]:px-0">
         <Section title="What we'll collect">
           <TopicList items={kinds.map((title) => ({ title }))} />

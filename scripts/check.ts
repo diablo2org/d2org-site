@@ -3,17 +3,21 @@
  * Fails on cross-references that point at nothing and on internal links
  * in MDX that don't match a known page.
  */
+import fs from "node:fs";
+import path from "node:path";
 import { communities } from "@/data/communities";
 import { mods } from "@/data/mods";
 import { servers } from "@/data/servers";
 import { tools } from "@/data/tools";
 import { versions } from "@/data/versions";
 import { getAllArticles } from "@/lib/content";
+import { getKbArticles, getKbCategories } from "@/lib/kb";
 import { findBrokenRefs } from "@/lib/relationships";
 
 const STATIC_PAGES = [
   "/", "/play", "/play/versions", "/mods", "/servers", "/tools", "/modding", "/knowledge",
-  "/mechanics", "/technical", "/history", "/archive", "/search", "/community",
+  "/mechanics", "/technical", "/history", "/archive", "/search", "/community", "/downloads",
+  "/api/kb", "/llms.txt", "/llms-kb.txt", "/llms-full.txt",
 ];
 
 const known = new Set([
@@ -24,15 +28,27 @@ const known = new Set([
   ...servers.map((s) => `/servers/${s.slug}`),
   ...tools.map((t) => `/tools/${t.slug}`),
   ...versions.map((v) => `/play/versions/${v.version}`),
+  ...getKbCategories().map((c) => `/kb/${c.slug}`),
+  ...getKbArticles().map((a) => a.href),
 ]);
 
 const problems: string[] = [];
+
+/** Links to files served from public/, such as knowledge base images. */
+const isPublicFile = (href: string) => fs.existsSync(path.join(process.cwd(), "public", decodeURIComponent(href)));
 
 for (const { from, to } of findBrokenRefs()) problems.push(`${from} relates to missing ${to}`);
 
 for (const a of getAllArticles()) {
   for (const m of a.body.matchAll(/\]\((\/[^)#\s]*)/g)) {
-    if (!known.has(m[1])) problems.push(`${a.file} links to unknown page ${m[1]}`);
+    if (!known.has(m[1]) && !isPublicFile(m[1])) problems.push(`${a.file} links to unknown page ${m[1]}`);
+  }
+  if (!a.title || !a.summary) problems.push(`${a.file} is missing title or summary`);
+}
+
+for (const a of getKbArticles()) {
+  for (const m of a.body.matchAll(/\]\((\/[^)#\s]*)/g)) {
+    if (!known.has(m[1]) && !isPublicFile(m[1])) problems.push(`${a.file} links to unknown page ${m[1]}`);
   }
   if (!a.title || !a.summary) problems.push(`${a.file} is missing title or summary`);
 }

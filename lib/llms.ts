@@ -4,6 +4,7 @@ import { servers } from "@/data/servers";
 import { tools } from "@/data/tools";
 import { versions } from "@/data/versions";
 import { getArticles, SECTIONS, type Section } from "./content";
+import { getKbArticles, getKbCategories, kbArticleMarkdown } from "./kb";
 import { absoluteUrl } from "./seo";
 import { site } from "./site";
 
@@ -12,7 +13,7 @@ import { site } from "./site";
 const link = (title: string, path: string, summary: string) => `- [${title}](${absoluteUrl(path)}): ${summary}`;
 
 function header() {
-  return `# ${site.name}\n\n> ${site.tagline} ${site.description}\n\nAn independent, community-built reference for the original Diablo II and Lord of Destruction (not Diablo II: Resurrected). It compares mods, private servers and tools as facts and differences, without rankings. Entries that haven't been checked against their sources are marked "Not yet verified" on the site.`;
+  return `# ${site.name}\n\n> ${site.tagline} ${site.description}\n\nAn independent, community-built reference for the original Diablo II and Lord of Destruction (not Diablo II: Resurrected). It compares mods, private servers and tools as facts and differences, without rankings. Its knowledge base, archived from the Phrozen Keep, also covers modding Diablo II: Resurrected. Entries that haven't been checked against their sources are marked "Not yet verified" on the site.`;
 }
 
 /** MDX body as markdown: component tags are dropped, their text content kept. */
@@ -41,7 +42,17 @@ export function llmsIndex() {
   parts.push(`## Private servers\n\n${servers.map((s) => link(s.name, `/servers/${s.slug}`, s.summary)).join("\n")}`);
   parts.push(`## Tools\n\n${tools.map((t) => link(t.name, `/tools/${t.slug}`, t.summary)).join("\n")}`);
   parts.push(`## Communities\n\n${communities.map((c) => link(c.name, `/community/${c.slug}`, c.summary)).join("\n")}`);
-  parts.push(`## Optional\n\n${link("Full text", "/llms-full.txt", "Every article and directory entry in one file.")}`);
+  for (const c of getKbCategories()) {
+    const items = getKbArticles(c.slug).map((a) => link(a.title, a.markdownHref, a.summary));
+    parts.push(`## Knowledge base: ${c.title}${c.game === "d2r" ? " (Diablo II: Resurrected)" : ""}\n\n${items.join("\n")}`);
+  }
+  parts.push(
+    `## Optional\n\n${[
+      link("Full text", "/llms-full.txt", "Every article and directory entry in one file."),
+      link("Knowledge base full text", "/llms-kb.txt", "Every knowledge base article in one file, with authors and original URLs."),
+      link("Knowledge base index", "/api/kb", "JSON list of knowledge base categories and articles."),
+    ].join("\n")}`,
+  );
   return parts.join("\n\n") + "\n";
 }
 
@@ -101,5 +112,14 @@ export function llmsFull() {
       ])}`,
     );
 
+  return parts.join("\n\n---\n\n") + "\n";
+}
+
+/** The whole knowledge base in one file, for tools that want everything at once. */
+export function llmsKb() {
+  const parts = [
+    `# ${site.name} knowledge base\n\n> File guides, tutorials and references for modding Diablo II and Diablo II: Resurrected, archived from the Phrozen Keep (d2mods.info). Each article keeps its original author and a link to the original. Version labels come from the Keep's categories and haven't been rechecked.`,
+  ];
+  for (const a of getKbArticles()) parts.push(kbArticleMarkdown(a, site.url));
   return parts.join("\n\n---\n\n") + "\n";
 }
