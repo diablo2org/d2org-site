@@ -152,7 +152,7 @@ export default function Home() {
 function KeepBand() {
   const articles = getKbArticles();
   const guides = [...articles].sort((a, b) => (b.views ?? 0) - (a.views ?? 0)).slice(0, 5);
-  const files = [...downloads].filter((d) => d.status === "recovered").sort((a, b) => (b.keepDownloads ?? 0) - (a.keepDownloads ?? 0)).slice(0, 5);
+  const files = [...downloads].filter((d) => d.status === "available").sort((a, b) => (b.keepDownloads ?? 0) - (a.keepDownloads ?? 0)).slice(0, 5);
   const stats = downloadStats();
   const list = (title: string, href: string, label: string, items: { href: string; title: string; note: string }[]) => (
     <div>
@@ -173,7 +173,7 @@ function KeepBand() {
   return (
     <Section
       title="From the Phrozen Keep"
-      lead={`The home of Diablo II modding since 2000. Its ${articles.length} knowledge base articles and ${stats.recovered.toLocaleString("en-GB")} recovered downloads now live here, with every author credited.`}
+      lead={`The home of Diablo II modding since 2000. Its ${articles.length} knowledge base articles and ${stats.available.toLocaleString("en-GB")} downloads now live here, with every author credited.`}
     >
       <div className="grid gap-10 md:grid-cols-2">
         {list("Most-read guides", "/knowledge", "Enter the knowledge base", guides.map((a) => ({ href: a.href, title: a.title, note: `${a.views?.toLocaleString("en-GB")} reads` })))}

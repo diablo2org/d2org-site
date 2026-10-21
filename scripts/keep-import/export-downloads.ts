@@ -5,8 +5,9 @@
  *
  * keep-files-dir is a copy of the download system's upload folder (forum/ext/dmzx/downloadsystem/files).
  * azure-dir is a local copy of Necrolis's public Azure container, laid out by blob name.
- * Entries whose file is the shared "missing-readme.zip" placeholder usually link to an Azure copy
- * in their description; those are matched there. Every matched file gets a real size and SHA-256.
+ * Entries whose file is the shared "missing-readme.zip" placeholder, or a zip holding only a readme,
+ * usually link to the real file's Azure copy in their description; those are matched there.
+ * Every matched file gets a real size and SHA-256.
  */
 import crypto from "node:crypto";
 import fs from "node:fs";
@@ -35,6 +36,29 @@ function findFile(root: string, name: string): string | undefined {
     }
   }
   return undefined;
+}
+
+/** File names inside a zip, read from its central directory. Undefined if it isn't a readable zip. */
+function zipEntries(file: string): string[] | undefined {
+  const buf = fs.readFileSync(file);
+  const eocd = buf.lastIndexOf(Buffer.from([0x50, 0x4b, 0x05, 0x06]));
+  if (eocd < 0) return undefined;
+  const count = buf.readUInt16LE(eocd + 10);
+  let at = buf.readUInt32LE(eocd + 16);
+  const names: string[] = [];
+  for (let i = 0; i < count && buf.readUInt32LE(at) === 0x02014b50; i++) {
+    const nameLen = buf.readUInt16LE(at + 28);
+    names.push(buf.toString("latin1", at + 46, at + 46 + nameLen));
+    at += 46 + nameLen + buf.readUInt16LE(at + 30) + buf.readUInt16LE(at + 32);
+  }
+  return names;
+}
+
+/** Many Keep uploads are a zip with only a readme, pointing at the real file on Azure. */
+function isReadmeStub(file: string) {
+  if (!file.toLowerCase().endsWith(".zip")) return false;
+  const names = zipEntries(file)?.filter((n) => !n.endsWith("/"));
+  return !!names?.length && names.every((n) => /\.(txt|nfo|url|html?|rtf)$/i.test(n));
 }
 
 async function main() {
@@ -80,7 +104,7 @@ async function main() {
       ...String(entry.description ?? "").matchAll(
         /phrozenkeep\.blob\.core\.windows\.net\/public\/(?:([^>\n]+?)>\)|((?:\\[()]|[^)\s"])+))/g,
       ),
-    ].map((m) => decodeURIComponent((m[1] ?? m[2]).replace(/\\([()])/g, "$1")));
+    ].map((m) => decodeURIComponent((m[1] ?? m[2]).replace(/\\(.)/g, "$1")));
     const external = [...String(entry.description ?? "").matchAll(/\]\((https?:\/\/(?:www\.)?(?:fileplanet\.com|phrozenkeep\.it-point\.com)[^)\s]*)\)/g)].map((m) => m[1]);
 
     let local: string | undefined;
@@ -88,10 +112,12 @@ async function main() {
       local = findFile(filesDir, filename);
       if (local) entry.source = "keep";
     }
-    if (!local && azureDir) {
+    const stub = !!local && isReadmeStub(local);
+    if ((!local || stub) && azureDir) {
       for (const name of azure) {
         const p = path.join(azureDir, name);
         if (!name.includes("..") && fs.existsSync(p)) {
+          if (stub) entry.readmeStub = true;
           local = p;
           entry.source = "azure";
           entry.azurePath = name;
@@ -99,6 +125,12 @@ async function main() {
           break;
         }
       }
+    }
+    if (local && stub && entry.source === "keep") {
+      // Only the readme survived, which isn't the download.
+      local = undefined;
+      entry.readmeStub = true;
+      delete entry.source;
     }
     if (local) {
       const buf = fs.readFileSync(local);

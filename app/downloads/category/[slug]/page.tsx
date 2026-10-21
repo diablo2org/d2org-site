@@ -24,7 +24,7 @@ export default async function DownloadCategoryPage({ params }: PageProps<"/downl
   const c = getDownloadCategory((await params).slug);
   if (!c) notFound();
   const items = downloadsIn(c.slug);
-  const recovered = items.filter((d) => d.status === "recovered").length;
+  const available = items.filter((d) => d.status === "available").length;
 
   return (
     <>
@@ -38,7 +38,7 @@ export default async function DownloadCategoryPage({ params }: PageProps<"/downl
         ]}
       >
         <p className="font-ui text-[0.8125rem] tracking-wide text-stone-400 uppercase">
-          {items.length} {items.length === 1 ? "file" : "files"} · {recovered} recovered · {c.path} on the Phrozen Keep
+          {items.length} {items.length === 1 ? "file" : "files"} · {available} ready to download · {c.path} on the Phrozen Keep
         </p>
       </PageHeader>
       <div className="mx-auto max-w-6xl px-4 pt-10 sm:px-6">

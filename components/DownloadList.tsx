@@ -11,9 +11,9 @@ export const SECTION_ACCENT: Record<DownloadSection, { bar: string; dot: string;
 };
 
 const STATUS_STYLE: Record<DownloadStatus, string> = {
-  recovered: "border-q-set/40 text-q-set",
-  missing: "border-q-broken/40 text-q-broken",
-  "dead-host": "border-stone-600 text-stone-400",
+  available: "border-q-set/40 text-q-set",
+  pending: "border-q-rare/40 text-q-rare",
+  lost: "border-q-broken/40 text-q-broken",
 };
 
 export function DownloadStatusPill({ status }: { status: DownloadStatus }) {
@@ -48,7 +48,8 @@ export function DownloadList({ items, showCategory = true }: { items: Download[]
               {[d.uploaded?.slice(0, 4), formatBytes(d.bytes)].filter(Boolean).join(" · ")}
             </span>
             <span className="md:text-right">
-              <DownloadStatusPill status={d.status} />
+              {/* A file you can download needs no label. */}
+              {d.status !== "available" && <DownloadStatusPill status={d.status} />}
             </span>
           </Link>
         </li>

@@ -52,9 +52,10 @@ const out = entries.map((e) => {
     changed: e.changed !== e.uploaded ? e.changed : undefined,
     keepDownloads: e.downloads,
     originalUrl: e.originalUrl,
-    status: e.status === "found" ? "recovered" : e.status === "dead-host" ? "dead-host" : "missing",
+    // What a visitor can do: download it now, wait for hosting, or not at all.
+    status: e.status !== "found" ? "lost" : e.source === "azure" && e.azurePath ? "available" : "pending",
     source: e.status === "found" ? e.source : undefined,
-    // Necrolis's public Azure container still serves these. Files recovered from the hosting backup have no public copy yet.
+    // Necrolis's public Azure container still serves these. Files only in the hosting backup have no public copy yet.
     url: e.status === "found" && e.source === "azure" && e.azurePath ? AZURE + e.azurePath.split("/").map(encodeURIComponent).join("/") : undefined,
     bytes: e.bytes,
     sha256: e.sha256,

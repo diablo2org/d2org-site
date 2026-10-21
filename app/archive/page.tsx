@@ -43,7 +43,7 @@ export default function ArchivePage() {
           <LinkCard href="/knowledge" eyebrow={`${getKbArticles().length} articles`} title="Knowledge base">
             File guides, tutorials, references and interviews from 25 years of the Keep, with every author credited.
           </LinkCard>
-          <LinkCard href="/downloads" eyebrow={`${files.recovered.toLocaleString("en-GB")} of ${files.total.toLocaleString("en-GB")} files recovered`} title="Downloads">
+          <LinkCard href="/downloads" eyebrow={`${files.available.toLocaleString("en-GB")} files to download`} title="Downloads">
             {`Mods, tools, plugins and patches uploaded since ${files.oldest?.slice(0, 4)}: ${formatBytes(files.bytes)}, each with a checksum.`}
           </LinkCard>
         </div>

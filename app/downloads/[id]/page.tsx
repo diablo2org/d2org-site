@@ -38,7 +38,7 @@ export default async function DownloadPage({ params }: PageProps<"/downloads/[id
   const siblings = downloadsIn(c.slug).filter((s) => s.id !== d.id).sort((a, b) => (b.keepDownloads ?? 0) - (a.keepDownloads ?? 0)).slice(0, 8);
 
   const facts: [string, React.ReactNode][] = [
-    ["Status", <DownloadStatusPill key="s" status={d.status} />],
+    ...(d.status === "available" ? [] : ([["Status", <DownloadStatusPill key="s" status={d.status} />]] as [string, React.ReactNode][])),
     ["File", d.filename && <span className="font-mono text-[0.8rem] break-all">{d.filename}</span>],
     ["Size", formatBytes(d.bytes)],
     ["Version", d.version],
@@ -114,11 +114,11 @@ export default async function DownloadPage({ params }: PageProps<"/downloads/[id
                 </a>
                 <p className="mt-2 text-[0.8125rem] leading-relaxed text-stone-400">From the Phrozen Keep&apos;s file mirror.</p>
               </>
-            ) : d.status === "recovered" ? (
+            ) : d.status === "pending" ? (
               <p className="leading-relaxed text-stone-300">
-                Recovered from the Keep&apos;s server backup. A download link will be added once the archive&apos;s file hosting is set up.
+                Coming soon. We saved this file from the Keep&apos;s servers, and it will be downloadable once our file hosting is set up.
               </p>
-            ) : d.status === "dead-host" ? (
+            ) : d.deadLink ? (
               <p className="leading-relaxed text-stone-300">
                 The Keep linked to a copy on{" "}
                 <span className="break-all text-stone-200">{d.deadLink ? new URL(d.deadLink).hostname : "another site"}</span>, which has shut

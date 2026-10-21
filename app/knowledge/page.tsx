@@ -110,8 +110,8 @@ export default function KnowledgePage() {
 
       <Section title="Also on diablo2.org">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <LinkCard href="/downloads" eyebrow={`${files.recovered.toLocaleString("en-GB")} files`} title="Downloads">
-            The Keep&apos;s library of mods, tools and plugins, recovered and checksummed.
+          <LinkCard href="/downloads" eyebrow={`${files.available.toLocaleString("en-GB")} files`} title="Downloads">
+            The Keep&apos;s library of mods, tools and plugins, ready to download.
           </LinkCard>
           <LinkCard href="/mechanics" eyebrow="In progress" title="Mechanics">
             Breakpoints, resistances, treasure classes, item generation and everything else the game hides from you.

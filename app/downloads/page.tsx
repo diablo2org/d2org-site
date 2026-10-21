@@ -6,6 +6,7 @@ import { PageHeader, Section } from "@/components/PageHeader";
 import {
   categoryOf,
   DOWNLOAD_SECTIONS,
+  DOWNLOAD_STATUS,
   downloadCategories,
   downloads,
   downloadStats,
@@ -18,7 +19,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Downloads",
   description:
-    "The Phrozen Keep's download library: Diablo II mods, modding tools, plugins and patches uploaded since 2003, recovered and checksummed.",
+    "The Phrozen Keep's download library: Diablo II mods, modding tools, plugins and patches uploaded since 2003, with every file checksummed.",
   path: "/downloads",
   keywords: ["phrozen keep", "diablo 2 mods download", "d2 modding tools", "d2se", "plugins"],
 });
@@ -34,11 +35,12 @@ export default function DownloadsPage() {
     version: extraVersion(d),
     category: categoryOf(d).path,
     year: d.uploaded?.slice(0, 4),
-    recovered: d.status === "recovered",
+    available: d.status === "available",
+    status: d.status === "available" ? undefined : DOWNLOAD_STATUS[d.status].toLowerCase(),
   }));
   const figures = [
     { value: stats.total.toLocaleString("en-GB"), label: "uploads catalogued" },
-    { value: stats.recovered.toLocaleString("en-GB"), label: "files recovered" },
+    { value: stats.available.toLocaleString("en-GB"), label: "ready to download" },
     { value: formatBytes(stats.bytes), label: "of mods, tools and plugins" },
     { value: stats.keepDownloads.toLocaleString("en-GB"), label: "downloads on the Keep" },
   ];
@@ -48,7 +50,7 @@ export default function DownloadsPage() {
       <PageHeader
         eyebrow="Phrozen Keep archive"
         title="Downloads"
-        lead={`Every mod, tool and plugin uploaded to the Phrozen Keep since ${stats.oldest?.slice(0, 4)}. ${stats.recovered.toLocaleString("en-GB")} of them are recovered from the Keep's servers and file mirror, each with a checksum so you know you have the original.`}
+        lead={`Every mod, tool and plugin uploaded to the Phrozen Keep since ${stats.oldest?.slice(0, 4)}. ${stats.available.toLocaleString("en-GB")} of them are ready to download, each with a checksum so you know you have the original file.`}
         crumbs={[{ href: "/", label: "Home" }]}
       >
         <dl className="grid grid-cols-2 gap-x-8 gap-y-4 sm:grid-cols-4">
@@ -105,19 +107,15 @@ export default function DownloadsPage() {
         <DownloadList items={mostDownloaded} />
       </Section>
 
-      <Section title="What the labels mean">
-        <dl className="grid max-w-3xl gap-4 text-stone-300 sm:grid-cols-3">
+      <Section title="Can't download something?">
+        <dl className="grid max-w-3xl gap-4 text-stone-300 sm:grid-cols-2">
           <div>
-            <dt className="font-ui text-[0.8125rem] tracking-[0.08em] text-q-set uppercase">Recovered</dt>
-            <dd className="mt-1 text-sm">We have the original file, with its size and SHA-256 checksum.</dd>
+            <dt className="font-ui text-[0.8125rem] tracking-[0.08em] text-q-rare uppercase">Coming soon</dt>
+            <dd className="mt-1 text-sm">We have the file, saved from the Keep&apos;s servers, and it will be downloadable once our file hosting is set up.</dd>
           </div>
           <div>
-            <dt className="font-ui text-[0.8125rem] tracking-[0.08em] text-stone-400 uppercase">Lost with its host</dt>
-            <dd className="mt-1 text-sm">The Keep linked to FilePlanet or another host that has since shut down.</dd>
-          </div>
-          <div>
-            <dt className="font-ui text-[0.8125rem] tracking-[0.08em] text-q-broken uppercase">Missing</dt>
-            <dd className="mt-1 text-sm">The listing survives but the file doesn&apos;t. If you have a copy, we&apos;d like to hear from you.</dd>
+            <dt className="font-ui text-[0.8125rem] tracking-[0.08em] text-q-broken uppercase">Lost</dt>
+            <dd className="mt-1 text-sm">The listing survives but nobody has the file, often because it was hosted on a site that shut down. If you have a copy, we&apos;d like to hear from you.</dd>
           </div>
         </dl>
       </Section>

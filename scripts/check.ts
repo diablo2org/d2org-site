@@ -17,7 +17,7 @@ import { findBrokenRefs } from "@/lib/relationships";
 const STATIC_PAGES = [
   "/", "/play", "/play/versions", "/mods", "/servers", "/tools", "/modding", "/knowledge",
   "/mechanics", "/technical", "/history", "/archive", "/search", "/community", "/downloads",
-  "/api/kb", "/llms.txt", "/llms-kb.txt", "/llms-full.txt",
+  "/api/kb", "/api/downloads", "/llms.txt", "/llms-kb.txt", "/llms-full.txt",
 ];
 
 const known = new Set([

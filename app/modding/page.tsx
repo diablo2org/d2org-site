@@ -55,7 +55,7 @@ export default function ModdingPage() {
   const guides = getKbArticles("file-guides").sort((a, b) => (b.views ?? 0) - (a.views ?? 0));
   const topics = TOPICS.map((s) => getKbCategories().find((c) => c.slug === s)).filter((c) => c !== undefined);
   const tools = downloads
-    .filter((d) => d.category[0] === "Tools" && d.status === "recovered")
+    .filter((d) => d.category[0] === "Tools" && d.status === "available")
     .sort((a, b) => (b.keepDownloads ?? 0) - (a.keepDownloads ?? 0))
     .slice(0, 6);
   const files = downloadStats();
@@ -144,7 +144,7 @@ curl -o .claude/skills/diablo2-modding/SKILL.md \\
       <Section
         id="downloads"
         title="Tools and downloads"
-        lead={`The Phrozen Keep's library: ${files.recovered.toLocaleString("en-GB")} mods, tools and plugins recovered and checksummed. These are the most-downloaded tools.`}
+        lead={`The Phrozen Keep's library: ${files.available.toLocaleString("en-GB")} mods, tools and plugins ready to download. These are the most-downloaded tools.`}
         action={<Link href="/downloads" className="inline-flex items-center gap-2 text-sm font-semibold text-gold-400 hover:text-ember-400">Browse all downloads <ArrowRight className="size-3.5" /></Link>}
       >
         <DownloadList items={tools} />

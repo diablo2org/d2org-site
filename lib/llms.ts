@@ -51,6 +51,7 @@ export function llmsIndex() {
       link("Full text", "/llms-full.txt", "Every article and directory entry in one file."),
       link("Knowledge base full text", "/llms-kb.txt", "Every knowledge base article in one file, with authors and original URLs."),
       link("Knowledge base index", "/api/kb", "JSON list of knowledge base categories and articles."),
+      link("Download catalogue", "/api/downloads", "JSON list of the Phrozen Keep's downloads, with category, status, size and checksum."),
     ].join("\n")}`,
   );
   return parts.join("\n\n") + "\n";
