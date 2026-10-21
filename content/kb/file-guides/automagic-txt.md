@@ -103,7 +103,6 @@ Orange	oran
 Bright White	bwht
 ```
 
-  
 **itype 1 to itype7**: "Include Type" fields. You need to place item codes in any of these columns to allow that item to receive mods from this row. See the note below.
 
 **etype 1 to itype3**: 'Exclude type' . This field prevents certain mods from spawning on specific item codes.
@@ -114,7 +113,7 @@ Bright White	bwht
 
 **add**: Numeric value that acts as a flat sum added to the item price.
 
-\-------------------------------
+### -
 
 _Another one. It's nice to have easy to read refrence materials around. I'll do more as I have time. If anyone has corrections, sugestions, or additional information that should be here please let me know._
 

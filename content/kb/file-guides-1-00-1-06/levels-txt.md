@@ -75,13 +75,13 @@ EDIT: This handles the display part of level connections, this column contains I
 Column AL Intensity: ~~Unknown(is set to 0 for most levels(not including act4).~~  
 EDIT: This controls the intensity of the RGB lighting, setting it to 255 will make the colors the most intense (if you remember XyRAX 15.0) you know what 255 looks like in-game.
 
-Column AM Red: like the RGB columns in monstats.txt, stands for red.
+**Column AM Red:** like the RGB columns in monstats.txt, stands for red.
 
-Column AN Green: like the RGB columns in monstats.txt, stands for Blue.
+**Column AN Green:** like the RGB columns in monstats.txt, stands for Blue.
 
-Column AO Blue: like the RGB columns in monstats.txt, stands for Blue.
+**Column AO Blue:** like the RGB columns in monstats.txt, stands for Blue.
 
-Column AP Portal: Unknown
+**Column AP Portal:** Unknown
 
 Column AQ Position: ~~Unknown~~  
 EDIT: Can a portal be re-positioned within the level? 1 = it can be repositioned, 0 = it cannot be repositioned.
@@ -138,15 +138,15 @@ EDIT: Percentage chance that the critter in question will spawn.
 Column EL-EO CD1-CD4: ~~Unknown~~  
 EDIT: Also related to critters but not used in vanilla. Might handle maximum number to spawn.
 
-Column EP Themes: Unknown
+**Column EP Themes:** Unknown
 
-Column ER SoundEnv: determines the music this area has (open soundenviron.txt for the numbers that should be put inside these slots.
+**Column ER SoundEnv:** determines the music this area has (open soundenviron.txt for the numbers that should be put inside these slots.
 
-Column ES Waypoint: determines if the area has a way point (255 means none). you can also switch way points with this WARNING if you let the old way point 'as is' you will Probaly be crashed out your game you must make the old waypoint 255(for eg the way point to cold plain is number 1 put 1 into the chaos sanctuary or cowlvl and now make the cold plain 255 now you will have a way point to cowlvl or the chaos sanctuary(all has to do how you choose it).
+**Column ES Waypoint:** determines if the area has a way point (255 means none). you can also switch way points with this WARNING if you let the old way point 'as is' you will Probaly be crashed out your game you must make the old waypoint 255(for eg the way point to cold plain is number 1 put 1 into the chaos sanctuary or cowlvl and now make the cold plain 255 now you will have a way point to cowlvl or the chaos sanctuary(all has to do how you choose it).
 
-Column ET LevelName: determines the name of the area but it must also be changed in String and patchstring.tbl to appear in the game.
+**Column ET LevelName:** determines the name of the area but it must also be changed in String and patchstring.tbl to appear in the game.
 
-Column EU LevelWarp: Determines the name that appear above the entrance to the area(like the caves entrance if you scroll over it will say the warps name, eg: to the den of evil(must also be changed to appear in the game in string and patchstring.tbl.
+**Column EU LevelWarp:** Determines the name that appear above the entrance to the area(like the caves entrance if you scroll over it will say the warps name, eg: to the den of evil(must also be changed to appear in the game in string and patchstring.tbl.
 
 Column EV EntryFile: ~~Unknown:(note: this is also appearing in other level txts like lvlprest.txt).~~  
 EDIT: Determines what 'entry message' DC6 file is played when you enter this level.

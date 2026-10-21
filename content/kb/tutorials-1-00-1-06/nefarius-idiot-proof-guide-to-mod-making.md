@@ -20,12 +20,9 @@ Contents:
 -   Overall gameplay changes
 -   Ideas for your own mods
 
-  
 **1\. what is a mod?**
 
 A mod is a modification of a game such as Diablo II which gives you new features the original game hasn't given you (like: new items, new monsters and any other changes in regard of game play).
-
-  
 
 **2\. Basic stuff you'll need**
 
@@ -45,8 +42,6 @@ Most of this stuff is freeware so you can get it for free, some of the programs 
 
 Here is a link to a page having all the freeware on it [www.phrozenkeep.com](www.d2mods.com)
 
-  
-
 **3\. How to make a simple items mod**
 
 Here you will learn how to ad a new item to the game and make all items dropped rare, and also how to modify unique and set items.
@@ -63,10 +58,8 @@ Now choose load archive choose patch\_d2.mpq choose a file called itemratio.txt 
 Change the raredividor and rare columns to 1, now you will have to put the file back into your mpq so it will work in the game. First after you made these changes press save button in excel it will make two messages appear on your screen, ignore them and press ok on both. Now make sure the modified itemratio.txt is inside the same folder as mpq2k, now go down into your start menu and choose run now a small message like thing will appear type command into it and a black command prompt window will appear on your screen, in this window find the folder you keep all the following files in (all files have to be in the same folder for it to work) mpq2k, itemratio.txt, patch\_d2.mpq if you found the folder type mpq2k the program will respond and show you a list of options, now type:
 
 Mpq2k a patch\_d2.mpq itemratio.txt data\\global\\excel\\itemratio.txt  
-  
-If you did everything correctly you may take the modified patch\_d2.mpq file back into your Diablo II directory, notice when you play the game some of the rare items you have equipped may 'morph' (aka have different modifiers, color etc), and you will find almost only rare (yellow items).
 
-  
+If you did everything correctly you may take the modified patch\_d2.mpq file back into your Diablo II directory, notice when you play the game some of the rare items you have equipped may 'morph' (aka have different modifiers, color etc), and you will find almost only rare (yellow items).
 
 Making a new item
 
@@ -88,8 +81,6 @@ Mpq2k a patch\_d2.mpq treasureclass.txt data\\global\\excel\\treasureclass.txt
 
 Mpq2k a patch\_d2.mpq string.tbl data\\local\\LNG\\eng\\string.tbl
 
-  
-
 **4\. How to make a simple boss mod**
 
 here we will learn how to make a boss mod, so you will be able to fight bosses everywhere!  
@@ -108,8 +99,6 @@ Launch Diablo II and go into the bloodmoor you will be surprised!
 
 For full brief on levels.txt go to my site, Nefarius' D2 Mod Page.
 
-  
-
 **5\. How to make a simple skill mod**
 
 No no no I am not teaching you how to change the skill graphics, if you wanna learn that go to [www.phrozenkeep.com](www.d2mods.com).
@@ -124,8 +113,6 @@ Mpq2k a patch\_D2.mpq skills.txt data\\global\\excel\\skills.txt
 
 This is not a tutorial like the above, it simply will explain what a overall gameplay change is and how you best make them. Until now all we've done in this tutorial are rediculous changes, that might be fun for a time but not much else, An overall gameplay changing mod OTOH is for example what I did in my XyRAX Mod or what Fecesfaerie did in his Kagero mod, there is really no limit to what you can do.  
 Unless you come with rediculous ideas such as adding a new character class or a new act.
-
-  
 
 **7\. Ideas for your own mods**
 

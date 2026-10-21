@@ -27,7 +27,6 @@ Now you should be able to run each mod, and still access Battle.net with a clean
 
 ---
 
-  
 \[align=center:030a3f30bc\]Acknowledgements\[/color:030a3f30bc\]\[/align:030a3f30bc\]\[/size:030a3f30bc\]
 
 -   Fusman - the Direct Switch tutorial
@@ -38,7 +37,6 @@ Now you should be able to run each mod, and still access Battle.net with a clean
 
 ---
 
-  
 \[align=center:030a3f30bc\]Appendix - Registry Settings\[/color:030a3f30bc\]\[/align:030a3f30bc\]\[/size:030a3f30bc\]
 
 Blizzard uses the Windows Registry for a number of settings related to game configuration, Battle.net, and where your save files end up. We will focus on two settings here, the Install Path and the Save Path. Different versions of Windows, and different computer setups, may store this information in either or both of two places, HKEY\_CURRENT\_USER or HKEY\_LOCAL\_MACHINE. There are several keys which may or may not be on your machine:

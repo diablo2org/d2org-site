@@ -15,9 +15,7 @@ I'll use the property I created as an example:
 
 Dual Leech:
 
-Open up properties.txt and create a new row at the bottom
-
-for the Name column, put dual-leech  
+Open up properties.txt and create a new row at the bottom for the Name column, put dual-leech  
 for completed put 1  
 leave set1 and val1 blank  
 put 1 in func1  
@@ -31,9 +29,7 @@ Now open up itemstatcost and go down to the rows for lifedrainmindam and manadra
 Go all the way to the end of the row and put a 3 in dgrp  
 in dgrpval, and dgrpfunc put whatever is in descval (for dgrpfunc I used 19)  
 in dgrpstrpos and dgrpstrneg put dual-leech  
-now save and open up patchstring.tbl
-
-create a new string with the name dual-leech (or whatever you used instead) and put the text for the property there. If you used dgrpfunc 19, you will need to put something like:
+now save and open up patchstring.tbl create a new string with the name dual-leech (or whatever you used instead) and put the text for the property there. If you used dgrpfunc 19, you will need to put something like:
 
 %d%% life and mana stolen per hit
 

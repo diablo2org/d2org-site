@@ -223,4 +223,3 @@ An Evil Force
 3) You didn’t change the strings at all :P
 
 > **Note:** If you copy/paste the name from excel make sure it there isnt and extra space on the end of the key, this will result in Evil Forces :P
-

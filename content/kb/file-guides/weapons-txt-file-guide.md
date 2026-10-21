@@ -207,7 +207,6 @@ NOTE: Since [Misc.txt](/kb/file-guides/misc-txt) and Armor.txt are part of the s
 3 = Metal item, which allows the creation of iron golem
 ```
 
-  
 **vendorMin - vendorMax - vendorMagicMin - vendorMagicMax - vendorMagicLvl**: These columns control what the different Vendors can sells.  
 "Vendors" are
 
@@ -231,7 +230,6 @@ Malah
 Drehya (Anya)
 ```
 
-  
 **vendorMin - vendorMax** act as minimum \\ maximum amount of items of this type the vendor can sell. Do not increase these values too much or you will risk to crash the game if it spawns too many items.
 
 **vendorMagicMin - vendorMagicMax** have the same purposes as the ones above, but for the magical items

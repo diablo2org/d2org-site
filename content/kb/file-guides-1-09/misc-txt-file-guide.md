@@ -48,9 +48,7 @@ flippyfile - The name of the animation file the item uses in-game when it's drop
 
 copy this cell from there, unless you intend to remaster the gfx for the drop, if so the file to look for is data\\global\\items\\flpxxxxxxx.dc6.
 
-xxxxxxx is stated specifically for the item) Note:For flippyfile, you need to use the DC6Maker available in PK. this allows to extract individual
-
-frames which can be edited. Change the palette back to the 256-col used in D2 (palettes are also available in Tools of the Trade) and recompile with DC6Maker again) whatever name you save your new flpxxx as, put it in this cell
+xxxxxxx is stated specifically for the item) Note:For flippyfile, you need to use the DC6Maker available in PK. this allows to extract individual frames which can be edited. Change the palette back to the 256-col used in D2 (palettes are also available in Tools of the Trade) and recompile with DC6Maker again) whatever name you save your new flpxxx as, put it in this cell
 
 invfile - The DC6 file that this item uses in your inventory (this is the one most commonly edited, I use the above method exactly)
 
@@ -88,9 +86,7 @@ autobelt - Whether or not the item appears in your belt when picked up
 
 stackable - Whether or not the item can be stacked (doesn't seem to work unless item was already meant to stack, am looking into it, some ppl are
 
-trying to stack healing potions) <JBouley: Potion stacking doesn't work; the game treats the entire stack as a single potion>
-
-minstack/maxstack - Min/max number in stack found for stackable items
+trying to stack healing potions) <JBouley: Potion stacking doesn't work; the game treats the entire stack as a single potion> minstack/maxstack - Min/max number in stack found for stackable items
 
 spawnstack - max amt spawnable (ref to arrows/bolt/keys to get a good picture)
 

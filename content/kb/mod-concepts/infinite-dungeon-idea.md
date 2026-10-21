@@ -16,5 +16,4 @@ I know close to nothing about actually modding so maybe somebody with some exper
 
 ---
 
-  
 Feel free to discuss this concept in the [designated thread](http://www.d2mods.com/forum/viewtopic.php?t=22402).

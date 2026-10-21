@@ -40,11 +40,11 @@ shortcut(s) - the list of skills that show up when you press 'S'
 charscreen - character screen, shows up when you press 'C'  
 selected skill - one of the two active skills that are set to your mouse buttons
 
-\--------------------
+### -
 
 **skilldesc:** Name of the skill description, referenced by skills.txt (col D).
 
-\--------------------
+### -
 
 **SkillPage:** (Allowed values = 0 - 3) Determines which page the skill will show up.
 
@@ -56,7 +56,6 @@ selected skill - one of the two active skills that are set to your mouse buttons
 
 ```
 
-  
 **SkillRow:** (Allowed values = 0 - 6) Determines which row the skill will show up.
 
 ```
@@ -65,7 +64,6 @@ selected skill - one of the two active skills that are set to your mouse buttons
 6 - bottom row
 ```
 
-  
 **SkillColumn:** (Allowed values = 0 - 3) Determines which column the skill will show up.
 
 ```
@@ -76,7 +74,6 @@ selected skill - one of the two active skills that are set to your mouse buttons
 
 ```
 
-  
 **ListRow:** (Allowed Values = -1 - 4) Determines which row the skill will show up in the shortcuts
 
 ```
@@ -86,7 +83,6 @@ selected skill - one of the two active skills that are set to your mouse buttons
 4 - reserved for Identify and Town Portal
 ```
 
-  
 **ListPool:** (Allowed Values = 0 - 2) Used only by Identify and Town Portal scrolls.
 
 ```
@@ -95,7 +91,6 @@ selected skill - one of the two active skills that are set to your mouse buttons
 2 - scroll of town portal
 ```
 
-  
 **IconCel:** (Allowed Values = 0 - X) (user defined, read below)  
 Used to determine the icons (usable and unusable) used by the skill. Value that is put here determines the usable icon, and the next icon will be the unusable icon.  
 Icons always come in pairs, so if you're making your own skill icons, do put them in the right order.
@@ -114,7 +109,6 @@ pa	Paladin
 so	Sorceress
 ```
 
-  
 If skill is not a class skill, icons will be taken from :  
 dataglobaluispellsskillicon.dc6
 
@@ -221,7 +215,7 @@ Some desclines are not picky about whether these are filled, but since there are
 **desccalca** / **desccalcb:** These are numbers or calcs that may be filled or left blank.  
 Similar to **desctexts**, **desccalcs** may be treated as empty or 0 if not present, so if you don't need the extra space, choose a suitable descline.
 
-\--------------------
+### -
 
 In Appendix B, I used the following notation:  
 S1 & S2 refer to desctexta and desctextb respectively. S for String because that is what these two columns are.  
@@ -274,12 +268,12 @@ In the end, we get the final output:
 Poison Damage: 43-78  
 over 2 seconds
 
-\--------------------
+### -
 
 Conclusion:  
 Skilldesc can get a bit tricky, and sometimes some things just don't work so well. My advice is that even though some of the desclines may look perfect for your skill description, if they don't work, try using some of the more common ones. Some of the desclines are not used in skilldesc, I found them by trying every number. Some are only used by one skill, so I classed it as being specific, though they may still be able to work, don't get too worked up when it doesn't. In my opinion, you can do a lot with just the basic few. You can do your own calcs and display a raw number instead of leaving it to the hardcoded desclines. But it's up to the individual modder
 
-\----------------------------------------
+### -
 
 Appendix A: Layout of Skill Description on the Tree.
 
@@ -300,7 +294,7 @@ Next Level: X+1
 
 As mentioned earlier, synergies are using dsc3 lines, so they'll be shown right at the bottom. If you want some stats that only show for current level, use dsc2. If you want stats that show for current and next levels, use desc.
 
-\----------------------------------------
+### -
 
 Appendix B: List of desclines
 

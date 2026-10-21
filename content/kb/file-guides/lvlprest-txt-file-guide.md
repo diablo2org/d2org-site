@@ -55,15 +55,15 @@ PopPad: With this you can change the size of the box and either increase its siz
 \*Positive value: 2 (this will increase the box from where you have added the second special box).  
 \*Negative value: -2 (this will decrease the box from where you have added the second special box)
 
-Files: The amount of versions the map has, based on entries in File 1 to File 6 columns
+**Files:** The amount of versions the map has, based on entries in File 1 to File 6 columns
 
-File 1 to File 6: The location of the ds1 versions, leave at 0 for files that don't exist
+**File 1 to File 6:** The location of the ds1 versions, leave at 0 for files that don't exist
 
-Dt1mask: Number telling which tiles to use from lvltypes.txt
+**Dt1mask:** Number telling which tiles to use from lvltypes.txt
 
-Beta: Refrence Only
+**Beta:** Refrence Only
 
-Expansion: Refrence Only
+**Expansion:** Refrence Only
 
 Pops and PopPad info were taken directly from Kingpins find in this thread:  
 [Roofs pop and popadd explained](http://phrozenkeep.it-point.com/forum/viewtopic.php?t=20360)  

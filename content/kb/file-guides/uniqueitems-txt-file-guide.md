@@ -58,8 +58,6 @@ originalUrl: 'https://d2mods.info/forum/kb/viewarticle?a=343'
 **prop1:** first magical modifier on the item  
 **par1:** Parameter used for the modifier (such as cold length for cold damage)  
 **min1:** Minimum value that the item can spawn with  
-**max1:** Maximum value that the item can spawn with
-
-the other prop columns function the same as the first ones
+**max1:** Maximum value that the item can spawn with the other prop columns function the same as the first ones
 
 **eol:** End of Line: Marks the end of the file

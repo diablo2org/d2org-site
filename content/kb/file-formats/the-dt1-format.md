@@ -14,10 +14,6 @@ originalUrl: 'https://d2mods.info/forum/kb/viewarticle?a=40'
 **DT1 format**  
 Paul SIRAMY, 30 December 2002
 
-  
-
-  
-
 Before  
 anything else, I really want to thanks **Clannad**  
 for his original documentation of the DT1 format. Without  
@@ -33,13 +29,7 @@ Diablo 2 Modding scene, and this was the start of many tools
 I have made since. If you hadn't made it, I shouldn't even  
 be here today).
 
-  
-
-  
-
 **Introduction**
-
-  
 
 Ok,  
 so what are the DT1 files ? They are all the **Diablo  
@@ -58,8 +48,6 @@ structure (different for each acts). For instance, the file
 **DataGlobalTilesAct1TristramTown.dt1** have all the  
 Tiles specific to Tristram.
 
-  
-
 One  
 thing to remember is that a DT1 is usually used by many maps.  
 Let's take the stone walls you see in the Rogue Encampment.  
@@ -67,8 +55,6 @@ There are some such walls in this town. But you can see the
 exact same walls in the Cold Plains, in Stony Field, in Tristram...  
 So if you want to edit a DT1, don't forget your changes will  
 alter more than 1 map, so be carefull.
-
-  
 
 Another  
 usefull things to know : Diablo 2 is a 3D-isometric game,  
@@ -78,18 +64,10 @@ it's less obvious for some of them, like this fence, this
 is why I have added a green rule under it for this example  
 :
 
-  
-
 ![](/kb/img/d2mods.info/phrozenkeep/forum/content/tutimages/dt1doc_data/floor.gif)  
 ![](/kb/img/d2mods.info/phrozenkeep/forum/content/tutimages/dt1doc_data/fence_grid1.gif)
 
-  
-
-  
-
 **Concepts**
-
-  
 
 Since  
 we'll discuss the format of a DT1 in all its parts, you need  
@@ -217,7 +195,6 @@ to know more.
     RAW Floor blocks are in a 3d-isometric shape too, as you  
     can see).
 
-  
 -
 
     Just  
@@ -237,24 +214,18 @@ to know more.
     the gfx block of a Wall (variable amount). For Floors  
     it's almost the same, but not for the Walls.
 
-  
-
 **  
 File Format**
-
-  
 
 **  
 Structure of a DT1**
 
-  
-
 -   File  
     Header
-  
+
 -   X Tile  
     Headers
-  
+
 -   X Tile  
     Data, each one structured like that :  
 
@@ -264,42 +235,10 @@ Structure of a DT1**
     -   Y  
         Block Data
 
-  
-
-  
-
 **File Header** **(  
 276 bytes )**
 
-  
-
-  
-
 The file start as folow :
-
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
 
 | \# Bytes | Description |
 | --- | --- |
@@ -308,8 +247,6 @@ The file start as folow :
 | 260 | All zero (reserved for future use ?) |
 | 4   | Number of Tiles |
 | 4   | Pointer in file to Tile Headers (= 276) |
-
-  
 
 There  
 are some DT1 with the first 2 DWORD not equal to 7 and 6,  
@@ -320,124 +257,14 @@ completly. In any case, if a DT1 don't start with the DWORD
 7 and 6, obviously don't try to read the datas with the current  
 doc, as you'll get garbage.
 
-  
-
 After  
 this File Header follow a variable amount of Tile Headers.  
 Of course there is 1 Tile Header for each Tile there is in  
 the DT1 (4th data of the File Header). Each one of this header  
 is structured as follow :
 
-  
-
 **  
 Tile Header ( 96 bytes )**
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
 
 | \# Bytes | Description | Comment |
 | --- | --- | --- |
@@ -463,8 +290,6 @@ Tile Header ( 96 bytes )**
 | 4   | \# of Blocks |     |
 | 12  | Zeros | Unused |
 
-  
-
 **Direction**  
 : As far as I'm concerned, it's useless. I prefer to check  
 the **Orientation** instead of  
@@ -485,16 +310,12 @@ is used when the game need to draw the Roof : it tells in
 how many pixels to the up the sprite must be draw above the  
 floor.
 
-  
-
 **Sound  
 index**  
 : This is a number that is used when the player is walking  
 / running over a tile. There are differents sound : Wood,  
 Stone, Mud, Hearth... I don't know the relation between this  
 index and the wav files, as I have never check.
-
-  
 
 **Animated  
 ?**  
@@ -514,8 +335,6 @@ a duration of 1/10 of a second, like in this example :
 
 ![](/kb/img/d2mods.info/phrozenkeep/forum/content/tutimages/dt1doc_data/floor_animated.gif)  
 
-  
-
 **Height**  
 and **Width** : they are the  
 size of the 'box' where the final Tile fit whitin. They are  
@@ -528,8 +347,6 @@ to do with the coordinates system within. The Width and Height
 are just needed to create a bitmap in memory with enough space  
 (and usually you'll have more space that you really need).  
 The decoding process within this box will be discuss later.
-
-  
 
 >
 >
@@ -545,26 +362,10 @@ The decoding process within this box will be discuss later.
 >
 >
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-
 |     |     |     |
 | :---: | --- | :---: |
 | Smaller  <br>box, because  <br>only the left part is used |     | Normal box, because the<br><br>Width is from the left side |
 | ![](/kb/img/d2mods.info/phrozenkeep/forum/content/tutimages/dt1doc_data/box_small.gif) |     | ![](/kb/img/d2mods.info/phrozenkeep/forum/content/tutimages/dt1doc_data/box_big.gif) |
-
-  
 
 >
 >
@@ -577,8 +378,6 @@ The decoding process within this box will be discuss later.
 > is such a DT1 with some empty Tiles.
 >
 >
-
-  
 
 **Orientation**,  
 **Main Index** and **Sub-index**  
@@ -604,32 +403,26 @@ for a map you can 'only' use 64 \* 64 different tiles (4096)
 **per Orientation**, but that  
 should be enough ;)
 
-  
-
-  
 The **Orientation** is the data  
 to check to know the type of the Tile :
 
-  
-
-  
 -   Floors,  
     either static or animated, have an orientation of 0
 
 -   Special  
     Tiles have 10 or 11 (special tiles are Warps, TP location,  
     Map entries...)
-  
+
 -   Shadows  
     have 13
-  
+
 -   'Walls'  
     (better say 'Objects') that have the precedent Shadows have  
     an Orientation of 14
-  
+
 -   Roofs  
     have 15
-  
+
 -   Lower  
     walls have > 15
 
@@ -707,16 +500,10 @@ to check to know the type of the Tile :
     >
     > ![](/kb/img/d2mods.info/phrozenkeep/forum/content/tutimages/dt1doc_data/or_1_to_9.gif)
 
-  
-
-  
-
 **Rarity  
 / Frame Index** : As said before, this data is either  
 the Rarity of a Tile, or the Frame Index in the case of an  
 Animated Floor.
-
-  
 
 **Unknown  
 1**  
@@ -738,45 +525,36 @@ say the North of the Tile is the upper-right border, the order
 of the flags is from bottom to up and left to right, as follow  
 :
 
-  
-
 ![](/kb/img/d2mods.info/phrozenkeep/forum/content/tutimages/dt1doc_data/floor_flags.gif)
-
-  
 
 As  
 far as I know, here's the bits of such a Sub-tile flag, and  
 their meaning when I know them :
 
-  
-
-  
 -   bit  
     0 : block walk
-  
+
 -   bit  
     1 : block light + block Line Of Sight (the possibility to  
     see monsters)
 
 -   bit  
     2 : block jump (and teleport I believe)
-  
+
 -   bit  
     3 : block Player's walk but not Mercenary's walk (weird)
-  
+
 -   bit  
     4 : ?
-  
+
 -   bit  
     5 : block light only (not LOS)
-  
+
 -   bit  
     6 : ?
-  
+
 -   bit  
     7 : ?
-
-  
 
 **Block  
 Headers Pointer**  
@@ -786,15 +564,11 @@ Height of the Tile are both equal to zero (no Blocks), this
 pointer is unsignificant (in originals DT1 it point to the  
 Block Headers of the next valid Tile).
 
-  
-
 **Block  
 Datas Length**  
 : Length of the Block Headers + Block datas of this Tile (in  
 Bytes). If the Width and Height of the Tile are both equal  
 to zero (no Blocks), this length is set to zero.
-
-  
 
 **#  
 of Blocks**  
@@ -805,8 +579,6 @@ this number is set to zero.
 
 **  
 Coordinates systems**
-
-  
 
 Before  
 we look at the process of making a Tile with its Blocks, you  
@@ -820,9 +592,6 @@ to tells where to place it in the bitmap. So you must know
 where are theses coordinates in the bitmap, because it's dependant  
 of the type of the Tile.
 
-  
-
-  
 -   **Floors  
     and Roofs system**  
     :  
@@ -831,7 +600,6 @@ of the type of the Tile.
     >
     > ![](/kb/img/d2mods.info/phrozenkeep/forum/content/tutimages/dt1doc_data/system1.gif)
 
-  
 -
 
     >
@@ -846,11 +614,9 @@ of the type of the Tile.
     >
     >
 
-  
 -   **Upper  
     Walls, Shadows and Special Tiles system**  
     :
-  
 
 >
 >
@@ -874,7 +640,6 @@ of the type of the Tile.
 >
 >
 
-  
 -   **Lower  
     Walls system** :  
 
@@ -918,88 +683,23 @@ of the type of the Tile.
     >
     >
 
-  
-
-  
-
 After  
 all the Tile Headers come the Tile Datas. Each one of this  
 Tile Data is structure like that :
 
-  
-
-  
 -   a variable  
     amount of Block Headers
 
 -   the  
     same amount of Block Datas
-  
-
-  
 
 A  
 Block Header contain all the informations of a Block, while  
 the Block Data is the encoded pixels of this Block. Each one  
 of the Block Header is structured as follow :
 
-  
-
 **  
 Block Header ( 20 bytes )**
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
 
 | \# Bytes | Description | Comment |
 | --- | --- | --- |
@@ -1013,16 +713,12 @@ Block Header ( 20 bytes )**
 | 2   | Zeros | Unused |
 | 4   | File offset | Offset in file of the encoding data |
 
-  
-
 **X  
 position**  
 and **Y position** : They  
 are the coordinates of the upper / left corner of the Block,  
 according to the Coordinates System of the Tile, as explain  
 before.
-
-  
 
 **Grid  
 X**  
@@ -1038,12 +734,8 @@ if you want (but keep that in mind).
 Block (RAW format, no transparency), else a regular one (RLE  
 fomat, 32 by 32 pixels).
 
-  
-
 **Length**  
 : Length in bytes of the encoding data of this Block.
-
-  
 
 **File  
 offset**  
@@ -1051,7 +743,6 @@ offset**
 Headers Pointer** of the Tile to have the position  
 in the file of the encoding data of this Block.
 
-  
 After all theses Block Headers come the Block Datas. Each  
 one of this encoding data must be decode in accordance of  
 the **Format** code of the Block.  
@@ -1060,21 +751,14 @@ palette for each act. Here are 2 (lame) samples of code in
 C language that show how to decode the 2 possible types of  
 Blocks :
 
-  
-
 **  
 3D-isometric Block** :
 
-  
-
-  
 1st line : draw a line of 4 pixels
 
 2nd line : draw a line of 8 pixels  
 3rd line : draw a line of 12 pixels  
 and so on...  
-
-  
 
 void draw\_block\_isometric (BITMAP \* dst, int x0, int y0, const UBYTE \* data, int length)
 {
@@ -1107,16 +791,11 @@ void draw\_block\_isometric (BITMAP \* dst, int x0, int y0, const UBYTE \* data,
 **RLE  
 Block** :
 
-  
-
 1st  
 byte is pixels to 'jump', 2nd is number of 'solid' pixels,  
 followed by the pixel color indexes.  
 when 1st and 2nd bytes are 0 and 0, next line.
 
-  
-
-  
 void draw\_block\_normal (BITMAP \* dst, int x0, int y0, const UBYTE \* data, int length)
 {
    UBYTE \* ptr = data, b1, b2;
@@ -1149,28 +828,19 @@ b2--;
    }
 }  
 
-  
-
 **Rarity  
 of Tiles**
-
-  
 
 A  
 harder topic now. I'll assume you have already used my DS1  
 Editor (a DS1 is a map of the game). If it is not the case,  
 you should leave this topic for now, and come back later.
 
-  
-
-  
 So, what identify a Tile is 3 indexes : Orientation, Main-index  
 and Sub-index. And you should already know that when some  
 Tiles have the same 3 indexes, they are a part of the same  
 **random set of Tiles**. Now,  
 how the game handle this ?
-
-  
 
 For  
 instance, in Tristram, there are 4 Floor Tiles which are looking  
@@ -1192,8 +862,6 @@ each set to 1. So, we have 2 Floors, with the same Rarity,
 from the same random set. If you test this map, you'll see  
 the 2 Floors, and they'll share equally the area.
 
-  
-
 Now,  
 set the first Floor Rarity to 1 and the second to 10. After  
 remaking the DT1 and testing with the same map... the 1st  
@@ -1203,14 +871,10 @@ Floor Rarity to 2 and the second to 4, you'll have the first
 Tile appear 2 / 6 of the times, and the second 4 / 6 of the  
 times.
 
-  
-
 Now,  
 some special cases. What happens if in a Tile Random Set some  
 tiles have a Rarity of 0 ? All to 0 ? Same random set in 2  
 different DT1 ? Some 0 in 1 DT1 and the other ?
-
-  
 
 Let's  
 say we have 2 DT1, whith Tiles of the same random set in both.  
@@ -1231,18 +895,11 @@ appear according to its Rarity, as long as it is not zero
 (it's just normal to not take a Tile if it have 0 luck to  
 appear after all).
 
-  
-
 Maybe  
 an exemple will help to fix how it works :
 
-  
-
 ![](/kb/img/d2mods.info/phrozenkeep/forum/content/tutimages/dt1doc_data/random_tiles.gif)
 
-  
-
-  
 This image show all the Tiles of 1 random set, used by **facade.ds1**,  
 the Monastery. All these Floors are part of the same random  
 set because they all have the same Orientation / main index  
@@ -1260,14 +917,8 @@ Tile in the bottom-left corner of the image, because it have
 a Rarity of 0. It surely won't be this exact amount of Tiles,  
 because of some randomness, but you've got the idea.
 
-  
-
-  
-
 **Last  
 words**
-
-  
 
 This  
 doc is not yet complete, as there are still some unknown datas  

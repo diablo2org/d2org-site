@@ -13,42 +13,33 @@ originalUrl: 'https://d2mods.info/forum/kb/viewarticle?a=353'
 ---
 ItemStatCost.txt Fileguide
 
-Test
-
+**Test**  
 This is based on no other fileguide because the differences between the 1.09 and 1.10 ItemStatCost.txt are extreme.
 
-Stat
-
+**Stat**  
 the name of the stat
 
-ID
-
+**ID**  
 the ID of the stat
 
-Send Other
-
+**Send Other**  
 This is most likely used to determine if this stat is sent to other users when in multiplayer. Only those stats are sent that are important for graphics (faster attack / cast / gethit rate). For some reason, dex and strength are sent, too.
 
-Signed
-
+**Signed**  
 Is the stat signed or not? -> Can this stat be negative or not?
 
-Sendbits
-
+**Sendbits**  
 Number of bits used to send this value between client and server.
 
-Send Param
-
+**Send Param**  
 Has something to do with client / server things, too.
 
-UpdateAnimateRate
-
+**UpdateAnimateRate**  
 ???
 
 Probably a boolean that tells the client to update the characters animation rate.
 
-Saved
-
+**Saved**  
 Is the stat saved when the character is saved?
 
 Other stats are saved in the item saves.
@@ -71,20 +62,16 @@ CSvParam
 
 Has something to do with saved parameters for some stats
 
-fCallback
-
+**fCallback**  
 ???
 
-fMin
-
+**fMin**  
 ???
 
-MinAccr
-
+**MinAccr**  
 ???
 
-Encode
-
+**Encode**  
 related to how the thing is encoded
 
 Add, Multiply, Divide
@@ -95,8 +82,7 @@ the formula is:
 
 price = base\_price \* (1+ stat\_value \* (\[multiply\]/\[divide\])) + \[add\]
 
-with
-
+**with**  
 base\_price = base item price (from the other .txt files)
 
 stat\_value = amount of the stat that is on the item (for +8 strength this would be 8...)
@@ -107,8 +93,7 @@ divide cannot be changed for some reason, better leave it at 1024.
 
 other files may modify the price, too (magicprefix / suffix has add / multiply / divide fields, npc.txt says something about sell / buy multipliers, ...).
 
-ValShift
-
+**ValShift**  
 Value is shifted by that. 1 would mean that its shifted by 1 which is a multiplication by 2. ValShift 2 is a multiplication by 4 and ValShift 8 equals a multiplication by 256 (2^8=256). This is done because, for example, hitpoints are internally calculated with 1/256 step precision.
 
 1.09-Save Bits, 1.09-Save Add
@@ -145,8 +130,7 @@ keepzero
 
 Boolean, can the stat go negative? (1 = cannot be negative)
 
-op
-
+**op**  
 This is the number of the operator used to calculate the effects of the item stat.
 
 Known numbers and effects:
@@ -175,22 +159,19 @@ See op
 
 op base
 
-See op
-
+**See op**  
 op stat1 - op stat3
 
 The op stats. See op
 
-direct
-
+**direct**  
 If the stat adds to another stat, too, this is set to 1. For example, when equipping an item with +30 mana, your maximum mana increases as well.
 
 maxstat
 
 The max stat the stat adds to (when direct is set to 1)
 
-itemspecific
-
+**itemspecific**  
 Is this stat specific to one item only (and does therefore only affect this item)?
 
 you should be able to stop the second weapon from increasing your first weapons attack speed this way
@@ -241,12 +222,10 @@ Function that is executed on itemevent1. Functions that are used are:
 
 31 : reanimate slain monster
 
-descpriority
-
+**descpriority**  
 priority of the description on the item. The higher this, the earlier will the stat be displayed on your item. Not sure, though
 
-descfunc
-
+**descfunc**  
 Function used to display the stat. There are numerous ones, I didnt yet test all yet.
 
 some values and what they display (descval used: 1, see below):
@@ -301,8 +280,7 @@ descstr2
 
 Second display string (for per level attributes for example)
 
-dgrp
-
+**dgrp**  
 Display group. If all stats of a display group have the same stats, they will be displayed together.
 
 dgrpfunc
@@ -325,8 +303,7 @@ dgrpstr2
 
 Same as descstr2, but for display groups
 
-stuff
-
+**stuff**  
 ???
 
 \*eol

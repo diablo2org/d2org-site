@@ -66,7 +66,152 @@ function sentenceCase(text: string) {
   });
 }
 
-const tally = { titles: 0, bylines: 0, callouts: 0, headings: 0, files: 0 };
+const tally = { titles: 0, bylines: 0, callouts: 0, headings: 0, joined: 0, code: 0, terms: 0, files: 0 };
+
+// Lines that are code in old articles that never marked them: batch commands, hex, assembly,
+// "column - value" settings and "code -> meaning" tables.
+const CODE_LINE = [
+  /^@?(?:echo|cls|pause|copy|del|rename|ren|move|md|mkdir|cd|set|goto|call|start|xcopy|mpq2k)\b/,
+  /^[A-Za-z]\w* - [\w./%+*-]+$/,
+  /^\w+ -> .{1,40}$/,
+  /^(?:[0-9A-Fa-f]{2}\s+){3,}[0-9A-Fa-f]{2}\b/,
+  /^(?:[0-9A-Fa-f]{6,8}[: ]\s*)?(?:mov|push|pop|call|jmp|je|jne|jz|jnz|cmp|add|sub|xor|lea|ret|test|nop|inc|dec|and|or|shl|shr|imul)\s/i,
+];
+/** A short label on its own line, like a column name in a file guide. */
+const TERM = /^[A-Za-z][\w()*/.-]*(?: [\w()*/.-]+){0,2}$/;
+/** "column=value" settings lines, which are never wrapped prose. */
+const ASSIGN = /^[\w,.[\]\\]+\s*=/;
+const KEY_VALUE = /^([A-Za-z][\w ]{0,24}?):\s+(\S.*)$/;
+
+const lineText = (l: string) => l.replace(/(\s{2,}|\\)$/, "").trim();
+const unescape = (s: string) => s.replace(/\\([\\`*_{}[\]()#+\-.!|>~<])/g, "$1");
+const special = (b: string) => /^(#|```|~~~|>|\||!\[|[-*+] |\d+\. |<| {4})/.test(b);
+const isCode = (b: string) => !special(b) && b.split("\n").every((l) => CODE_LINE.some((r) => r.test(unescape(lineText(l)))));
+const fence = (bs: string[]) => ["```", ...bs.flatMap((b) => b.split("\n").map((l) => unescape(lineText(l)))), "```"].join("\n");
+
+function toBlocks(body: string) {
+  const blocks: string[] = [];
+  let cur: string[] = [];
+  let inFence = false;
+  for (const line of body.split("\n")) {
+    if (/^\s*(```|~~~)/.test(line)) inFence = !inFence;
+    if (!inFence && !line.trim()) {
+      if (cur.length) blocks.push(cur.join("\n"));
+      cur = [];
+    } else cur.push(line);
+  }
+  if (cur.length) blocks.push(cur.join("\n"));
+  return blocks;
+}
+
+const lastLine = (s: string) => s.split("\n").pop()!;
+const codeish = (s: string) => CODE_LINE.some((r) => r.test(unescape(lineText(s))));
+/** Lines that stand alone in reference articles: settings, "column: text", "column - text", "a -> b" and bare column names. */
+const standalone = (s: string) =>
+  codeish(s) || KEY_VALUE.test(s) || ASSIGN.test(s) || /^\w[\w%]* - /.test(s) || s.includes(" -> ") || (TERM.test(s) && s.length <= 32);
+
+/** Whether paragraph b continues a sentence that was hard-wrapped at the end of prev. */
+function wraps(prev: string, b: string) {
+  const last = lastLine(prev);
+  return (
+    !special(prev) && !special(b) && prev.length >= 40 &&
+    !/(\s{2,}|\\)$/.test(last) && // an intended line break
+    !/[.!?:;)"'*]$/.test(last.trim()) &&
+    !/ = /.test(last) && // a formula or setting, not prose
+    /^[a-z]/.test(b) &&
+    !standalone(lineText(last)) && !standalone(lineText(b.split("\n")[0]))
+  );
+}
+
+/** Fixes articles whose HTML put every line in its own paragraph and never marked code as code. */
+function reflow(body: string) {
+  let blocks = toBlocks(body);
+
+  // "--- cut below ---" ... "--- stop cutting above ---" wraps a script.
+  const cut: string[] = [];
+  for (let i = 0; i < blocks.length; i++) {
+    if (/^\\?-{2,}\s*cut below\s*-*$/i.test(blocks[i])) {
+      const end = blocks.findIndex((b, j) => j > i && /^\\?-{2,}\s*stop cutting/i.test(b));
+      if (end > i) {
+        cut.push(fence(blocks.slice(i + 1, end)));
+        tally.code++;
+        i = end;
+        continue;
+      }
+    }
+    cut.push(blocks[i]);
+  }
+  blocks = cut;
+
+  // "--- commands ---" dividers are section headings.
+  blocks = blocks.map((b) => {
+    const m = b.match(/^\\?-{3,}\s*(.+?)\s*-{3,}$/);
+    if (!m || b.includes("\n")) return b;
+    tally.headings++;
+    const t = unescape(m[1]).replace(/^\w/, (c) => c.toUpperCase());
+    return `### ${t}`;
+  });
+
+  // Runs of three or more code lines.
+  const coded: string[] = [];
+  for (let i = 0; i < blocks.length; ) {
+    let j = i;
+    // A short lowercase line between two code lines is a wrapped command.
+    const continues = (k: number) => /^[a-z]/.test(blocks[k]) && blocks[k].length < 80 && !special(blocks[k]) && k > i && isCode(blocks[k - 1]) && isCode(blocks[k + 1] ?? "");
+    while (j < blocks.length && (isCode(blocks[j]) || continues(j))) j++;
+    const lines = blocks.slice(i, j).reduce((t, b) => t + b.split("\n").length, 0);
+    if (j > i && lines >= 3) {
+      coded.push(fence(blocks.slice(i, j)));
+      tally.code++;
+      i = j;
+    } else {
+      coded.push(blocks[i]);
+      i++;
+    }
+  }
+  blocks = coded;
+
+  // Sentences hard-wrapped into separate paragraphs.
+  const joined: string[] = [];
+  for (const b of blocks) {
+    const prev = joined[joined.length - 1];
+    if (prev && wraps(prev, b)) {
+      joined[joined.length - 1] = `${lineText(prev)} ${b}`;
+      tally.joined++;
+    } else joined.push(b);
+  }
+  blocks = joined;
+
+  // "column: description" runs, as in the old file guides.
+  for (let i = 0; i < blocks.length; ) {
+    let j = i;
+    while (j < blocks.length && !blocks[j].includes("\n") && KEY_VALUE.test(blocks[j]) && !special(blocks[j])) j++;
+    if (j - i >= 4) {
+      for (let k = i; k < j; k++) blocks[k] = blocks[k].replace(KEY_VALUE, "**$1:** $2");
+      tally.terms += j - i;
+    }
+    i = Math.max(j, i + 1);
+  }
+
+  // A column name on its own line followed by its description, when the article does it throughout.
+  const pair = (i: number) =>
+    TERM.test(blocks[i]) && blocks[i].length <= 32 && blocks[i + 1] && !special(blocks[i + 1]) && !TERM.test(blocks[i + 1]) &&
+    // The description reads as one: lowercase, a full sentence, or the guide's own "???".
+    /^[a-z]|[.?!]$|^\?+$/.test(lineText(blocks[i + 1]));
+  if (blocks.filter((_, i) => pair(i)).length >= 4) {
+    const merged: string[] = [];
+    for (let i = 0; i < blocks.length; i++) {
+      if (pair(i)) {
+        merged.push(`**${unescape(blocks[i])}**  \n${blocks[i + 1]}`);
+        tally.terms++;
+        i++;
+      } else merged.push(blocks[i]);
+    }
+    blocks = merged;
+  }
+
+  return `${blocks.join("\n\n")}\n`;
+}
 
 for (const f of files) {
   const raw = fs.readFileSync(f, "utf8");
@@ -118,6 +263,12 @@ for (const f of files) {
     out.push(line);
   }
   body = out.join("\n").replace(/\n{3,}/g, "\n\n").replace(/^\n+/, "");
+  // Each pass can expose more to fix, so run until nothing changes.
+  for (let pass = 0; pass < 5; pass++) {
+    const next = reflow(body);
+    if (next === body) break;
+    body = next;
+  }
 
   if (body !== content) {
     tally.files++;

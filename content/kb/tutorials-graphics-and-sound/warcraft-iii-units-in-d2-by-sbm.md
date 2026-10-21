@@ -67,9 +67,7 @@ this attributes of the unit. You can also increase or decrease the
 distance to zoom out or to zoom in. The unit's size should not be  
 bigger than it should become in Diablo2.
 
-2.) Now choose the animation you want to get. We need at last the
-
-following modes:  
+2.) Now choose the animation you want to get. We need at last the following modes:  
 ONE Attack Mode Animation  
 ONE Death Mode Animation  
 ONE Stand Mode Animation  

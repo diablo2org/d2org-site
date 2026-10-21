@@ -11,59 +11,55 @@ open skilldesc.txt and find salvation.
 
 Scroll over to the column labled descline1. and from their on, enter what is listed below (i'll explain it all)
 
+```
 descline1 - 2
-
 desctexta1 - StrSkill88
-
 desctextb1 - StrSkill23
-
 desccalca1 - ln34
+```
 
 (this is for manarecovery bonus)
 
+```
 descline2 - 2
-
 desctexta2 - StrSkill31
-
 desctextb2 - StrSkill23
-
 desccalca2 - ln34
+```
 
 (this is for the defense bonus)
 
+```
 descline3 - 2
-
 desctexta3 - StrSkill54
-
 desctextb3 - StrSkill23
-
 desccalca3 - dm34
+```
 
 (this is for the resist-all bonus)
 
+```
 descline4 - 2
-
 desctexta4 - StrSkill22
-
 desctextb4 - StrSkill23
-
 desccalca4 - ln34
+```
 
 (this is for the attack% bonus)
 
+```
 descline5 - 4
-
 desctexta5 - StrSkill50
-
 desccalca5 - ln34/2
+```
 
 (this is for heals+25)
 
+```
 descline6 - 19
-
 desctexta6 - StrSkill18
-
 desccalca6 - ln12
+```
 
 (this is for the radius)
 
@@ -91,9 +87,7 @@ Now in which order desctexta and desctextb appear depends on descline.
 
 Desccalc - This calculates what # to display beside the stat, should be the EXACT SAME as the one used in skills.txt for that property.
 
-now, you would use both Desccalc's for skills with chances and such,
-
-eg/ a passive skill that grants you 5% chance to cast level 10 nova when hit (where they can both increase by enhancing the skill)
+now, you would use both Desccalc's for skills with chances and such, eg/ a passive skill that grants you 5% chance to cast level 10 nova when hit (where they can both increase by enhancing the skill)
 
 EDIT: You will most likely have to come up with new formulas to display what you want, and re-arrange the parameters in skills.txt. For a list of the variables you can use in your formulas, check skillcalc.txt
 

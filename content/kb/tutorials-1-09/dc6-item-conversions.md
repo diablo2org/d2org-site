@@ -22,7 +22,6 @@ It's a MS-DOS based program that should work on every machines.
 
 When you get ready, hang on to the next Section : Mastering the Tools.
 
-  
 [Return to Top](#up)**
 
 ---
@@ -50,7 +49,6 @@ Now you have all the forementioned tools, we gonna take a look at the functions 
 >
 > The easy one :) Paul has done a good job on this one. Without getting into the details, [there is a little bat file](http://dynamic6.gamespy.com/~phrozenkeep/files/tutorialfiles.zip) that will simplify your life. Download it, I'll use it from now.
 
-  
 [Return to Top](#up)**
 
 ---

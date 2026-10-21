@@ -23,11 +23,13 @@ Right, look for the rows that say chipped gems, flawed gems, etc... Delete every
 
 Now, put 'gem03' without quotes in the first drop column for chipped gems, and give it a probability of 1. Do this for all the grades.
 
-gem03 - chipped  
-gem06 - flawed  
-gem09 - normal  
-gem12 - flawless  
+```
+gem03 - chipped
+gem06 - flawed
+gem09 - normal
+gem12 - flawless
 gem15 - perfect
+```
 
 Now these five codes will work ANYWHERE in treasureclassex.txt. You could do things like forcing Duriel to always drop four normal gems, as well as his usual drop and a TP scroll. And it will count ALL your gems so long as you don't typo it, and you have set your gems levels to 3, 6, 9, 12, and 15.
 

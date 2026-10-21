@@ -22,14 +22,10 @@ It’s the VK Middle Earth Mod, based entirely on the Middle Earth World.
 
 Ever heard of it?
 
-  
-
 During a slow cold day at the keep I was searching for a good mod to play, something that seemed balanced, fun, and challenging.  
 A mod that caught my eye was this one.  
 Upon doing some research I discovered this mod has been around sense the days of Pole Arm Barbs, capless Strafe, and useful Telekinesis.  
 It's had a lot of time to develop, and it shows.
-
-  
 
 First lets talk general.  
 They got rid of that dusty old Cain.  
@@ -52,8 +48,6 @@ But there are no new skills to be heard of, something that is important in mods 
 Some skills have been slightly altered to look a wee bit different, for example the necro summons got a dash of VK paint now get beat down in shades of yellow instead of white.  
 But if you're looking for new and dazzling skills, you've come to the wrong place.  
 
-  
-
 Items are the next thing in the mod.  
 Although you'll be hard pressed to find new item leaking out and grabbing you, you'll find new items in a different light, as exceptional and elite versions of the item. A method I liked.  
 Instead of the same boring Bone knife, you'll get a Bone knife with good, old fashion Diablo 1 Graphics.  
@@ -67,8 +61,6 @@ it doesn't (that I know of).
 The quality of Magic and rare item is also up. Shopping is actually something I did, and rares were commonly good when I found them.  
 Accident? I think not.  
 
-  
-
 But as far as mods go, this one wasn't that addictive.  
 Its has a lot of really great features and good balance, but something about it just screams 'been there, done that.'
 
@@ -76,15 +68,11 @@ The new and improved story line is a little interesting to someone that doesn't 
 I've always played Diablo II on a less chat more splat bases; this mod is a real system shock to someone like me.  
 So power gamers should just stick to Zy-El and BG Trappers.  
 
-  
-
 The mod also lacks what a lot of mods nowadays need, pretty interfaces and new maps.  
 Before I go into a rant about these, keep in mind this mod was here before the days of  
 shiny new interface graphics, so should I hold it against them?  
 For the sake of fair reviewing yes, they lack it and I miss them.  
 There is also a lack of new monster graphics which makes this mod less favorable to the spoiled mod players of today.
-
-  
 
 Overall, this mod is a great mod with a few, easy to fix problems having to deal with  
 overall entertainment value.  
@@ -92,13 +80,6 @@ Balance and playability with a nice item range that works. Well done and it does
 
 Agree? Disagree? Let the world know by [clicking here!](http://www.d2mods.com/forum/viewtopic.php?t=7324)
 
-  
-
-  
-
 ---
 
-  
-
-  
 Anyone wishing to check out the Middle Earth mod can do so by visiting the official website at [http://vkmods.d2mods.com](http://vkmods.d2mods.com).

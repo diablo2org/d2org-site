@@ -63,7 +63,7 @@ from page to page. I will describe the ways to do both SINGLE-PAGE and
 MULTI-PAGE scrolls…plus an extra lesson on ROLLED SCROLLS (which are useful if  
 you will be having vendors sell clue scrolls).
 
-\-------------------------------------------------------------------
+### -
 
 SINGLE-PAGE SCROLLS:
 
@@ -87,8 +87,7 @@ scrolls. You might be able to use some existing item types already in the game,
 but in the interests of not causing any game errors or confusion, let’s just  
 create a new one, shall we?
 
-Open itemtypes.txt
-
+**Open itemtypes.txt**  
 Copy the entire row for the “Skull” item type, which  
 is the last row in the unmodded version of the itemtypes file. It is row number  
 105 if you are using Microsoft Excel.
@@ -122,8 +121,7 @@ You are now done with this file. Save it and close the file.
 
 2) misc.txt
 
-Open misc.txt.
-
+**Open misc.txt.**  
 Once again, we will copy a row and paste it at the end of  
 the file (to save time and cut down on errors), as we did in itemtypes.txt,  
 then we will change certain columns.
@@ -381,12 +379,10 @@ empty Item column and set the Prob value in the adjacent column to whatever you
 like to make it drop as often or as rarely as you like in relation to the other  
 items being dropped by that TC row.
 
-2) You can go into monstats.txt and enter Clue Scrolls
-
-to the TreasureClass rows for various monsters so that they will drop the  
+2) You can go into monstats.txt and enter Clue Scrolls to the TreasureClass rows for various monsters so that they will drop the  
 scrolls now instead of what they used to drop.
 
-\--------------------------------------------------------------------
+### -
 
 MULTI-PAGE SCROLLS:
 
@@ -422,9 +418,7 @@ page 1, Pindleskin page 2, and Pindleskin page 3. Again, this
 column is for reference only. Name the rows according to what you want to keep  
 things straight and know what the rows are for.
 
-Change column M (code) to y00, y01, and y02
-
-respectively for the three new rows. Just to keep from confusing you, I wanted  
+Change column M (code) to y00, y01, and y02 respectively for the three new rows. Just to keep from confusing you, I wanted  
 to give these multi-page scrolls a slight different item code name from the  
 ones I suggested for the single-page scrolls.
 
@@ -476,8 +470,7 @@ You must slay
 For the second page, you add the string y01 and the  
 descriptor might be:
 
-which will
-
+**which will**  
 of Creation,
 
 gain the Orb
@@ -501,8 +494,7 @@ Pindleskin to
 
 (right click to make)
 
-gain the Orb
-
+**gain the Orb**  
 of Creation,
 
 which will
@@ -513,8 +505,7 @@ allow you to
 
 make normal
 
-items into Sets
-
+**items into Sets**  
 The inelegant part of this is that you will always see the  
 next page right away, with the words “right click to make” in between the two  
 blocks of text. It doesn’t look fantastic, but it is quite readable and players  
@@ -527,7 +518,7 @@ single-page scrolls. But the item code you would put for a multi-page scroll in
 an Item column for any treasure class row would be the item code for the first  
 page of that multi-page scroll only.
 
-\--------------------------------------------------------------
+### -
 
 ROLLED SCROLLS:
 
@@ -657,8 +648,7 @@ more quickly
 
 end the battle
 
-use flame to
-
+**use flame to**  
 This guarantees that when the player puts the cursor over  
 the rolled scroll, he or she will only see the first two “pages,” telling them  
 it’s a rolled scroll and that it will have a clue about monsters. The player  

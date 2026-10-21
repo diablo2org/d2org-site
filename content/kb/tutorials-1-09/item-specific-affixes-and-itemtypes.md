@@ -26,11 +26,11 @@ Enter a name in the first column, for this example we will call it RUNSPEED\_001
 
 next enter 1 in spawnable in order to allow the game to use this affix (0 would disable it and will not allow you to use it in the game)
 
+```
 set rare to 1 in order to allow this affix to spawn on rare items.
-
 set level to lets say 15 (the level at which this affix can begin to appear)
-
 set levelreq to 5 (this is the level your character will have to reach in order to equip a item that spawns with this affix (as long as the items level req is lower then this)
+```
 
 (HINT: if you want to limit a affix to not spawn after a specific level use the MaxLevel column)
 
@@ -56,9 +56,7 @@ Save the File.
 Now open up Armor.txt in your spreadsheet.  
 We will now make the game spawn lvl15+ leather boots with our new affix.
 
-Go down to the leather boots row and scroll over to the 'auto prefix' column
-
-now remember I told you to write down the group # before?  
+Go down to the leather boots row and scroll over to the 'auto prefix' column now remember I told you to write down the group # before?  
 Enter 308 into the auto prefix cell.
 
 Save the file.

@@ -139,9 +139,7 @@ Copy to this location (from the directory that holds your modified files) 
 
 data\\global\\excel\\Levels.txt   
 data\\global\\excel\\LvlTypes.txt (you don’t need to copy this file since we haven’t modified this)   
-data\\global\\excel\\LvlPrest.txt 
-
-data\\global\\tiles\\ACT1\\OUTDOORS\\bivouac.ds1 (remember to copy this file from your win ds1 editor directory)   
+data\\global\\excel\\LvlPrest.txt data\\global\\tiles\\ACT1\\OUTDOORS\\bivouac.ds1 (remember to copy this file from your win ds1 editor directory)   
 data\\global\\tiles\\ACT1\\CAVES\\denent.ds1 (you don’t need to copy this file since we haven’t modified this) 
 
 One Last Thing   

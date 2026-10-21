@@ -92,5 +92,4 @@ Anyways, that's my mishmash of ideas. It is 2 am, must now get to bed. Good nigh
 
 ---
 
-  
 Feel free to discuss this concept in the [designated thread](http://phrozenkeep.it-point.com/forum/viewtopic.php?t=20485).

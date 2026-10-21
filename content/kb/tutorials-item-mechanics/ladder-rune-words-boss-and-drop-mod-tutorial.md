@@ -14,14 +14,12 @@ Realm Rune-Word, Drop and Boss Mod Tutorial
 
 Introduction
 
-  
 This tutorial is meant for absolute beginners, many newbies seam to have their goal set at one of these three things, yet it seams that many of them experience great trouble doing so, no more. This tutorial will work on 1.10, 1.110 and 1.11b and probably all future versions.
 
-\--------------------------------------------------------------------------------
+### -
 
 Step One - Setting up the Mod-folder.
 
-  
 This section will teach you how to make a new mod folder to use for your mod, if you already know this you can just as well skip this step.
 
 First of all, make a new folder in your Diablo II directory, inside this directory you create another folder. So that the path looks like this: C:\\Program Files\\Diablo II\\TestMod\\
@@ -30,28 +28,24 @@ Now, add additional folders until it looks like this: C:\\Program Files\\Diablo 
 
 In the end, it the folder structure must look like this in explorer:  
 
-  
 C:\\ \_
-  
+
       Program Files \_
-  
+
                       Diablo II \_
-  
+
                                   TestMod \_
 
-  
                                             Data \_
-  
-                                                   Global \_
-  
-                                                            Excel
-  
 
-\--------------------------------------------------------------------------------
+                                                   Global \_
+
+                                                            Excel
+
+### -
 
 Step Two - Setting up the Mod-Shortcut.
 
-  
 This section will teach you how to set up a mod shortcut, to run your mod without changing the original game, if you already know how to do this you can skip to step three.
 
 First, copy your Diablo II shortcut on the desktop and rename it to TestMod, then right click and select properties. Two fields are of interest to us, change them to what I've changed them here:
@@ -63,22 +57,20 @@ The first executes Diablo II inside your mod folder, and the second one tells th
 
 Thats it, the game is set to use your new directory as the primary data source.
 
-\--------------------------------------------------------------------------------
+### -
 
 Step Three - Getting the files from the MPQ.
 
-  
 This section will teach you how to extract the needed files from the MPQ, if you know this already, you guessed it, skip to step four.
 
 First of all, get [MPQView](https://d2mods.info/forum/dload.php?action=file&file_id=113) from our file center. This is the fastest and easiest to use MPQ Extractor out there. Next, [grab the most recent data file](https://d2mods.info/forum/dload.php?action=file&file_id=1329) (remember, Blizzard doesn't remove files from the MPQs, so a data file for 1.11b is useable with all versions of the game, be it 1.00 or whatever).
 
 Extract MPQView and the data file, then run the program (MPQVIEW), first click FILE > OPEN DATAFILE and select the data file (not the MPQ, the txt file you downloaded before). Then, click on the large OPEN ARCHIVE button, and select PATCH\_D2.MPQ.
 
-\--------------------------------------------------------------------------------
+### -
 
 Step Four - Enabling Ladder Runewords.
 
-  
 This section will teach you how to enable the ladder runewords.
 
 You should have Patch\_D2.mpq open in MPQView, if not look at step four. scroll downward in the file list, until you find data\\global\\excel\\runes.txt. Extract this file to your own EXCEL folder (C:\\Program Files\\Diablo II\\TestMod\\Data\\Global\\Excel\\). Now open the extracted Runes.txt with a spreadsheet program, such as Microsoft Excel or Open Office Calc, if you don't have either of these spreadsheets, you can use [AFJ666's Sheet Editor](https://d2mods.info/forum/dload.php?action=file&file_id=1054) or [D2Excel](https://d2mods.info/forum/dload.php?action=file&file_id=145).
@@ -87,11 +79,10 @@ After having the text files open infront of you, look at all those runewords tha
 
 Save the text file as Tab-Delimited Text in Excel (press OK on both messages it will display!), then run the game from your new shortcut. You will see the game creates new bin files inside your mod folders excel directory.
 
-\--------------------------------------------------------------------------------
+### -
 
 Step Five - Making a Drop Mod
 
-  
 This section will teach you how to make a simple drop mod.
 
 First extract the following two files (the process of extracting is explained in step four) into your mods EXCEL folder. The files to extract are UniqueItems.txt and TreasureClassEx.txt.
@@ -102,11 +93,10 @@ Next, open TreasureClassEx.txt, in here, set the UNIQUE, SET, RARE and MAGIC col
 
 Now its time for the test, run the game from your new shortcut and go kill some monsters ![icon\_wink.gif](/kb/img/d2mods.info/forum/images/smiles/icon_wink.gif)
 
-\--------------------------------------------------------------------------------
+### -
 
 Step Six - Making a Boss Mod
 
-  
 This section will teach you how to make a simple boss mod.
 
 First extract the following two files (the process of extracting is explained in step four) into your mods EXCEL folder. The files to extract are MonStats.txt and Levels.txt.
@@ -117,6 +107,6 @@ Next, open Levels.txt, for now we will only alter the Blood Moor, you will be ab
 
 Now test your skills again, launch the game from your new shortcut and kill some prime evils this time ![icon\_wink.gif](/kb/img/d2mods.info/forum/images/smiles/icon_wink.gif)
 
-\--------------------------------------------------------------------------------
+### -
 
 Thats all for this tutorial, this should be enough to get you started.

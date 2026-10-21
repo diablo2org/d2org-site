@@ -385,7 +385,6 @@ MonsterOK: Boolean, unknown.
 18 = Zoo Keeper (nothing)
 ```
 
-  
 **_Per ObjMode Settings_**
 
 > **Note:** The following columns come in groups of eight, each of them controls certain aspects of the object individually for each mode the object uses.

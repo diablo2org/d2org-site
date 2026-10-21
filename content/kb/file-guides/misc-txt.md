@@ -237,7 +237,6 @@ Malah
 Drehya (Anya)
 ```
 
-  
 **vendorMin - vendorMax** act as minimum \\ maximum amount of items of this type the vendor can sell. Do not increase these values too much or you will risk to crash the game if it spawns too many items.
 
 **vendorMagicMin - vendorMagicMax** have the same purposes as the ones above, but for the magical items

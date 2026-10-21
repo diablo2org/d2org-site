@@ -137,8 +137,7 @@ javazon can only throw her javelin or use it in melee but not
 both.  
 Demon - Blank
 
-Save Monstats.txt
-
+**Save Monstats.txt**  
 Open Monstats2.txt and copy the cr\_archer1 line to the bottom of the file and change the name field to enemyzon1.
 
 A quick note about the BaseW field. This field tells the game which animations to use from the following folders for this monster. For a complete list of the different base weapon types to use in this field I refer you to the Animation Conversion Extended Tutorial.
@@ -220,18 +219,15 @@ Save Monstats2.txt
 Open Levels.txt  
 Replace the fallen1 with enemyzon1 in the Wilderness 1.
 
-Save Levels.txt
-
+**Save Levels.txt**  
 Open Montype.txt  
 Add a row to this file and in the Type field put enemychara. don't forget to put a 0 in the EOL field.
 
-Save Montype.txt
-
+**Save Montype.txt**  
 Open Patchstring.tbl  
 Give your enemyzon a name using the namestr we put in the Monstats.txt which was- enemyzon.
 
-Save patchstring.tbl
-
+**Save patchstring.tbl**  
 Finished!!!  
 Run the game in -direct -txt mode and go into the Blood Moor and there should be newbie looking zons running around trying to kill you.
 

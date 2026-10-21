@@ -79,7 +79,6 @@ _Example: Monastery uses this field to place its entrance always at same locatio
 3 Wilderness level
 ```
 
-  
 **LevelType**: The type of the Level (Id from lvltypes.txt)
 
 **Sub Columns** IDs from [LvlSub.txt](/kb/file-guides/lvlsub-txt), which is used to randomize outdoor areas, such as spawning ponds in the blood moor and more stones in the Stoney Field. This is all changeable, the other subcolumns are explained in this post.

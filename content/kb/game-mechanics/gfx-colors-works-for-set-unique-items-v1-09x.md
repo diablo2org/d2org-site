@@ -21,7 +21,6 @@ I'll talk about these files, so a knowledge of them is recomanded, but not requi
 -   gems.txt
 -   d2data.mpq\\data\\global\\items\\palette\\\*.dat (like grey2.dat)
 
-  
 This doc explain the way the game use (or don't use) some colors on some items. It covers of course unique and set items, but also the socketing of gems, and tell why amulets and rings are all looking the same, despite there \* is \* some color info in some of them.
 
 Lets's take an example and say you have a 'Sword of Ali Baba' in your stash, how the game will know the right file to use, and the right colors to put on it ?
@@ -69,7 +68,6 @@ Detailed description :
 >
 > If you're interested, you shall know that you can change these tints. Again, I'll explain later. In our case the Ali Baba sword will be more 'crystal red' than it is for now.
 
-  
 Now, open **weapons.txt**. Search the **9fc** item (the row having **9fc** in the **code** column, not in either **normcode**, **ubercode** nor **ultracode**). This is the row 123 ('Tulwar').
 
 > **invfile** = **invflc**  

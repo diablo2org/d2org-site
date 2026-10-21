@@ -44,13 +44,12 @@ Now, rename the sounds like this: gethit7.wav to gethit.wav, death3.wav to death
 
 4\. Open Sounds.txt. Add a new line, copy the frozenhorror\_attack\_1 line (line #1000) and paste it at the bottom. Rename Sound to evildru\_attack, change Index to next available (4699 unmodded) and Filename to monster\\evildru\\die.wav. Then change Group Size to 0.
 
-Add a new line, copy the druid\_hit\_5 line (line #2931) and paste it at the bottom. Rename Sound to evildru\_hit, change Index to next available and Filename to monster\\evildru\\gethit.wav.
-
-Add a new line, copy the druid\_death\_3 line (line #2934) and paste it at the bottom. Rename Sound to evildru\_death, change Index to next available and Filename to monster\\evildru\\death.wav.
-
-Add a new line, copy the druid\_chat\_c\_1 line (line #3410) and paste it at the bottom. Rename Sound to evildru\_neutral, change Index to next available and Filename to monster\\evildru\\thisisforyou.wav.
-
-Add a new line, copy the monster\_duriel\_taunt\_1 line (line #4642) and paste it at the bottom. Rename Sound to evildru\_taunt, change Index to next available and Filename to monster\\evildru\\timetodie.wav.
+```
+Add a new line, copy the druid_hit_5 line (line #2931) and paste it at the bottom. Rename Sound to evildru_hit, change Index to next available and Filename to monster\evildru\gethit.wav.
+Add a new line, copy the druid_death_3 line (line #2934) and paste it at the bottom. Rename Sound to evildru_death, change Index to next available and Filename to monster\evildru\death.wav.
+Add a new line, copy the druid_chat_c_1 line (line #3410) and paste it at the bottom. Rename Sound to evildru_neutral, change Index to next available and Filename to monster\evildru\thisisforyou.wav.
+Add a new line, copy the monster_duriel_taunt_1 line (line #4642) and paste it at the bottom. Rename Sound to evildru_taunt, change Index to next available and Filename to monster\evildru\timetodie.wav.
+```
 
 Just out of precaution, check that the sound names put in Filename column coinincide with the ones in your evildru folder and that the monster says exactly what you want!
 

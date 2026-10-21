@@ -28,9 +28,6 @@ Go to the Lightsaber row and change its code to any other weapon code (like 7gm)
 3) monequip.txt  
 Remove all entry for shadowmaster except one and use these values :
 
-  
-  
-
 |     |     |     |     |     |     |
 | --- | --- | --- | --- | --- | --- |
 | monster | oninit | level | item1 | loc1 | mod1 |
@@ -45,15 +42,17 @@ item1,2,3 : item code
 loc1,2,3 : item location (like in charstats.txt)  
 mod1,2,3 : item quality
 
-1 -> cracked ??  
-2 -> low quality ?  
-3 -> normal  
-4 -> magic  
-5 -> set  
-6 -> rare  
-7 -> unique  
-8 -> crafted  
+```
+1 -> cracked ??
+2 -> low quality ?
+3 -> normal
+4 -> magic
+5 -> set
+6 -> rare
+7 -> unique
+8 -> crafted
 9 -> tempered
+```
 
 Now save and close all your files and run the game.
 
@@ -72,8 +71,7 @@ I have some more to add to this nice tutorial.
 armor.txt  
 automagic.txt
 
-first open armor.txt
-
+**first open armor.txt**  
 First copy Cap/hat row in armor.txt to the last row. Then make an additional copy of cap/hat row to the row below the previous one you copied to.
 
 change the following:
@@ -118,8 +116,7 @@ levelreq: 0
 
 now we are done in this file so we can save and close it.
 
-Open up monequip.txt
-
+**Open up monequip.txt**  
 add the following above joel's azurewrath column.  
 shadowmaster 0 2 a00 head 3  
 shadowmaster 0 1 a01 head 3
@@ -142,8 +139,7 @@ And so last we look how item1, item2 and item3 works.
 
 This is an example from an existing row:
 
-shadowmaster Level 6
-
+**shadowmaster Level 6**  
 item1: 7ar  
 loc1: rarm  
 mod1: 4
@@ -160,8 +156,7 @@ When we use more than item1 entry on a row it will use this to randomize what it
 
 If we want to make it spawn an item or not we can use this we just talked about above. With the example below here it will have 50% chance to spawn an item in Level 6 group.
 
-shadowmaster Level 6
-
+**shadowmaster Level 6**  
 item1: 7ar  
 loc1: rarm  
 mod1: 4

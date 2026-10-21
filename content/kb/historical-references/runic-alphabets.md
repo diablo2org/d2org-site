@@ -11,15 +11,11 @@ originalUrl: 'https://d2mods.info/forum/kb/viewarticle?a=293'
 
 ![](/kb/img/phrozenkeep.it-point.com/forum/content/articles/runes-anglosaxon.gif)
 
-  
-
 ---
 
 **Danish Futhark**
 
 ![](/kb/img/phrozenkeep.it-point.com/forum/content/articles/runes-danishfuthark.gif)
-
-  
 
 ---
 
@@ -27,15 +23,11 @@ originalUrl: 'https://d2mods.info/forum/kb/viewarticle?a=293'
 
 ![](/kb/img/phrozenkeep.it-point.com/forum/content/articles/runes-elderfuthark.gif)
 
-  
-
 ---
 
 **Gothic Runes**
 
 ![](/kb/img/phrozenkeep.it-point.com/forum/content/articles/runes-gothic.gif)
-
-  
 
 ---
 
@@ -43,15 +35,11 @@ originalUrl: 'https://d2mods.info/forum/kb/viewarticle?a=293'
 
 ![](/kb/img/phrozenkeep.it-point.com/forum/content/articles/runes-medievalfuthark.gif)
 
-  
-
 ---
 
 **Norwegian Futhark**
 
 ![](/kb/img/phrozenkeep.it-point.com/forum/content/articles/runes-norwegianfuthark.gif)
-
-  
 
 ---
 

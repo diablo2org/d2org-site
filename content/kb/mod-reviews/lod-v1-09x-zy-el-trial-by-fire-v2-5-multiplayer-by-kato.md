@@ -13,19 +13,19 @@ originalUrl: 'https://d2mods.info/forum/kb/viewarticle?a=111'
 ---
 I come to you today not with a review, but a testament. And how it's a testament to madness and how it's a beautiful thing. After my several weeks leave I came back the Keep ready to dive in and start reviewing. Shortly before I made the decision of doing a new Zy-El review I had this conversation with my brother, who convinced me to go along with his crazy idea.
 
-Him: Hey did you know there's another version of Zy-El out?
+**Him:** Hey did you know there's another version of Zy-El out?
 
-Me: Doesn't surprise me, it was good after all.
+**Me:** Doesn't surprise me, it was good after all.
 
-Him: Its 2.5, looks huge.
+**Him:** Its 2.5, looks huge.
 
-Me: 2.5? Does this Kato character sleep at all?
+**Me:** 2.5? Does this Kato character sleep at all?
 
-Him: Maybe an army of monkey warriors makes the mod for him.
+**Him:** Maybe an army of monkey warriors makes the mod for him.
 
-Me: Whatever, so what's makes this better then what I've played?
+**Me:** Whatever, so what's makes this better then what I've played?
 
-Him: New monsters, oh, and look: Server Play.
+**Him:** New monsters, oh, and look: Server Play.
 
 I was hooked.
 
@@ -63,5 +63,4 @@ Special Thanks to Siphur for helping me with off line Multiplayer Review, Ghost(
 
 ---
 
-  
 Anyone wishing to check out the Zy-El mod can do so by visiting the official website at [http://zyel.d2mods.com](http://zyel.d2mods.com).

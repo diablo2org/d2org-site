@@ -31,7 +31,6 @@ right hand -> 1handed “swing” weapon (sword, axe, throwing axe, club, wand�
 
 left hand -> 1 handed “jab” weapon (knife, javelin, throwing knife)
 
-  
 1st - just like 1js, but the other way around  
 1ss - dual “swing” weapons  
 1jt - dual jab/throw weapons (no throwing axes, however)  

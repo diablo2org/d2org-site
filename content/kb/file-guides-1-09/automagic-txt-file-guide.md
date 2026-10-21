@@ -93,9 +93,7 @@ Let's say we want:
 Poison Dagger1 | Level 1-20, 5-10 poison damage  
 Poison Dagger2 | Level 21-40, 10-20 poison damage  
 Poison Dagger3 | Level 41-60, 20-30 poison damage  
-Poison Dagger4 | Level 61 and up, 30-45 poison damage & 25% deadly strike
-
-so we'd need 4 different lines, but all using the  
+Poison Dagger4 | Level 61 and up, 30-45 poison damage & 25% deadly strike so we'd need 4 different lines, but all using the  
 same automagic number. We can copy our new line and paste it 3 times so  
 we have 4 identical lines. Then we can edit the level/maxlevel to suit  
 our requirements, 1,20 then 21,40 followed by 41-60 and lastly 61, . We don't need to specify the upper limit for the last one coz the game will go figure that out themselves.
@@ -111,9 +109,7 @@ Now let's say we want to let the automagics overlap,
 Poison Dagger1 | Level 1-25, 5-10 poison damage  
 Poison Dagger2 | Level 15-45, 10-20 poison damage  
 Poison Dagger3 | Level 40-65, 20-30 poison damage  
-Poison Dagger4 | Level 60 and up, 30-45 poison damage & 25% deadly strike
-
-you'll see that now previously they never coincided  
+Poison Dagger4 | Level 60 and up, 30-45 poison damage & 25% deadly strike you'll see that now previously they never coincided  
 and now they do. Now what? It's exactly the same, but for the levels  
 15-25, 40-45 and 60-65, there are TWO possible automagics. So one of  
 them will randomly spawn. This will be determined by the frequency.
@@ -151,9 +147,7 @@ pole/mace/etc. However, let's say I wanted to make swords have a
 different automagic.
 
 att% 0 100 150 - for all other weapons  
-att% 0 150 200 - for swords only
-
-now I could either start listing all the possible itypes (and make it rather messy) or I could do this:  
+att% 0 150 200 - for swords only now I could either start listing all the possible itypes (and make it rather messy) or I could do this:  
 att% 0 100 150, itype = weap (all weapons), etype = swor (but swords)  
 att% 0 150 200, itype = swor (and nothing else)
 

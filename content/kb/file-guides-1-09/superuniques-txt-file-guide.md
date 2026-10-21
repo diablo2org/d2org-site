@@ -29,8 +29,6 @@ For example:
 
 ECLASS=1, Skeleton ID=-436
 
-  
-
 ECLASS=0, Skeleton ID=0
 
 I. AutoPos : This defines if the monster spawns exactly were the map places him or in a random radius around that point

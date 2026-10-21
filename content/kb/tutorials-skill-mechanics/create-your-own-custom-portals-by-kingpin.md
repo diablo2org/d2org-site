@@ -91,7 +91,6 @@ We are going to replace the Test ESI and JNZ so we can add a jump to our own cus
 000E3FD6 5F POP EDI
 ```
 
-  
 **Change Code:**  
 
 ```
@@ -100,7 +99,6 @@ We are going to replace the Test ESI and JNZ so we can add a jump to our own cus
 000E3FD5   90               NOP
 ```
 
-  
 **Custom Code:**  
 
 ```
@@ -133,14 +131,12 @@ This code will read the act ID value and do a check if the missile is allowed to
 000284C2 5F POP EDI
 ```
 
-  
 **Change Code:**  
 
 ```
 000284BE   E9 9CE50C00      JMP 000F6A5F ; we have replaces the EDI and JNZ calls above to point to our custom code.
 ```
 
-  
 **Custom Code:**  
 
 ```
@@ -158,7 +154,6 @@ This code will read the act ID value and do a check if the missile is allowed to
 000F6A7E  E9 491AF3FF      JMP 000284CC ; jump back to code that will spawn our portal object
 ```
 
-  
 Our next code will add our CltParam5 (object ID) as parameter to the object creation code.
 
 The object creation function is D2Game.6FD13DF0 that contains of nine arguments.
@@ -181,14 +176,12 @@ Arg1 = ptGame
 000285A4   57               PUSH EDI
 ```
 
-  
 **Change Code:**  
 
 ```
 000285A0   E9 DEE40C00      JMP 000F6A83 ; the above code is moved to our custom code and replaced with a jump
 ```
 
-  
 **Custom Code:**  
 
 ```
@@ -215,7 +208,6 @@ In this part we will start looking into how to restrict town portals from be cas
 000D2CC1   884424 10        MOV BYTE PTR SS:[ESP+10],AL  ; Store Current act as byte in ESP+10
 ```
 
-  
 **Changed Code:**  
 
 ```
@@ -223,7 +215,6 @@ In this part we will start looking into how to restrict town portals from be cas
 000D2CC0   90               NOP
 ```
 
-  
 **Custom Code:**  
 
 ```
@@ -250,7 +241,6 @@ This was part of Blizzards anti rush feature. They could have done this in a bet
 00048F67   8B4E 08          MOV ECX,DWORD PTR DS:[ESI+8] ; Move ptPlayer to ECX
 ```
 
-  
 **Changed Code**  
 
 ```
@@ -259,7 +249,6 @@ This was part of Blizzards anti rush feature. They could have done this in a bet
 00048F69   90               NOP
 ```
 
-  
 **Custom Code**  
 
 ```
@@ -391,8 +380,7 @@ Search for item\_levelreq stat and do the change down here so we are able to add
 
 Save and close the file.
 
-Open up uniqueitems.txt
-
+**Open up uniqueitems.txt**  
 We will use an existing (unused) unique ring that blizzard have left that is called constricting ring and modify it to be able to use for a first level character and also have our own new portal skill.
 
 Modify the following columns for Constricting Ring  
@@ -411,8 +399,7 @@ We are done now in this file and have one left thing to do before we can test th
 
 As I have mentioned already we will use quillrats to always spawn our unique Constricting Ring.
 
-Open up treasureclassEx.txt
-
+**Open up treasureclassEx.txt**  
 Search for Quill 1 treasureclass and do the changes down here.
 
 **Picks:** set -1 so it always drops one item (our unique item)  
@@ -444,8 +431,7 @@ Make a copy of our CowPortalSkill and add the row below CowPortalSkill row (firs
 
 You know the process now? All is edited for the skill and time to save and close.
 
-Open up missiles.txt
-
+**Open up missiles.txt**  
 Make a copy of Cowlevelmissile and add it at your first empty row and rename it to TownPortalmissile. Do the following changes down here.
 
 **Id:** Next avaible ID, in this tutorial I’m using 688  
@@ -456,8 +442,7 @@ Make a copy of Cowlevelmissile and add it at your first empty row and rename it 
 
 Save and close the file.
 
-Open up skilldesc.txt
-
+**Open up skilldesc.txt**  
 Make a copy of fire bolt and add it to your first empty row (should be below CowSkillDesc row) and change the name to TownPortalDesc. Do the following changes down here.
 
 **SkillPage:** enter the value 1 here  

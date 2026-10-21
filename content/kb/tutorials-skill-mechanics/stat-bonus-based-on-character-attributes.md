@@ -33,9 +33,7 @@ make these changes:
 **maxlvl:** 99  
 **reqskill1:** _blank_  
 **Param1:** 0  
-**Param2:** 0
-
-now, open **states.txt** and copy **firemastery** line.  
+**Param2:** 0 now, open **states.txt** and copy **firemastery** line.  
 paste **firemastery** line at the bottom, and rename it to **innatepassive**.  
 change the Id to the next in your **states.txt**
 

@@ -9,28 +9,22 @@ modified: '2018-01-06'
 views: 6681
 originalUrl: 'https://d2mods.info/forum/kb/viewarticle?a=430'
 ---
-class
-
+**class**  
 : Which class this line applies to.
 
-str
-
+**str**  
 : The starting strength value for this class.
 
-int
-
+**int**  
 : The starting energy value for this class.
 
-vit
-
+**vit**  
 : The starting vitality value for this class.
 
-tot
-
+**tot**  
 : The total of all the starting stats points for this class.
 
-hpadd
-
+**hpadd**  
 : The starting hit points for this class.
 
 PercentStr
@@ -57,44 +51,34 @@ PercentVit
 
 vitality.
 
-ManaRegen
-
+**ManaRegen**  
 : Starting mana regeneration percentage for this class.
 
-ToHitFactor
-
+**ToHitFactor**  
 : Starting attack rating for this class.
 
-WalkVelocity
-
+**WalkVelocity**  
 : Starting walking speed for this class.
 
-RunVelocity
-
+**RunVelocity**  
 : Starting running speed for this class.
 
-RunDrain
-
+**RunDrain**  
 : The rate at which running drains stamina for this class.
 
-Comment
-
+**Comment**  
 : Just another Blizzard comment.
 
-LifePerLevel
-
+**LifePerLevel**  
 : The fourths of life this class gains each level.
 
-StaminaPerLevel
-
+**StaminaPerLevel**  
 : The fourths of stamina this class gains each level.
 
-ManaPerLevel
-
+**ManaPerLevel**  
 : The fourths of mana this class gains each level.
 
-LifePerVitality
-
+**LifePerVitality**  
 : The fourths of life this class gains for each point of vitality.
 
 StaminaPerVitality
@@ -103,8 +87,7 @@ StaminaPerVitality
 
 vitality.
 
-ManaPerMagic
-
+**ManaPerMagic**  
 : The fourths of mana this class gains for each point of magic.
 
 #walk
@@ -133,38 +116,28 @@ weapon.
 
 : Which animation index this class uses when firing a bow.
 
-BlockFactor
+**BlockFactor**  
+: The additional percentage to blocking to add to shields when being used by this class.
 
-: The additional percentage to blocking to add to shields when
-
-being used by this class.
-
-StartSkill
-
+**StartSkill**  
 : The total number of skill points that this class starts with.
 
-BaseWClass
-
+**BaseWClass**  
 : The attack rating of this class when unarmed.
 
-item1
-
+**item1**  
 : The code for the 1st starting item carried by this class.
 
-item1loc
-
+**item1loc**  
 : The location for the 1st starting item carried by this class.
 
-item1count
-
+**item1count**  
 : The quantity for the 1st starting item carried by this class.
 
-item2
-
+**item2**  
 : The code for the 2nd starting item carried by this class.
 
-item2loc
-
+**item2loc**  
 : The location for the 2nd starting item carried by this class.
 
 item2count

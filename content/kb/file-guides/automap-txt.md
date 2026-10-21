@@ -82,7 +82,6 @@ fd			18		full down
 fi			19		full invisible?? (paired with 18)
 ```
 
-  
 **Style:**Style is the same as the tile Main Index, the numbers are decimal.
 
 **StartSequence / EndSequence:** Sequence is the same as the tile Sub Index and with Start and End you can define a range of indices.  

@@ -28,7 +28,6 @@ You might be thinking 'Well, if I can get a Zod Rune in Act V hell, that isn't s
 
 ---
 
-  
 **Examination:**
 
 Let us take a more detailed look at the actual **Runes 1-17** rows.
@@ -53,7 +52,6 @@ As you can see, your chances of getting anything in the Runes 10 or above sectio
 
 ---
 
-  
 **Remedy:**
 
 I can already hear you: 'That is insane! How can I fix this?!?!?!'
@@ -108,7 +106,6 @@ Everyone remembers how useless sets were in CD2. By the time you collected all t
 
 ---
 
-  
 **Conclusions:**
 
 To summarize, the only column you need to change to improve the variety of rune drops is the Prob3 column (column M). The only exception is that for Runes 17 you need to change Prob2 (column K). Those are the columns that determine the (generally overwhelming) chance that the Rune drop will be downgraded to the next lower Rune drop. By lowering that number, you reduce the chances of a given Rune drop being downgraded to the next lowest one (and so on, and so on, ad nauseum until you get an El Rune in Act V hell =) ).

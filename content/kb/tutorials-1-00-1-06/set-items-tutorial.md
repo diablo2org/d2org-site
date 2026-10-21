@@ -131,7 +131,6 @@ Now, let's get to the step-by-step process of adding the new set. First, we must
      -   Your Number of Modifiers is gotten by multiplying 2x your number of set items, plus the number of modifiers you want for the bonus
      -   The set must replace an old set
      -   You must add the codes and names for all items to the string.tbl for the game to recognize the set
-  
 
 Ondo's Color Chart
 

@@ -87,7 +87,6 @@ the bonus equals: cost \* (1 + value \* multiply / 1024)) + add (...)
 13 - adds [color=#80FFBF]opstat.base * statvalue / 100[/color] to the value of [b][color=#FFBF00]opstat[/color][/b], this is useable only on items it will not apply the bonus to other unit types (this is why it is used for +% durability, +% level requirement, +% damage, +% defense [etc]).
 ```
 
-  
 **Direct:** this boolean controls whenever this stat has a maximum stat associated with it, which among others means that unless you screw up something badly, this stat can never exceed the value of the maximum stat and that any change to this stat is permanent (a skill that alters mana, hitpoints or stamina is permanent, while a skill that alters maxmana, maxhp and maxstamina is temporary). You do not need to specify a maximum stat for the effect to be permanent, this can be used to get kill counters to work (look for SVR's old post).
 
 **MaxStat:** the maximum stat associated with this stat, this field only ever has an effect if Direct is set to true, see the discussion under that field. Percentage based increases to the max stat will usually alter this stat too, however this has some hardcoded aspects to it and is not entirely softcoded.

@@ -34,7 +34,7 @@ data/global/objects/xk/tr/xktrlitophth.dcc
 data/global/objects/xk/cof/xkNUHTH.cof  
 data/global/objects/xk/cof/xkNONTH.cof  
 data/global/objects/xk/cof/xkNOPTH.cof  
-  
+
 To figure out what token each chest animation uses, extract and open objects.txt and look at the 'token' column for each chest type  
 
 Now, go to your mod directory and make the following folder:  
@@ -47,7 +47,7 @@ Copy xktrlitnuhth.dcc, xktrlitonhth.dcc, and xktrlitophth.dcc to this folder. Re
 xktrlitnuhth.dcc renamed to !ctrlitnuhth.dcc  
 xktrlitonhth.dcc renamed to !ctrlitddhth.dcc  
 xktrlitophth.dcc renamed to !ctrlitdthth.dcc  
-  
+
 I highligthed the changes in bold to make it easier to read.
 
 NU is the monsters Neutral animation, used when it is no moving. DD is the monsters corpse animation. DT is the animation the monster plays as it dies.  
@@ -110,7 +110,7 @@ maxHP:1 (same for all difficulty settings)
 Ac: 1 (same for all difficulty settings)  
 Treasureclass columns: Whatever you want, heres how you get your custom drop  
 Eol: 0  
-  
+
 We did not use the immunity columns here because they will display under the chest name, which won't look right. Instead we add damage immunitues with monprop later in the tutorial.  
 
 Part IV: Monstats2.txt Entries  

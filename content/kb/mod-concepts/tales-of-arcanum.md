@@ -30,5 +30,4 @@ Those of you who's played Arcanum, please, post your ideas! I think this would b
 
 ---
 
-  
 Feel free to discuss this concept in the [designated thread](http://phrozenkeep.it-point.com/forum/viewtopic.php?t=20719).

@@ -86,40 +86,40 @@ V spelloffset: unknown.
 W component: unknown.  
 This controlled what component of the animation this item will alter AND what itemtype it is. Remember, ItemTypes.txt was a hardcoded table prior to the expansion.
 
-X bodyLoc1: the body location this item can be used at, (i.e. right/left hand etc)
+**X bodyLoc1:** the body location this item can be used at, (i.e. right/left hand etc)
 
-Y bodyLoc2: the body location this item can be used at, (i.e. right/left hand etc)
+**Y bodyLoc2:** the body location this item can be used at, (i.e. right/left hand etc)
 
-Z invwidth: the width of inventory boxes this item has.
+**Z invwidth:** the width of inventory boxes this item has.
 
-AA invhieght: the height of inventory boxes this item has.
+**AA invhieght:** the height of inventory boxes this item has.
 
-AB hasinv: can this item have sockets? 1 means yes, 0 means no.
+**AB hasinv:** can this item have sockets? 1 means yes, 0 means no.
 
 AC gemsockets: the amount of sockets this item can have for 2x4 items and 2x3 items the maximum is 6 and minimum is 1.  
 Nowadays the maximum is 7, back then it was indeed 6. You could only have sockets in normal items.
 
-AD flippyfile: the flip animation of this item (i.e. the animation displayed when it is dropped).
+**AD flippyfile:** the flip animation of this item (i.e. the animation displayed when it is dropped).
 
-AE invfile: the inventory graphic for this item.
+**AE invfile:** the inventory graphic for this item.
 
-AF uniqueinvfile: the graphic this item uses if it is unique.
+**AF uniqueinvfile:** the graphic this item uses if it is unique.
 
-AG rArm: controls the graphic for the right arm.
+**AG rArm:** controls the graphic for the right arm.
 
-AH lArm: controls the graphic for the left arm.
+**AH lArm:** controls the graphic for the left arm.
 
-AI Torso: controls the graphic for the torso.
+**AI Torso:** controls the graphic for the torso.
 
-AJ Legs: controls the graphic for the legs.
+**AJ Legs:** controls the graphic for the legs.
 
-AK rSPad: unknown, might have to do with the right shoulder pad.
+**AK rSPad:** unknown, might have to do with the right shoulder pad.
 
-AL rLPad: unknown, might have to do with the left shoulder pad.
+**AL rLPad:** unknown, might have to do with the left shoulder pad.
 
-AM useable: can this item be right clicked? 1 means yes, 0 means no.
+**AM useable:** can this item be right clicked? 1 means yes, 0 means no.
 
-AN Throwable: 1 means it is throwable, 0 means it is not.
+**AN Throwable:** 1 means it is throwable, 0 means it is not.
 
 AO stackable: 1 means it is stackable, 0 means it is not. (note  
 only items that are 100% identical can stack that's why you should NOT  
@@ -154,19 +154,19 @@ Does this item require ammo to fire missiles. 0=no, 1=yes
 AX lightradius: does this item have a lightradius if equipped? Set the amount of the radius here, seams to have no effect.  
 Unused
 
-AY belt: can this item be in your belt? 1 means yes and 0 means no.
+**AY belt:** can this item be in your belt? 1 means yes and 0 means no.
 
-AZ quest: does this item have to do something with a quest?
+**AZ quest:** does this item have to do something with a quest?
 
-BA missiletype: what missile does this item use when thrown, use the ID numbers from missiles.txt.
+**BA missiletype:** what missile does this item use when thrown, use the ID numbers from missiles.txt.
 
-BB durwarning: at what value of durability, the warning of low durability appears.
+**BB durwarning:** at what value of durability, the warning of low durability appears.
 
-BC qntwarning: at what value of quantity, does the low quantity warning appear.
+**BC qntwarning:** at what value of quantity, does the low quantity warning appear.
 
-AD mindam: minimum smith damage of a shield.
+**AD mindam:** minimum smith damage of a shield.
 
-AE maxdam: maximum smite damage of a shield.
+**AE maxdam:** maximum smite damage of a shield.
 
 BF gemoffset: unknown, probably useless or unused since no item has this set.  
 Unused

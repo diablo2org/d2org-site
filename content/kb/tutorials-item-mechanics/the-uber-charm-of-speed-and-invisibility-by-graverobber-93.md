@@ -33,8 +33,6 @@ For Example
 
 Code:
 
-prop1             par1          min1   min2
-
-state        Speedmorph      1        1
+prop1             par1          min1   min2 state        Speedmorph      1        1
 
 Now, go test your new speed charm, i suggest testing it with teleport, its fun :)

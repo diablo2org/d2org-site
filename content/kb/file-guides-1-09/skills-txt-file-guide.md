@@ -120,27 +120,19 @@ CB. SrcDam - See below for amendment by Scott Weaver
 
 CC-CD. MinDam/MaxDam - Min/Max phys dmg dealt
 
-CE-CG. LevDam1-3 - Increment in damage/slvl
-
-to slvl 10-15, lvl3 to >15 - aasa>\[/i\]
+CE-CG. LevDam1-3 - Increment in damage/slvl to slvl 10-15, lvl3 to >15 - aasa>\[/i\]
 
 CH. EType - ltng,cold,fire,pois,mag (self-explanatory)
 
-CI-CJ. EMin/EMax - Min/Max Elem Dmg (some values vary, eg. Charged Bolt is
-
-half stated value in skills.txt)
+CI-CJ. EMin/EMax - Min/Max Elem Dmg (some values vary, eg. Charged Bolt is half stated value in skills.txt)
 
 CK-CM. ELev1-3 - Increment in Elem Dmg/slvl \*Don't know how to calculate\*
 
 CN. ELen - Length of element (for cold and poison)
 
-CO-CQ. ELevLen1-3 - Increment in Elem Len/slvl
+CO-CQ. ELevLen1-3 - Increment in Elem Len/slvl lvl2 to slvl 10-15, lvl3 to >15 - aasa>
 
-lvl2 to slvl 10-15, lvl3 to >15 - aasa>
-
-CR. caster state - State caster is in (eg. STATE\_FROZENARMOR) - \*Does anyone
-
-know where to find out the states?\*
+CR. caster state - State caster is in (eg. STATE\_FROZENARMOR) - \*Does anyone know where to find out the states?\*
 
 CS. cost mult - If skill is in item, multiply costprice by value (?)
 

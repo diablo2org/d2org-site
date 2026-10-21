@@ -19,8 +19,7 @@ Files needed: PatchString.tbl, Weapons.txt, UniqueItems.txt, CharStats.txt
 What is this?  
 This tutorial will guide you thru the steps needed to make the Amazon start with a unique javelin. Because this guide is aimed at beginners, I will provide details about all the columns changed in the process. Note, that unlike 1.00-1.09, you can no longer give items spawned during char creation stats, unless these stats are skill boni to certain skills provided in charstats.txt (![icon\_cry.gif](/kb/img/d2mods.info/forum/images/smiles/icon_cry.gif)).
 
-Step 1
-
+**Step 1**  
 Open up weapons.txt in your spreadsheet editor, and scroll down to the Javelin row (or use Find, Ctrl+F in most apps), once you find the row, copy it, and paste it below the last line in the file (\*).
 
 First of, change spawnable to 0 (=this column tells the game whenever this item can drop from auto tcs, it also controls whenever NPCs can sell this item, 1=true, 0=false). Setting this to 0, will save you work, since you won't need to worry about the item being sold anywhere or dropped by monsters.
@@ -33,8 +32,7 @@ Finally, set skipname to 1 (=this column will make the game display only the nam
 
 \* This is not necessary in armor,misc and weapons.txt - but you should do it anyway to get used to it, most other files will crash or cause glitches (such as item morphing, should you add them between existing lines, this is so because the game uses line number to reference many things, including client side settings of magic modifiers and tons of hardcoded setup).
 
-Step 2
-
+**Step 2**  
 Next, load up uniqueitems.txt in your spreadsheet editor, go to the bottom of the file, and follow these instructions.
 
 Change the index column to a new name, something like unique\_javelin will do (=this controls the string that will be used for your new item, it is also used to link the unique item in question to this line, if you would want to excess it from other files)
@@ -43,15 +41,13 @@ Set version to 100 (=controls what version the item is available in, 0 = prior t
 
 Finally, scroll to the last column \*eol and enter something in here (it doesn't have to be 0). Always do this, to avoid unexpected game crashes.
 
-Step 3
-
+**Step 3**  
 First fire up your spreadsheet and open CharStats.txt, select the Amazon row, and go to the Item1 column.  
 In here, replace jav with ujav (=this tells the game to give the new Amazon a copy of your new item instead of a normal javelin).
 
 Finally, since we have no way to give our new javelin stats in 1.10+, go to the startskill column, and enter Jab, this will make the javelin spawn with +1 to Jab.
 
-Step 4
-
+**Step 4**  
 Finally, open PatchString.tbl in a TBL editor (I recommend AFJs TBL Edit). If you use that, hit the big \[+\] button, enter unique\_javelin in here, and click OK.
 
 In the right part of the screen, enter the name you'd like the javelin to have in-game.

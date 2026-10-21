@@ -89,8 +89,7 @@ this will give your summons 100% chance of crushing blow. thanks kingpin!
 
 Make sure there is a 0 in eol and save monprop.txt.
 
-Open monstats.txt.
-
+**Open monstats.txt.**  
 Create a new row at the bottom.
 
 Find the monster you would like to use.
@@ -147,16 +146,14 @@ Next are a lot of statistical fields that you can set to whatever you want, resi
 
 Make sure there is a 0 in eol and save monstats.txt.
 
-Open monstats2.txt
-
+**Open monstats2.txt**  
 Simply take the thornhulk1 line and copy it to the bottom in a new row, and change the name to earthelemental.
 
 I didnt do anything else to this file. Kingpin posted that if you create a new line for a monster in monstats.txt then the creation of a line in monstats2.txt is neccessary.
 
 Save monstats2.txt.
 
-Open skills.txt.
-
+**Open skills.txt.**  
 Create a new line at the bottom.
 
 Find a summoning skill to copy into it.
@@ -211,8 +208,7 @@ A little ways down is a field called calc1 with a desc column followed by calc2 
 
 I cant really figure these out but im theorizing that for a summons creature the first calc is for a life modifier of some kind.
 
-Calc2 put ulvl.
-
+**Calc2 put ulvl.**  
 this is for pets.
 
 if you want to use a calculation somewhere based on the level of your pet skill, use the factor ulvl, not lvl.
@@ -259,8 +255,7 @@ this puts it at the top left corner of the page.
 
 Set listrow to 1, listpool to 0 and iconcell is the icon the skill will use.
 
-I used 58.
-
+**I used 58.**  
 For str name and short and long and alt I used the string names earth, earth1, earth2, earth3 respectively and left StrSkill3 in.
 
 It displays 'mana cost:'.
@@ -281,13 +276,13 @@ This will display the enhanced damage percentage.
 
 Now go to the Descline6. these description fields go in reverse, so this is like going to the top.
 
-Descline6: 5
+**Descline6:** 5
 
-Desctexta: earthys (a string you will create)
+**Desctexta:** earthys (a string you will create)
 
-Desccalca: 'min(lvl,par3)' -matches formula used in skills.txt.
+**Desccalca:** 'min(lvl,par3)' -matches formula used in skills.txt.
 
-Descline5: 13 (tells game to display the life of the creature I think)
+**Descline5:** 13 (tells game to display the life of the creature I think)
 
 No text or calcs are needed for the life modifier unless the creature had a +maxlife%.
 
@@ -313,17 +308,17 @@ lastly, make sure eol has a 0 in it and save skilldesc.txt.
 
 As an afterthought, these are the strings you would have to make for the above example.
 
-myminion: An ally of the druid
+**myminion:** An ally of the druid
 
-earth: Earth Elemental
+**earth:** Earth Elemental
 
-earth1: Being from the elemental planes
+**earth1:** Being from the elemental planes
 
-earth2: Summons an elemental being to aid you in combat.
+**earth2:** Summons an elemental being to aid you in combat.
 
-earth3: Earth Elemental
+**earth3:** Earth Elemental
 
-earthys: Elementals:
+**earthys:** Elementals:
 
 That should do it. Place your modified .txt files into the /excel file.
 

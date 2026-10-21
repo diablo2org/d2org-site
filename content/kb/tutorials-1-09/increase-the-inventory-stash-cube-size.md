@@ -34,9 +34,7 @@ you will see it is quite large for a dc6 it should be: 320x864px in size:
 
 what they dont tell you: this is actually a twoframe animation of two 320x432px images, now seperate the image into two parts and save each of them as a single file (make sure each part is EXACTLY 320x432px in size else you will see glitches in the game which you probably dont want to!)
 
-Now now, this is all up to your image editing skills, but make yourself a small chart
-
-write down:
+Now now, this is all up to your image editing skills, but make yourself a small chart write down:
 
 CELLGRIND:  
 LeftArm:  

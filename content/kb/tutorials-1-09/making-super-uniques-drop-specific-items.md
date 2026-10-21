@@ -25,7 +25,6 @@ Weapons.txt -basic weapons, magic weapons, rare weapons
 Setitems.txt -set items  
 Uniqueitems.txt -unique items
 
-  
 1\. Open MPQview, and make sure you open the data file first (Downloadable in Tools of the Trade at Phrozen Keep) then select open archive. Search in your diablo 2 directory and select the CLEAN patch\_d2.mpq, and open it (usually located in C:\\program files\\diablo II\\). There is an awesome little tool called filter; select the .txt from the dropdown list. Then save all the .txt files specified above to your own d2mod folder.
 
 2\. Open Excel and open the treasureclassex.txt in your d2mod folder first (make sure the Files of Type dropdown menu is on Text Files, or else you wont be able to see them). In the treasureclassex.txt go to the very bottom row (row 775). Create a new row at the bottom and name the Treasure Class column (column A) the super-unique monster's name (i.e. Corpsefire).

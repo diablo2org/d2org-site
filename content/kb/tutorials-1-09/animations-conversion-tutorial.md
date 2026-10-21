@@ -41,12 +41,13 @@ As you probably saw there is no corpse, since d1 and hellfire
 use the last frame (for the direction) in the D mode as the corpse.The  
 animations of the torch ant have the following frames:
 
-A - 96  
-D - 160  
-H - 48  
+```
+A - 96
+D - 160
+H - 48
 N - 112
-
 W - 96
+```
 
 Save all of these animations as  
 ANIMATED .GIF. To save you ALOT of work later, make sure to ALWAYS  
@@ -69,9 +70,7 @@ Now you will have to make a corpse animation, which is easy.
 Open the D(death) animation with the gif animator, remove all  
 the frames  
 except the LAST frames for each direction and save it as C. Now  
-to the harder part. Open up d2data.mpq and browse with cv5 to
-
-data\\global\\monsters\\bk\\tr\\. You will see ALOT of animations.  
+to the harder part. Open up d2data.mpq and browse with cv5 to data\\global\\monsters\\bk\\tr\\. You will see ALOT of animations.  
 These are all the foul crow animations so make a list like the  
 one below because you will find it VERY helpful later on.
 
@@ -112,9 +111,7 @@ and size is 100x100px, the
 new animation is 150x150px, the offsets will be 70x 70y. It is  
 enough to get one offset for ALL the animations (thx to foxbat  
 for clearing this up that you need only 2 matching offset instead  
-of 16 ) this is only
-
-correct for d1 and hellfire monsters though! Now that you have  
+of 16 ) this is only correct for d1 and hellfire monsters though! Now that you have  
 the offset, save the edited .gifs as .dcc with cv5, set directions  
 to 8, enter the offsets in the 16 slots and then click the save  
 button on  
@@ -192,13 +189,14 @@ means 6 and 10. 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F the smallest
 number is 00 while the biggest is FF (255). Now remember when  
 I told you to write down the frame counts:
 
-A - 96  
-D - 160  
+```
+A - 96
+D - 160
 H - 48
-
-N - 112  
-W - 96  
+N - 112
+W - 96
 C - 8
+```
 
 A1 88  
 DD 8  
@@ -210,13 +208,14 @@ WL 64
 
 Now we will have to divide all these by 8 which will be:
 
+```
 A - 12
-
-D - 20  
-H - 6  
-N - 14  
-W - 12  
+D - 20
+H - 6
+N - 14
+W - 12
 C - 1
+```
 
 A1 11
 
@@ -232,12 +231,13 @@ this list since there is no need to hex edit something that matches.
 
 Now we will need to convert all of these to hex:
 
-A - 0C  
-D - 14  
-H - 06  
+```
+A - 0C
+D - 14
+H - 06
 N - 0E
-
 W - 0C
+```
 
 A1 0B  
 DT 17  
@@ -272,9 +272,7 @@ files so they can be used to replace the old ones. Rename the
 A.dcc to bktrlita1hth.dcc the D.dcc to bktrlitdthth.dcc and so  
 on for the rest (H,N,W,C) and put these into data\\global\\monsters\\bk\\tr\\  
 and put the .cofs into data\\global\\monsters\\bk\\cof. Now you can  
-hex edit a palshift.dat file
-
-if you want to change the monsters color to what ever you like  
+hex edit a palshift.dat file if you want to change the monsters color to what ever you like  
 or use what they have now. Since this tutorial deals with graphics  
 and not sounds I'll add a short but not full sound par. To use  
 the hellbat sounds go to the monsters/newsfx folder and get the  

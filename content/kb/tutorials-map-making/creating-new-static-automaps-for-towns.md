@@ -49,7 +49,7 @@ Act2MapS.dc6 The small version of the automap
 
 Open the new 32 frames in paint shop pro again, resize them by 50% and save. Then replace the frames in Act2MapS.dc6 just like we did in the last step with the full screen version
 
-\-----------------------------------------------------------------------------------
+### -
 
 Pandemonium Fortress automap (Act4Map.dc6 - fullscreen version)
 
@@ -87,7 +87,7 @@ Act4MapS The small version of the automap
 
 Open the new 4 frames in paint shop pro again, resize them by 50% and save. Then import the 4 frames again to dc6 creator, save as EAct4MapS and place in dataglobaluiAutomap
 
-\-----------------------------------------------------------------------------------
+### -
 
 Harogarth automap (ExTnMapS.dc6 - fullscreen version)
 

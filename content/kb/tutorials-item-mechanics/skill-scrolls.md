@@ -92,7 +92,7 @@ But this is still pretty good, if you want an all softcoded mod.
 
 Now that your scroll is all done, you can spawn it by a cube recipe, or you can enable it again, at the vendors.
 
-\--------------------
+### -
 
 **Update:**
 
@@ -116,9 +116,7 @@ make these changes:
 **CelFile:** null  
 **AnimLen:** 1  
 **AlwaysExplode:** 1  
-**Skill:** _blank_
-
-now open **skills.txt** and go to **Fireball** line. Make these changes:  
+**Skill:** _blank_ now open **skills.txt** and go to **Fireball** line. Make these changes:  
 **srvmissile:** monster\_spawning  
 **cltmissile:** monster\_spawning  
 **reqskill1:** _blank_
@@ -141,9 +139,7 @@ make the following changes:
 **range:** 25  
 **SubMissile1:** _blank_  
 **CltSubMissile1:** _blank_  
-**CltSubMissile2:** _blank_
-
-now open **skills.txt** and go to **Fireball** line.  
+**CltSubMissile2:** _blank_ now open **skills.txt** and go to **Fireball** line.  
 Make these changes:  
 **srvmissile:** new\_portal  
 **cltmissile:** new\_portal  

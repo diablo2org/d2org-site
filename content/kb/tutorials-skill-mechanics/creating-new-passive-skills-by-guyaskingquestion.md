@@ -52,19 +52,15 @@ Change the Id to the next highest unused number, and charclass to the name of th
 
 Charclass codes
 
+```
 ama -> Amazon
-
 ass -> Assassin
-
 bar -> Barbarian
-
 dru -> Druid
-
 nec -> Necromancer
-
 pal -> Paladin
-
 sor -> Sorceress
+```
 
 Now move along to passivestat1, this contains the benefit your passive shall grant. These abilities come from Properties.txt's stat1  
 column, so they are different from what you would use when creating  
@@ -74,21 +70,16 @@ one passive stat. For an all resistance skill you would need to use
 each single resist's entry (except for Magic), each passive stat then  
 would use the same calculation. Like so:
 
+```
 passivestat1 -> poisonresist
-
 passivecalc1 -> dm12
-
 passivestat2 -> fireresist
-
 passivecalc2 -> dm12
-
 passivestat3 -> coldresist
-
 passivecalc3 -> dm12
-
 passivestat4 -> lightresist
-
 passivecalc4 -> dm12
+```
 
 Here I will add item\_crushingblow , you can add what your passive grants.
 
@@ -127,8 +118,7 @@ lv 2 12% Crushing Blow
 
 lv 3 14% Crushing Blow
 
-and so on.
-
+**and so on.**  
 If you put dm12 in passivecalc1, make sure your Param2 is higher than Param1,otherwise your skill will get weaker per level.
 
 dm12 style skills will go like this
@@ -139,24 +129,21 @@ lv 2 18
 
 lv 3 22
 
-lv 4 23
-
+**lv 4 23**  
 Giving coninously lower bonuses, until you get close to your Param2 value, where you get almost no effect per level added.
 
 Right now were done with skills.txt, save and close it.
 
 Next we'lll do the state
 
-Open States.txt
-
+**Open States.txt**  
 This is quite simple, just add a new row to the bottom and under state put your skills name, or whatever you put in passivestate. For me this was Crush.
 
 Put a 0 under Eol and your done.
 
 Save and close this file.
 
-Now onto skilldesc.txt
-
+**Now onto skilldesc.txt**  
 This one usually takes me a while, it's simple but theres alot to remember.
 
 Copy the Ironskin entry and paste it at the bottom of the file.
@@ -197,9 +184,7 @@ graphic you want to use fo that skill, for now it is best to use one
 from another skill of that character. You can add your own using a DC6  
 editor, but that would be adding too much to this tutorial.
 
-Str name, Str short, str long and str alt
-
-are the skills written descriptions. Copy the last skills (Royal Strike  
+Str name, Str short, str long and str alt are the skills written descriptions. Copy the last skills (Royal Strike  
 if unmodded) entries and add 1 to the numbers. Remember these as you'll  
 need them to add to your string table.
 
@@ -230,8 +215,7 @@ Desccalca1, should be what you put in Passivecalc1, in skills.txt. Usually eithe
 
 Once your done save and close this file.
 
-String Edits
-
+**String Edits**  
 Now its time to add the skill entries. Open up your table file and add the following.
 
 Str name -> Your skills name (Crush)

@@ -18,9 +18,7 @@ version (column B) - Determines if the set is in normal Diablo II (0), or expans
 
 level (column C) - The level the character must be before he/she can gain the full set bonus
 
-NumItems (column D) - The numer of items found in the set. From a minimum of 2 to a maximum 6
-
-transform (column E) - A flag that determines whether or not items in the set change color (palette swap). 1 means they do change color (consult color table), and 0 means they do not.
+NumItems (column D) - The numer of items found in the set. From a minimum of 2 to a maximum 6 transform (column E) - A flag that determines whether or not items in the set change color (palette swap). 1 means they do change color (consult color table), and 0 means they do not.
 
 transformcolor (column F) - If transform is set to 1, this column determines the color the items will change to. Valid numbers are 0 to 20. See [this table](color-guide.php) for reference.
 

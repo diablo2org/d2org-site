@@ -47,13 +47,15 @@ This is what you need to know about the .dcc filename structure for now. There i
 
 Now that you know what all those codes mean, it's time to take some notes. You'll write a simple list containing all of the animations framecounts. View the data\\global\\monsters\\si\\tr folder with Cv5; click on the first file, wich is sitrlita1hth.dcc. It has 128 frames (the animation's framecount can be seen in the information box below). Take note, and proceed to the next file. By the end you should have a list that looks like this:
 
-A1 - 128  
-A2 - 104  
-DD - 8  
-DT - 112  
-GH - 48  
-NU - 64  
+```
+A1 - 128
+A2 - 104
+DD - 8
+DT - 112
+GH - 48
+NU - 64
 WL - 72
+```
 
 Now grab the new animation files you will use to replace the old ones (I do NOT recommend the Dragon, start with something simpler, there are lots of choices in the animation plugins sections of the [Phrozen Keep](http://dynamic2.gamespy.com/~phrozenkeep/site/index.php) and [Incandescence](http://www.planetdiablo.com/incandescence/)).  
 I'll explain the process for the attack1 animation, you'll basically do the same stuff with the other animations:

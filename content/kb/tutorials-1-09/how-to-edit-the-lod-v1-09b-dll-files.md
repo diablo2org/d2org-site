@@ -75,7 +75,6 @@ Like I've said before, maxbogus made a very important post about the creation, d
 000D0450 00000202  
 000D0454 6FB01830 D2CLIENT.6FB01830
 
-  
 And the list goes on. So I fired up OllyDbg (maxbogus was right, not only does this program kick ass, but its free of charge - if you're doing any dissasembling I highly recommend this program) and started to look at the functions. In not time, I found that the mouse function for the skill window is broken into two routines. The first occurs when the user clicks down, the second when they release the button. The down click is provided by maxbogus and is 6Fb1B5F0. A little testing showed that the up function is 6FB1BBF0. The skill code we're looking for is in this function, and here's the proof... When you have an extra skill point, click down on a skill that you can put it in, but DON'T RELEASE THE BUTTON. Now drag off of the button and release, you'll notice that no points go into that skill. This means it doesn't do the skill stuff until we let the button up. So let's go in and have a look at this function:
 
 6FB1BBF0 53 PUSH EBX  

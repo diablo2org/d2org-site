@@ -86,9 +86,7 @@ In this case we have two digits, so n = 2
 7 \* (16^0) + 11 \* (16^1)  
 7 \* 1 + 11 \* 16  
 7 + 176  
-183
-
-therefore B7 = 183.
+183 therefore B7 = 183.
 
 Most hex editors usually offer some way to do the conversion for you. Hex Workshop has a specific option for it, XVI32 you can do the conversion by selecting 'goto' from the menu, select the 'hex' option, put in your hex value, then click on 'decimal' and it's converted to whole number.
 
@@ -131,11 +129,11 @@ So now we will replace 32 with 012C. But wait, that is two bytes replacing one, 
 
 Fortunately for us, healing potions are stored in unsigned DWORDs. These range in dec from 0 to 4,294,967,295 (more than enough) A DWORD is made of four bytes, so we can represent a DWORD with four hex bytes. Thus the original would be
 
+```
 00 00 00 32
-
 and our modification
-
 00 00 01 2C
+```
 
 but wait, that's not what is there. At B2B50, you see a 32, at B2B51, a 00, and so on. What you are seeing is
 

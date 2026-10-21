@@ -152,7 +152,6 @@ These indexes are taken from the table indexes located in ArmType.txt which is h
 2.Heavy	hvy  
 ```
 
-  
 [If you'd ever wish to extend this table, follow this simple ASM code edit:](https://d2mods.info/forum/viewtopic.php?f=8&t=65261&hilit=ArmType)
 
 **flippyfile - invfile - uniqueinvfile - setinvfile**: These four columns contains DC6 filenames to use for various cases:  
@@ -276,7 +275,6 @@ Malah
 Drehya (Anya)
 ```
 
-  
 **vendorMin - vendorMax** act as minimum \\ maximum amount of items of this type the vendor can sell. Do not increase these values too much or you will risk to crash the game if it spawns too many items.
 
 **vendorMagicMin - vendorMagicMax** have the same purposes as the ones above, but for the magical items

@@ -26,9 +26,7 @@ missiles.txt
 skilldesc.txt (only if you want to add a description to your skill.
 
 _to follow this tutorial, you have to know how to use the needed tools._  
-_I also recommend to read the file guides of skills.txt, missiles.txt and skilldesc.txt_
-
-first, we will have to extract an animation in d2data.mpq because we will use the summoner animation as avatar.  
+_I also recommend to read the file guides of skills.txt, missiles.txt and skilldesc.txt_ first, we will have to extract an animation in d2data.mpq because we will use the summoner animation as avatar.  
 so open d2data.mpq, using winMPQ and extract the following files:  
 **data\\global\\monsters\\SU\\TR\\SUTRLITSCHTH.dcc**
 

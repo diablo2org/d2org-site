@@ -98,9 +98,7 @@ Permstoreitem: 1 (for testing purposes only)
 
 Second line
 
-Do as above but the name collumns will be the name for the
-
-clue that you want.  
+Do as above but the name collumns will be the name for the clue that you want.  
 Spawnable: 0  
 Code: clu1  
 Namestr: clu1  
@@ -124,9 +122,7 @@ Save patchstring.tbl
 
 6\. Cubemain.txt
 
-Open cubemain.txt and add a new line to the bottom and
-
-enter the following:
+Open cubemain.txt and add a new line to the bottom and enter the following:
 
 Description: anything you want  
 Enabled: 1  

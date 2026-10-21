@@ -32,9 +32,7 @@ In descval put a '1', this just determines the placement of some symbols.
 
 now in descstrpos and descstrneg put ModStr1a this will display the word 'strength' from the String table, and in descstr2 you need to put the string entry that displays '(increases with vitality)', for an example, put increaseswithvit.  
 then to finish off with itemstatcosts.txt, put a '0' in \*eol.  
-now add the string entry for increaseswithvit. in the string table of your choice eg/ patchstring.tbl
-
-time to edit Properties.txt, create a new row at the bottom, and put the property name, eg/ 'str/vit'  
+now add the string entry for increaseswithvit. in the string table of your choice eg/ patchstring.tbl time to edit Properties.txt, create a new row at the bottom, and put the property name, eg/ 'str/vit'  
 input a '1' in done, and '17' in func1 then in stat1 put the new entry you made in ItemStatCosts.txt, which was 'strength\_per\_vitality' for this example.  
 then, scroll over to the very end of the file and put a '0' in \*eol.
 
@@ -61,9 +59,7 @@ Known numbers and effects:
 
 (excerpt from the 1.10 fileguide thread, posted by Char originally)  
 descfunc  
-Function used to display the stat. Didn't yet have the time to see why this exactly works
-
-some values and what they display:  
+Function used to display the stat. Didn't yet have the time to see why this exactly works some values and what they display:  
 1 : +\[value\] \[string\]  
 2 : \[value\]% \[string\]  
 3 : \[value\] \[string\]  

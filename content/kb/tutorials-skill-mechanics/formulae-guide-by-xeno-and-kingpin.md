@@ -40,9 +40,7 @@ Simple formula is:
 
 stat(‘’.),  
 skill(‘’.),  
-\[missile? miss? (both do not work)\](‘’.),
-
-where , and stand for ISC, MS and SK string entries (they MUST be written in single quotas, e.g. stat(‘level’.accr) or skill(‘Holy Shock’).edmn) and is a reserved word which indicates the particular property of stat, skill or missile, we want to reference. You can see the list and detailed descriptions in the Appendix B.
+\[missile? miss? (both do not work)\](‘’.), where , and stand for ISC, MS and SK string entries (they MUST be written in single quotas, e.g. stat(‘level’.accr) or skill(‘Holy Shock’).edmn) and is a reserved word which indicates the particular property of stat, skill or missile, we want to reference. You can see the list and detailed descriptions in the Appendix B.
 
 Complicated formulae (more general case) are formed from simple ones with the usage of arithmetic operators (which include :'-', :'+', :'-', :'\*', :'/' and :'^'. Other c-style operators don’t seem to be working :( ), standard functions (see Appendix C) and, of course, parentheses. Examples:  
 Skill(‘FireStorm’.clc1)\*(Skill(‘FireStorm’.edmn)+ Skill(‘FireStorm’.edmx))/2 stands for average effective damage of firestorm skill (number of snakes \* average dmg);  

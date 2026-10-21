@@ -10,7 +10,6 @@ originalUrl: 'https://d2mods.info/forum/kb/viewarticle?a=283'
 ---
 I was thinking of making a mod which turned the entire game around, literally.  
 
-  
 You'd be playing as demons fighting humans going backwards from the Worldstone and going to Act I.  
 
 ---

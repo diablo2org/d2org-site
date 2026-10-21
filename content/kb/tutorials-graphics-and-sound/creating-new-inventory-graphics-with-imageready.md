@@ -11,11 +11,11 @@ modified: '2018-01-06'
 views: 10907
 originalUrl: 'https://d2mods.info/forum/kb/viewarticle?a=451'
 ---
-\-----------------------------------------------------------
+### -
 
 Creating New Inventory Graphics with ImageReady
 
-\-----------------------------------------------------------
+### -
 
 This is a step-by-step tutorial on how to use Adobe ImageReady to create new .dc6 inventory graphics in Diablo II.
 
@@ -31,7 +31,7 @@ First off you will need some tools:
 
 Opening The Graphic
 
-\------------------------
+### -
 
 Extract your image from its location in one of Blizzard's MPQs.
 
@@ -39,7 +39,7 @@ Open up DC6 Creator and Open your graphic of choice. Then Extract the graphic as
 
 Editing The Graphic
 
-\----------------------
+### -
 
 Edit your image. You can do this in millions for colors if you want or you can restrict yourself to a palette. Either way be aware that the color quality of the final will end up looking a little different than the original.
 
@@ -65,7 +65,7 @@ last, fill all areas to be transparent with black. The magic wand with 'contigio
 
 Applying the Palette
 
-\-----------------------
+### -
 
 Once you are done editing, in the WebContent/ColorTable window, click on the arrow in the upper right of the pane to open a menu. Select Load Color Table...
 
@@ -79,7 +79,7 @@ Uncheck Transparency in the Transparency pane. Under options, uncheck everything
 
 Putting the Graphic into Diablo II
 
-\-------------------------------------
+### -
 
 At this point we're about to put the image back into Diablo II. But first (if you haven't already) save your .psd file for later use or editing.
 
@@ -101,7 +101,7 @@ But wait, what if your image didn't turn out exactly like you wanted? Thats no p
 
 Troubleshooting
 
-\------------------
+### -
 
 1) My image has pixels in the transparent areas.
 

@@ -13,8 +13,6 @@ originalUrl: 'https://d2mods.info/forum/kb/viewarticle?a=309'
 ---
 This tutorial will show you how to spawn the Butcher in Diablo II Expansion version 1.10, this tutorial, unlike all of the preceding Butcher tutorials will not replace any monster (due to the wonderful new abilities granted by this patch), rather we will add a entirely new monster to the game, this will also concern how to spawn the monster in the game file as new superunique Boss which we will spawn in Andariels chamber (Catacombs Lvl 4). Note that for the later step I will only give an overall description as there is an excellent tutorial by Paul Siramy on this specific subject (which you should read at all cost) and there is no need to repeat this here. This tutorial will also not cover how to convert sounds and how to convert graphics, there are other sources for these.
 
-  
-
 **Game files you will need:**
 
 -   MonPreset.txt
@@ -31,8 +29,6 @@ This tutorial will show you how to spawn the Butcher in Diablo II Expansion vers
 -   The Butchers sounds from Diablo 1 (not really needed but if you want him to have the same sounds and taunt as he had in Diablo 1 you need these files.)
 -   The Butchers Cleaver inventory image from Diablo 1. (not really needed but if you want him to have the same item drop as in Diablo 1 you will need this file.)
 
-  
-
 **Tools you will need:**
 
 -   Any decent spreadsheet capable of working with tab delimited text files. (Star Office, Open Office, MS Excel etc)
@@ -42,16 +38,12 @@ This tutorial will show you how to spawn the Butcher in Diablo II Expansion vers
 -   A TBL Editor of your choice.
 -   CV5 or a similar MPQ extractor tool to extract the appropriate Diablo I graphics and sounds (for the Cleaver and the Butchers sounds).
 
-  
-
 **Things you should know:**
 
 -   Basic mod making knowledge and some patience.
 -   Knowing how to add superunique monsters to DS1 files.
 -   Knowing how to convert Diablo I sound files to WAV files compatible with Diablo II.
 -   Knowing how to convert Diablo I inventory graphic files to DC6 files.
-
-  
 
 **1st Step: Creating the Butcher (MonStats.txt and MonStats2.txt)**
 
@@ -79,8 +71,6 @@ Do as you did before, and copy the Smiths row (row 404), Paste it into the first
 
 We don't need to do anything else in this file if you used the Smiths row.
 
-  
-
 **2nd Step: Adding a New Boss (Andy3.ds1, SuperUniques.txt and MonPreset.txt)**
 
 Open up superuniques.txt and copy the Smiths row (yes again) and paste it into the first empty row in the file (in an unmodded game this is row 69). Change the name column to _TheButcher_. (NOTE: This column contains the string-code the game will use to look up the name of your monster in the TBL files, this is case sensitive, if you don't take care and for example enter _Thebutcher_ in a TBL file later on the game will not find your string and call your monster 'An Evil Force')
@@ -98,8 +88,6 @@ Next change AutoPos to false, this will force the game to spawn the Butcher exac
 And finally, change the treasureclass columns to TheButcher. (only do this if you want to make him drop his cleaver like he did in Diablo 1).
 
 For adding the Butcher to Andy3.ds1 (and also the editing of MonPreset.txt) please refer to [this tutorial.](https://d2mods.info/forum/kb.php?mode=article&k=287)
-
-  
 
 **3rd Step: Adding the Sounds (Sounds.txt and MonSounds.txt)**
 
@@ -129,8 +117,6 @@ Change the name of your new row to _thebutcher_, this name must be identical to 
 Change the Attack1 column to _butcher\_attack\_1_, make the Weapon1 column blank, do the same for the Attack2 and Weapon2 columns, change the HitSound column to _butcher\_hit\_1_ and change the DeathSound column to _butcher\_death\_1_, blank out the neutral columns (Neutral and NeuTime). Finally, change the Taunt column to _monster\_butcher\_taunt_.
 
 That's it with this file as well.
-
-  
 
 **4th Step: Give him back that Cleaver, will ya. (Weapons.txt, TreasureClassEX.txt and UniqueItems.txt)**
 
@@ -165,8 +151,6 @@ Now go to the Term column and enter 0, your done with this file.
 Finally, use CV5 to save Cleaver.CEL (In DiabData.MPQ under Items\\) as a GIF file (there are other tutorials explaining how to convert GIF files to DC6, I will not repeat these things here). The Inventory Graphics for the Cleaver are stored in frame 118 of ObjCurs.CEL (found in Data\\Inv in DiabData.MPQ on your Diablo I CD).
 
 When you are done converting these to DC6, name them _InvButchersCleaver_ and _FlpButchersCleaver_ and move them into Data\\Global\\Items. Make sure the drop animation has 16 frames, else the item will become invisible when it finishes droping (as the game freezes it on that specific frame, you can still highlight it even if it turns invisible thought).
-
-  
 
 **5th Step: Let there be names (Patchstring.tbl)**
 
