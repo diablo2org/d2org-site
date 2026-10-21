@@ -26,7 +26,9 @@ const columns = [
   {
     title: "Knowledge",
     links: [
+      { href: "/knowledge", label: "Knowledge base" },
       { href: "/modding", label: "Modding" },
+      { href: "/downloads", label: "Downloads" },
       { href: "/history", label: "History" },
       { href: "/mechanics", label: "Mechanics" },
       { href: "/technical", label: "Technical reference" },

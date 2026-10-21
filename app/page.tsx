@@ -8,6 +8,8 @@ import { mods } from "@/data/mods";
 import { mainServers } from "@/data/servers";
 import { tools } from "@/data/tools";
 import { getArticles } from "@/lib/content";
+import { downloads, downloadStats } from "@/lib/downloads";
+import { getKbArticles } from "@/lib/kb";
 import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -120,6 +122,8 @@ export default function Home() {
         />
       </Section>
 
+      <KeepBand />
+
       <section className="knowledge-section" aria-labelledby="knowledge-title">
         <div className="site-width knowledge-inner">
           <div className="knowledge-heading">
@@ -141,5 +145,40 @@ export default function Home() {
         <Link href="/archive"><ScrollText size={23} strokeWidth={1.3} aria-hidden="true" /><span><strong>The archive</strong><span>Diablo II history & community resources</span></span><ArrowRight size={17} aria-hidden="true" /></Link>
       </nav>
     </>
+  );
+}
+
+/** The Phrozen Keep's knowledge base and download library, archived here. */
+function KeepBand() {
+  const articles = getKbArticles();
+  const guides = [...articles].sort((a, b) => (b.views ?? 0) - (a.views ?? 0)).slice(0, 5);
+  const files = [...downloads].filter((d) => d.status === "recovered").sort((a, b) => (b.keepDownloads ?? 0) - (a.keepDownloads ?? 0)).slice(0, 5);
+  const stats = downloadStats();
+  const list = (title: string, href: string, label: string, items: { href: string; title: string; note: string }[]) => (
+    <div>
+      <h3 className="mb-3 font-ui text-sm font-semibold tracking-[0.12em] text-stone-300 uppercase">{title}</h3>
+      <ul>
+        {items.map((i) => (
+          <li key={i.href} className="border-b border-stone-800">
+            <Link href={i.href} className="flex items-baseline justify-between gap-4 py-2.5 text-stone-200 hover:text-gold-300">
+              <span className="truncate">{i.title}</span>
+              <span className="shrink-0 font-ui text-[0.8125rem] tabular-nums text-stone-400">{i.note}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <Link href={href} className="text-link mt-4">{label} <ArrowRight size={15} /></Link>
+    </div>
+  );
+  return (
+    <Section
+      title="From the Phrozen Keep"
+      lead={`The home of Diablo II modding since 2000. Its ${articles.length} knowledge base articles and ${stats.recovered.toLocaleString("en-GB")} recovered downloads now live here, with every author credited.`}
+    >
+      <div className="grid gap-10 md:grid-cols-2">
+        {list("Most-read guides", "/knowledge", "Enter the knowledge base", guides.map((a) => ({ href: a.href, title: a.title, note: `${a.views?.toLocaleString("en-GB")} reads` })))}
+        {list("Most-downloaded files", "/downloads", "Browse all downloads", files.map((d) => ({ href: `/downloads/${d.id}`, title: d.title, note: `${d.keepDownloads?.toLocaleString("en-GB")} downloads` })))}
+      </div>
+    </Section>
   );
 }

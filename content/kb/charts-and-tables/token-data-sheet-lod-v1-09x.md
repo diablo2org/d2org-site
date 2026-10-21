@@ -1,0 +1,260 @@
+---
+title: Token Data Sheet (LoD v1.09x)
+summary: >-
+  When making alterations to monster graphics, it is useful to know what the
+  tokens in MonType.txt actually refer to. Consult this list if you are
+  confused.
+keepId: 48
+author: Phrozen Heart
+credit: by Nefarius
+posted: '2004-05-27'
+views: 10791
+originalUrl: 'https://d2mods.info/forum/kb/viewarticle?a=48'
+---
+When making alterations to monster graphics, it is useful to know what the tokens in MonType.txt actually refer to. Consult this list if you are confused.
+
+For more information on changing monster graphics and other aspects of monsters in Diablo 2, read the relevant tutorials in our Tutorials Section.
+
+NOTE: This should be obvious, but just to be clear: If you are modding classic D2 (in other words, pre-expansion), the tokens for expansion (Lord of Destruction) monsters and NPCs will not be useful to you. Only consult the second part of this list (the expansion tokens) if you are modding the D2 expansion.
+
+## Tokens:
+
+**Diablo 2 (Classic)**
+
+10 = Captured soul  
+13 = Captured soul  
+17 = Izual soul  
+1D = Deckard cain  
+1Z = Wanderer  
+20 = Halbu  
+21 = Hydra  
+22 = Izual  
+23 = Fetish Shaman  
+2D = Deckard cain  
+2F = Woman (dummy)  
+2M = Man (dummy)  
+36 = Hadriel  
+3D = Deckard cain  
+4D = Deckard cain  
+5P = Overlord  
+66 = Diablo boneprison  
+67 = Diablo boneprison  
+68 = Diablo boneprison  
+69 = Diablo boneprison  
+9A = Nothing (no animation)  
+AE = Lightning spire  
+AH = Ashaera  
+AL = Alkor  
+AN = Andariel  
+AS = Act2 barkeeper woman  
+B9 = Bat (dummy)  
+BB = Baboon demon  
+BG = Bug (dummy)  
+BH = Bighead  
+BK = Foulcrow  
+BN = Foulcrow nest  
+BS = Bat (dummy)  
+BT = Bat demon  
+BU = D1 Butcher (unused)  
+BW = Bonewall (spell)  
+CI = Charsi  
+CK = Chicken (dummy)  
+CM = Camel (dummy)  
+CO = Snake (dummy)  
+CR = Corrupted rogue  
+CS = Corpse eater  
+CW = Cow (dummy)  
+DC = Deckard cain (this cain has a get hit animation)  
+DH = Mosquito nest (unused COOL and working!)  
+DI = Diablo  
+DM = Balrog  
+DR = Drognan  
+DS = Scorpion (dummy)  
+DU = Duriel  
+EC = Hell bovine  
+EH = Evil hole  
+EL = Elzix  
+FA = Fallen  
+FC = Fetish blowpiper  
+FD = Frog demon  
+FE = Fetish  
+FI = Glowing Ghost (COOL glowing ghost gfx unused and only 1 animation works fine as a replacment for Bone spirit)  
+FK = Bome fetish  
+FM = Elemental demon (Very cool a red version of the others)  
+FR = Finger mage  
+FS = Fallen shaman  
+FW = Fetish shaman  
+G1 = Clay golem  
+G2 = Blood golem  
+G3 = Fire golem  
+G4 = Iron golem  
+GE = Geglash  
+GH = Gheed  
+GM = Goatman  
+GO = Gorgon (cool but only 2 animatio)  
+GR = Grietz  
+GT = Gargoyle trap  
+GU = Guard (act2 merc)  
+GY = Great mummy  
+GZ = Grizwald  
+HP = Concil member  
+HR = Hratli  
+HX = Hydra (spell)  
+HY = Hydra (spell)  
+HZ = Hydra (spell)  
+IM = Elemental demon (VERY cool a blue version of the others)  
+IW = Iron wolf (act3 merc)  
+JA = Jamela  
+JE = Jeryn  
+K9 = nothing (no gfx)  
+LS = Spider (dummy)  
+LV = Larvae (dummy)  
+LY = Lysander  
+M1 = Vendor act2 (dummy)  
+M2 = Vendor act2 (dummy)  
+M3 = Meshif  
+M4 = Blade tower (unused ultra COOL trap)  
+M6 = Mephisto chamber soul  
+MA = Duriel corpse maggot (dummy)  
+MD = Broodwar (chat)  
+ME = Rat (dummy)  
+MG = Mummy spawner (coffin)  
+MM = Mummy  
+MO = Mosquito demon  
+MP = Mephisto  
+MQ = Maggot queen  
+MS = Meshif  
+N3 = Woman (dummy)  
+N4 = Man (dummy)  
+O0 = Bot (chat)  
+01 = Diablo1 warrior (chat)  
+O2 = Diablo1 mage (chat)  
+03 = Diablo1 rogue (chat)  
+04 = Starcraft (chat)  
+05 = Blizzard guy (chat)  
+06 = Magistrate (chat)  
+07 = Steelarmor guy (chat)  
+08 = Paperboy (chat)  
+09 = Orc (chat)  
+OF = Act2 blacksmith  
+OR = Ormus  
+PB = Desert turrent  
+PM = Elemental demon (unused)  
+PN = Blunderbore  
+PR = Parrot (dummy)  
+PS = Akara  
+PQ = Panther woman  
+QQ = Crab (dummy)  
+R7 = Hypnotic orb (act3 quest)  
+RC = Kashya  
+RD = Radament  
+RG = Rogue  
+RH = Gray wanderer (chat)  
+RO = Wanderer (chat)  
+RT = Rat (dummy)  
+S7 = Quill bear  
+SA = Skeleton archer (unused from pre beta d2!)  
+SB = Maggot baby  
+SC = Scarab demon  
+SD = Snake demon  
+SE = Maggot egg  
+SI = Quill rat  
+SK = Skeleton  
+SL = Sand leaper  
+SM = Sand maggot  
+SP = Spider demon  
+SR = Sand raider  
+ST = Flying scimitar  
+SU = Summoner  
+SW = Swarm  
+TC = Person with bell (chat)  
+TE = Watet watcher head  
+TH = Tree Demon  
+TN = Water watcher tail  
+TX = Tyrael  
+TY = Tyrael  
+TZ = Foulcrow nest  
+UM = Oblivion knight  
+VA = Vampire  
+VC = Vile child  
+VD = Vulture demon  
+VH = Evil window  
+VJ = Evil window  
+VK = Valkyrie  
+VM = Vile mother  
+WA = Warriv (act1)  
+WO = Wolf (unused)  
+WR = Wraith  
+WW = Will o wisp  
+WX = Warriv (act2)  
+YE = Yeti  
+ZM = Zombie  
+ZP = Zakarum priest  
+ZZ = Zakarum zealot
+
+**D2 Expansion (Lord of Destruction)**
+
+0A = Barbarian Helpers  
+0B = Succubi with bird wings  
+0C = Succubi with bat wings  
+0D = Barb Ancient (sword)  
+0E = Barb Ancient (pole)  
+0F = Barb Ancient (axe)  
+0G = Barb Ancient Statue (Sword)  
+0H = Barb Ancient Statue (Axe)  
+0I = Barb Ancient Statue (Pole)  
+0J = Nithalhak  
+2Q = Fence  
+2T = Demon Hut  
+40 = Werewolf  
+41 = Baal  
+42 = Baal  
+43 = Baals minion  
+44 = Baal tentackels  
+45 = Putrid terrors  
+46 = Glowing Vile Childs  
+48 = Bunny (dummy)  
+64 = Catapult  
+65 = Catapult  
+6Z = Bleeding barb  
+7I = Bleeding barb  
+7J = Bleeding barb  
+A6 = Weird stone thing  
+AC = Tower  
+AG = Door  
+AJ = Door  
+AK = Weird stone thing  
+B7 = Bear  
+B8 = Assasin blade disk  
+E9 = Assasin trap  
+EG = Mosquito  
+F0 = Ice Demon  
+FG = Assasin trap  
+GB = Siege Beast 4 legged version (has no overlay) still in development state  
+HK = Raven  
+IO = Yeti (act5 version)  
+IP = Imp  
+K9 = nothing NADA!  
+L3 = Minotaur  
+LG = Assasin Trap  
+M5 = Death Mauler  
+OS = Minion Lord  
+OX = Siege Beast  
+RE = Reanimated Horde  
+TG = Werebear  
+TW = VERY WIERD PURPLE GUARD TOWER  
+UA = Catapult  
+WF = Wolf  
+X3 = Druid Spirit  
+X4 = Druid Spirit  
+XA = other version of Demon hut  
+XR = Barb Blacksmith  
+XS = Anya  
+XT = Malha  
+XU = Nithalhak (this is the boss)  
+XV = Act5 Npc (forgot the name)  
+XW = Druid Spirit  
+XX = Minion  
+XY = Suiccide Minion  
+XZ = unused Flower Demon (very cool dosent lack frames)  
+Y0 = Anya

@@ -5,6 +5,7 @@ import { servers } from "@/data/servers";
 import { tools } from "@/data/tools";
 import { versions } from "@/data/versions";
 import { getAllArticles } from "@/lib/content";
+import { getKbArticles, getKbCategories } from "@/lib/kb";
 import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -23,6 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/archive",
     "/community",
     "/about",
+    "/downloads",
+    ...getKbCategories().map((c) => `/kb/${c.slug}`),
     ...communities.map((c) => `/community/${c.slug}`),
     ...mods.map((m) => `/mods/${m.slug}`),
     ...servers.map((s) => `/servers/${s.slug}`),
@@ -33,5 +36,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...paths.map((p) => ({ url: new URL(p, site.url).toString() })),
     // Articles carry an updated date; other pages don't track one, so they leave lastModified out.
     ...getAllArticles().map((a) => ({ url: new URL(a.href, site.url).toString(), lastModified: a.updated })),
+    ...getKbArticles().map((a) => ({ url: new URL(a.href, site.url).toString(), lastModified: a.modified ?? a.posted })),
   ];
 }

@@ -1,0 +1,41 @@
+---
+title: '[LoD v1.09x] Baldur''s Gate Mod v1.06 by Ric Faith & SubSanity'
+summary: >-
+  I’ve never played Baldur’s Gate. Probably never will either. From what I hear,
+  it is a shining example of how a modern RPG should be made, with impressive
+  gameplay and storyline that’ll keep you…
+keepId: 102
+author: Phrozen Heart
+credit: Reviewed by Maxx Power for the Phrozen Keep.
+posted: '2002-07-19'
+views: 10266
+originalUrl: 'https://d2mods.info/forum/kb/viewarticle?a=102'
+---
+I’ve never played Baldur’s Gate. Probably never will either. From what I hear, it is a shining example of how a modern RPG should be made, with impressive gameplay and storyline that’ll keep you hooked until the last boss’ head is severed from his body. Whether this is true or not, its hard to say, for the very reason mentioned above. This mod is, supposedly, based upon that very game, hence the title. I most certainly have played Diablo, so I guess the majority of the review will be based upon that fact, and nothing more. All to well then, because as a hardcore RPG, Baldur’s Gate isn’t up to scratch, but as an action RPG, is certainly commendable.
+
+**What Works**  
+From the very start of the game, you know things are different. The interface screen have a lush, interlace pattern around them. You spring into action with thirty stat points to your name, and some new skill trees which confuse you almost immediately. (They did me, as I was led to believe that you could attain some of the higher level skills at level 1). Reading through the manual and a quick glance at the site will certainly help, as there are so many new things to do, places to explore, that you just might find yourself bamboozled just trying to find the den of evil.
+
+OK then, first things first. The skill trees. Most skill trees usual stay the same on every mod I’ve reviewed so far, with the skills still very much there, if slightly tweeked. However, Baldur’s Gate certainly messes with your mind when you first see the skill trees. At a basic level, they start at the bottom, and work their way up. Its easy to understand once you get used to it, and much more logical in a way. Also, most of the skills themselves have been revamped. Rather than go the usual road of some mods and remove the pre-requests of skills, the creators of this mod have done away with then altogether. There is a more tightly packed selection to choose from, with the growth of skills more balanced than the original Diablo (in terms of this mod at best).
+
+Also, the new layout of the maps is a welcome changed. So far, I’ve seen mods which give you dungeon upon dungeon level go basically dig deep into. Never have I seen the high quality by which the levels have been designed in Baldur’s Gate. Its obvious the developers have thought it through. Forget whatever you think you know, because within five minutes, if you haven’t read through the manual, you may find yourself lost. However, once you understand the new way in which these maps are set out, it makes for more interesting gameplay, as you scour the landscape in search of quests and items. This also helps for some of the quests within the game, such as the Den of Evil, an early one, which forces you further afield than usual, as does the Lam Essen Tomb quest in Act 3, forcing you to either find Khalims Will to get your prize, or killing Mephisto. Extremely unique and original.
+
+New items also rear their heads from time to time. By this I mean the new runes, potions, gems and spheres. The runes are of the usual ilk, though some certainly stand out from the usual set (the use of the almost forgotten time-set value, by which some values are higher in the day than at night, is certainly above the norm). Potions now litter the landscape for your use, including potions which add sockets, create rares, set items, and base items from magic. This allows for controlled development of equipment, rather than the usual “random-drop” stance of the normal Diablo. Gems also come into the equation, allowing you to add the occasional extra mod to your item, though, to be fair, these bonuses take a long time to add up to anything.
+
+Perhaps it would be best if I devoted a new paragraph to the next subject, which are the spheres. Acting exactly like charms but using up enough inventory space to fit three grand ones, these can be upgraded during the course of the game, allowing for large bonuses to be added on top of those already present. Very few people create mods which allow the upgrading of charms, so this is a refreshing change. My only gripe is the fact they are useful only to the magic classes and the Barbarian. This leaves the other classes high and dry.
+
+**What Doesn't Work**  
+This seems like the fiftieth times I’ve mentioned this, and when it will sink in I’m not sure, but here goes again. There is no point replacing Blizzard’s original item graphics with inferior ones. I could probably scream until I’m blue in the face about it (in a metaphorical sense), but it still gets done. The item graphics in Baldur’s Gate are disgraceful, considering the high quality of the rest of the mod. Weapons are grainy in appearance, with dull orange and gray motif across the board it seems. Most likely these are the original items seen in Baldur’s Gate, but they have no place here. The names are original enough, for the base items at least, but for exceptional and elite, I admit placing “+1” and “+2” in front of items allows players to easily distinguish them, but it just seems a bit lazy to me.
+
+Let’s talk about monsters for a moment, shall we? I’m not a Dungeons and Dragons expert, but there are certainly no Quill Rats, Overseers or Megademons in there. The monsters haven’t been changed, not in name nor in graphics. For a mod which is supposedly base upon Baldur’s Gate, the lack of official AD&D monsters surprises me. OK, so there are skeletons and the like in Diablo, but everything else remains the same. It would have been nifty to see the occasional Orc or Dark Elf running around one of the acts. It would certainly give the mod a more D&D feel to it. Maybe in the next release?
+
+While we’re on the subject of monsters, I have to mention the uniques. There’s way to many, as you find yourself slap bang in the middle of huge masses of minions charging after you, with their respective master pounding you from afar with his almighty Multi-shot, Lit Enchanted mods. In the open areas, its not so bad, as you have ample space to run if necessary. However, in the cramped conditions of dungeons, it can get a bit too much, especially for frame-rates, with my FPS dropping to around one point seven at times. Thankfully, it is more challenging than annoying, but frustration will kick in as you are blocked by a wall of monsters for the twentieth time.
+
+And this isn’t so much as something which doesn’t work than a problem with the mod, is that after Act 3, the game remains the same. There are no new levels, the old pathways and way-points remain the same. Considering this is one of the mods strongest points, it’s a shame that it falters after this point.
+
+**Conclusion**  
+In all respects, Baldur’s Gate is a mixed bag of tricks. One half of the mod surpasses itself compared to some of the other mods out there, providing top quality entertainment for anyone wishing to test out this mod. The new levels and skills certainly add to the fun, while some of the new trinkets to play around with. However, at the other end of the spectrum, the mod does fall down on its face with the low-quality of weapons and armor, and the extensive amount of monsters hoarding towards you most of the time. And the fact that they aren’t directly ripped from the Dungeon’s and Dragon’s Monster Compendium may kill some die-hard fans. Also, don’t expect the game to remain at the same level of dungeon romp enjoyment, as it reverts back to the frankly dull Diablo way of doing things. Now all Baldur’s Gate needs is an ironing out of any bugs and faults, and perhaps it can attain the classical status it deserves. Now, where’s my d20…?
+
+---
+
+Anyone wishing to check out the Baldur's Gate mod can do so by visiting the official website at [http://bg.d2mods.com](http://bg.d2mods.com).

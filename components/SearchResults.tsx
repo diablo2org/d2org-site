@@ -14,6 +14,8 @@ const KIND_LABELS: Record<SearchKind, string> = {
   modding: "Modding",
   history: "History",
   community: "Communities",
+  kb: "Knowledge base",
+  download: "Downloads",
 };
 
 const SUGGESTIONS = ["1.13c widescreen", "steam deck", "shared stash", "private server", "glide", "mpq"];

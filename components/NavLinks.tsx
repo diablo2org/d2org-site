@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const KNOWLEDGE_PATHS = ["/knowledge", "/mechanics", "/technical", "/history", "/guides", "/community"];
+const KNOWLEDGE_PATHS = ["/knowledge", "/mechanics", "/technical", "/history", "/guides", "/community", "/kb"];
 
 export function NavLinks({ items }: { items: readonly { href: string; label: string }[] }) {
   const pathname = usePathname();

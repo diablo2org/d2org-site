@@ -4,6 +4,7 @@ import { servers } from "@/data/servers";
 import { tools } from "@/data/tools";
 import { versions } from "@/data/versions";
 import { getAllArticles, type Section } from "./content";
+import { getKbArticles } from "./kb";
 import type { Ref, RefKind } from "./types";
 
 export interface Node {
@@ -25,6 +26,7 @@ export const KIND_LABELS: Record<RefKind, string> = {
   modding: "Modding",
   history: "History",
   community: "Community",
+  kb: "Knowledge base",
 };
 
 const SECTION_KIND: Record<Section, RefKind> = {
@@ -54,6 +56,8 @@ function buildGraph() {
     const kind = SECTION_KIND[a.section];
     add({ ref: `${kind}:${a.slug}`, kind, title: a.title, href: a.href, summary: a.summary, related: a.related ?? [] });
   }
+  for (const a of getKbArticles())
+    add({ ref: `kb:${a.category}/${a.slug}`, kind: "kb", title: a.title, href: a.href, summary: a.summary, related: [] });
   return g;
 }
 

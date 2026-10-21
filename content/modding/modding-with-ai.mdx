@@ -1,0 +1,71 @@
+---
+title: Modding with an AI assistant
+summary: Give Claude Code or another assistant the Diablo II knowledge base, so it reads the file guides instead of guessing.
+order: 2
+updated: 2026-10-21
+keywords: ["ai", "llm", "claude", "claude code", "chatgpt", "skill", "prompt", "agent", "llms.txt"]
+related: ["modding:how-mods-work", "community:phrozen-keep", "tool:d2moo"]
+---
+
+Many modders now work with an AI coding assistant open alongside their mod. Assistants do much better when they can read the right reference than when they answer from memory. Diablo II's data files have hundreds of columns, and a confident wrong answer about one of them can cost an evening.
+
+The [knowledge base](/knowledge) on this site is published in forms that assistants can read directly. This page explains how to use it.
+
+## What the site provides
+
+| Address | What it is |
+| --- | --- |
+| `/knowledge` | The knowledge base for people: file guides, tutorials and references. |
+| `/api/kb` | A JSON index of every article, with a link to each one as plain markdown. |
+| `/api/kb/<category>/<article>` | One article as plain markdown, with its author, original URL and version label first. |
+| `/llms.txt` | An index of the whole site for language models, including every knowledge base article. |
+| `/llms-kb.txt` | Every knowledge base article in one file. |
+| `/ai/skills/diablo2-modding/SKILL.md` | A skill for Claude Code that teaches it to use all of the above. |
+
+Every article page also has a "Plain markdown" link in its sidebar.
+
+## Claude Code
+
+Install the skill into your mod's project folder:
+
+```sh
+mkdir -p .claude/skills/diablo2-modding
+curl -o .claude/skills/diablo2-modding/SKILL.md https://diablo2.org/ai/skills/diablo2-modding/SKILL.md
+```
+
+To use it in every project, put it in `~/.claude/skills/diablo2-modding/` instead. Claude Code picks the skill up when you're working on a Diablo II mod. It then checks the game version, finds the relevant file guide, and cites the guide for each change it makes.
+
+## Other assistants
+
+Most assistants can read a web page if you give them the address. Paste the plain markdown link for the guide you need, or point the assistant at `https://diablo2.org/llms.txt` and ask it to find the right article.
+
+## Prompts that work
+
+Say which game version you're on, and name the file. For example:
+
+```text
+I'm modding 1.13c. Read the Skills.txt file guide on diablo2.org, then explain
+what the srvdofunc column does and which skills I could copy it from.
+```
+
+```text
+I'm on 1.10f. Using the UniqueItems.txt and ItemStatCost.txt guides on diablo2.org,
+add a unique ring with +2 to all skills and 20% faster cast rate. Show me the rows
+you add and link the guide for each column you set.
+```
+
+```text
+Here is my CubeMain.txt row. Using the CubeMain.txt guide on diablo2.org, tell me
+why the recipe doesn't work in game. Don't change anything yet.
+```
+
+## Working safely
+
+<Callout type="tip" title="Keep your mod in git">
+Run `git init` in your mod folder before an assistant edits anything. Every change is then a diff you can read, and a mistake is one command to undo.
+</Callout>
+
+- **Test each change in game** before asking for the next one. Small steps make it obvious what broke.
+- **Keep a clean copy** of the original data files to compare against.
+- **Check the version.** Most of the knowledge base was written for a specific patch, and the files changed between patches.
+- **Treat the guides as a starting point.** They're archived community articles from the [Phrozen Keep](/community/phrozen-keep). Some are incomplete or out of date. For how 1.10f actually behaves, [D2MOO](/tools/d2moo) is the closest thing to the source.

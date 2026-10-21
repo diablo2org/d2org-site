@@ -38,7 +38,8 @@ export type RefKind =
   | "guide"
   | "modding"
   | "history"
-  | "community";
+  | "community"
+  | "kb";
 
 export interface Verification {
   /**
