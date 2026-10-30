@@ -493,7 +493,7 @@ export const servers: Server[] = [
       { label: "Meanski, to the DIABLO2.ORG staff (October 2026)", url: "https://d2up.net/" },
     ],
     tags: ["d2up", "hd", "upscaled", "act 6", "act vi", "ureh", "1.14d", "ai", "agentic"],
-    related: ["guide:private-servers-explained"],
+    related: ["mod:d2up", "guide:private-servers-explained"],
     smaller: true,
   },
 ];

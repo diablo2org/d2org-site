@@ -145,6 +145,34 @@ export const mods: Mod[] = [
     tags: ["annihilus", "annihilus legacy", "souls of the rift", "rifts", "crucible", "riftstones"],
     related: ["server:annihilus", "version:1.13d"],
   },
+  {
+    slug: "d2up",
+    name: "d2up",
+    style: "vanilla-plus",
+    summary:
+      "A 1.14d mod that redraws the game in HD at twice the original size and adds Act VI, Ureh the drowned city. Played online on its own realm, in closed beta.",
+    description:
+      "Acts I to V keep Diablo II's rules, with selected fixes and quality-of-life changes on top: HD art and fonts with a toggle back to the original pixels, widescreen up to 1068 wide, shared stash pages, an item pouch and a loot filter. Act VI (alpha) adds 16 areas, 5 quests and 16 named bosses, opened by killing Baal. d2up is developed agentic-first, with AI agents doing much of the work, so it changes quickly: it was at version 0.3.13 in October 2026.",
+    status: "active",
+    website: "https://d2up.net/",
+    discord: "https://d2up.net/discord",
+    latestRelease: "0.3.13",
+    versions: ["1.14d"],
+    os: ["windows", "macos"],
+    multiplayer: true,
+    ladder: true,
+    features: {
+      newAreas: true,
+    },
+    installer: "Windows launcher that installs and patches Diablo II, plus a macOS installer with Wine included",
+    sources: [
+      { label: "d2up.net", url: "https://d2up.net/" },
+      { label: "d2up features", url: "https://d2up.net/features/" },
+      { label: "Meanski, to the DIABLO2.ORG staff (October 2026)", url: "https://d2up.net/" },
+    ],
+    tags: ["d2up", "hd", "upscaled", "act 6", "act vi", "ureh", "1.14d", "ai", "agentic"],
+    related: ["server:d2up", "version:1.14d"],
+  },
 ];
 
 export function getMod(slug: string) {
