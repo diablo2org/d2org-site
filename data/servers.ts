@@ -433,6 +433,69 @@ export const servers: Server[] = [
     related: ["guide:private-servers-explained"],
     smaller: true,
   },
+  {
+    slug: "d2up",
+    name: "d2up",
+    style: "HD realm with a sixth act, in closed beta",
+    vanillaSimilarity: "vanilla-plus",
+    summary:
+      "A 1.14d realm redrawn in HD at twice the original size, with a new Act VI, Discord login and games hosted in nine regions. In closed beta.",
+    description:
+      "Acts I to V keep Diablo II's rules, with selected fixes and quality-of-life changes on top. d2up is developed agentic-first, with AI agents doing much of the work, so it changes quickly: it was at version 0.3.13 in October 2026.",
+    status: "active",
+    website: "https://d2up.net/",
+    discord: "https://d2up.net/discord",
+    versions: ["1.14d"],
+    os: ["windows", "macos"],
+    ladder: true,
+    customContent: true,
+    lootChanges: true,
+    skillChanges: true,
+    trading: "In game. Trades save both characters together or not at all",
+    pvp: "The Hall of Truce, a PvP town, and Bloody Lore, a hostile field outside it",
+    launcher:
+      "One-click Windows launcher that installs Diablo II, patches it to 1.14d and adds d2up, with automatic updates. macOS installer with Wine included",
+    regions: [
+      "Europe",
+      "US Central",
+      "US East",
+      "US West",
+      "South America",
+      "South Africa",
+      "Asia",
+      "Japan",
+      "Australia",
+    ],
+    services: [
+      {
+        label: "Stash",
+        url: "https://account.d2up.net/stash",
+        description: "Your account's stash on the web.",
+      },
+      {
+        label: "Status",
+        url: "https://d2up.net/status",
+        description: "Login service status.",
+      },
+    ],
+    changes: [
+      "HD art at twice the original size, widescreen up to 1068 wide, HD fonts and lighting. Press G to switch back to the original pixels.",
+      "Act VI, Ureh, the drowned city (alpha): 16 areas, 5 quests and 16 named bosses, opened by killing Baal.",
+      "Log in with Discord, with no CD key or Battle.net account. Up to 16 characters per account.",
+      "Four shared stash pages per mode, an item pouch for gems, runes and skulls, and vendor stock rerolls.",
+      "Loot filter, automap markers and an advanced stats panel.",
+      "Classic rares can roll the pre-1.07 way, Guided Arrow pierces as in 1.09, and some vanilla skill bugs are fixed.",
+      "A Diablo Clone event in each region that drops Annihilus.",
+    ],
+    sources: [
+      { label: "d2up.net", url: "https://d2up.net/" },
+      { label: "d2up features", url: "https://d2up.net/features/" },
+      { label: "Meanski, to the DIABLO2.ORG staff (October 2026)", url: "https://d2up.net/" },
+    ],
+    tags: ["d2up", "hd", "upscaled", "act 6", "act vi", "ureh", "1.14d", "ai", "agentic"],
+    related: ["guide:private-servers-explained"],
+    smaller: true,
+  },
 ];
 
 export const mainServers = servers.filter((s) => !s.smaller);
