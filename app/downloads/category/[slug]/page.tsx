@@ -15,7 +15,10 @@ export async function generateMetadata({ params }: PageProps<"/downloads/categor
   if (!c) return {};
   return pageMetadata({
     title: `${c.title} - Downloads`,
-    description: `${c.count} downloads from the Phrozen Keep's ${c.path} category.`,
+    description:
+      c.section === "community"
+        ? `${c.count} community downloads hosted on diablo2.org with the author's permission.`
+        : `${c.count} downloads from the Phrozen Keep's ${c.path} category.`,
     path: `/downloads/category/${c.slug}`,
   });
 }
@@ -38,7 +41,8 @@ export default async function DownloadCategoryPage({ params }: PageProps<"/downl
         ]}
       >
         <p className="font-ui text-[0.8125rem] tracking-wide text-stone-400 uppercase">
-          {items.length} {items.length === 1 ? "file" : "files"} · {available} ready to download · {c.path} on the Phrozen Keep
+          {items.length} {items.length === 1 ? "file" : "files"} · {available} ready to download ·{" "}
+          {c.section === "community" ? "Hosted with the author's permission" : `${c.path} on the Phrozen Keep`}
         </p>
       </PageHeader>
       <div className="mx-auto max-w-6xl px-4 pt-10 sm:px-6">

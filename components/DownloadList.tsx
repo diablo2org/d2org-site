@@ -3,6 +3,7 @@ import { categoryOf, DOWNLOAD_STATUS, extraVersion, formatBytes, type Download, 
 
 /** Each kind of download wears an item quality colour, so the type reads at a glance. */
 export const SECTION_ACCENT: Record<DownloadSection, { bar: string; dot: string; text: string }> = {
+  community: { bar: "shadow-[inset_3px_0_0_var(--color-q-crafted)]", dot: "bg-q-crafted", text: "text-q-crafted" },
   mods: { bar: "shadow-[inset_3px_0_0_var(--color-q-unique)]", dot: "bg-q-unique", text: "text-q-unique" },
   tools: { bar: "shadow-[inset_3px_0_0_var(--color-q-magic)]", dot: "bg-q-magic", text: "text-q-magic" },
   plugins: { bar: "shadow-[inset_3px_0_0_var(--color-q-set)]", dot: "bg-q-set", text: "text-q-set" },

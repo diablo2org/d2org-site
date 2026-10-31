@@ -22,6 +22,7 @@ export function GET() {
           description: d.description,
           uploaded: d.uploaded,
           changed: d.changed,
+          author: d.author,
           keepDownloads: d.keepDownloads,
           status: d.status,
           bytes: d.bytes,

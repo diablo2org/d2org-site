@@ -24,7 +24,7 @@ export const metadata: Metadata = pageMetadata({
   keywords: ["phrozen keep", "diablo 2 mods download", "d2 modding tools", "d2se", "plugins"],
 });
 
-const ORDER: DownloadSection[] = ["mods", "tools", "plugins", "game-files", "resources"];
+const ORDER: DownloadSection[] = ["community", "mods","tools", "plugins", "game-files", "resources"];
 
 export default function DownloadsPage() {
   const stats = downloadStats();

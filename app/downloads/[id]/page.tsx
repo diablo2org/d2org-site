@@ -18,7 +18,9 @@ export async function generateMetadata({ params }: PageProps<"/downloads/[id]">)
   const c = categoryOf(d);
   return pageMetadata({
     title: `${d.title}${d.version ? ` ${d.version}` : ""} - Downloads`,
-    description: `${d.title}, from the Phrozen Keep's ${c.path} downloads. Uploaded ${d.uploaded?.slice(0, 4) ?? "to the Keep"}.`,
+    description: d.author
+      ? `${d.title} by ${d.author}, a community release hosted on diablo2.org with the author's permission.`
+      : `${d.title}, from the Phrozen Keep's ${c.path} downloads. Uploaded ${d.uploaded?.slice(0, 4) ?? "to the Keep"}.`,
     path: `/downloads/${d.id}`,
   });
 }
@@ -39,7 +41,8 @@ export default async function DownloadPage({ params }: PageProps<"/downloads/[id
 
   const facts: [string, React.ReactNode][] = [
     ...(d.status === "available" ? [] : ([["Status", <DownloadStatusPill key="s" status={d.status} />]] as [string, React.ReactNode][])),
-    ["File", d.filename && <span className="font-mono text-[0.8rem] break-all">{d.filename}</span>],
+    ["Author", d.author],
+    ["File", d.filename &&<span className="font-mono text-[0.8rem] break-all">{d.filename}</span>],
     ["Size", formatBytes(d.bytes)],
     ["Version", d.version],
     ["Uploaded", formatDate(d.uploaded)],
@@ -83,7 +86,7 @@ export default async function DownloadPage({ params }: PageProps<"/downloads/[id
           {html ? (
             <div className="prose prose-d2 max-w-none min-w-0 overflow-x-auto lg:max-w-[46rem]" dangerouslySetInnerHTML={{ __html: html }} />
           ) : (
-            <p className="text-stone-400">The Keep listing has no description for this file.</p>
+            <p className="text-stone-400">{d.author ? "No description for this file." : "The Keep listing has no description for this file."}</p>
           )}
 
           {siblings.length > 0 && (
@@ -112,7 +115,11 @@ export default async function DownloadPage({ params }: PageProps<"/downloads/[id
                 <a href={d.url} className="diablo-button mx-auto !flex">
                   Download {formatBytes(d.bytes)}
                 </a>
-                <p className="mt-2 text-[0.8125rem] leading-relaxed text-stone-400">From the Phrozen Keep&apos;s file mirror.</p>
+                <p className="mt-2 text-[0.8125rem] leading-relaxed text-stone-400">
+                  {d.author
+                    ? `Hosted on diablo2.org with ${d.author}'s permission. Credit the author if you use it in a public mod.`
+                    : "From the Phrozen Keep's file mirror."}
+                </p>
               </>
             ) : d.status === "pending" ? (
               <p className="leading-relaxed text-stone-300">
@@ -141,7 +148,7 @@ export default async function DownloadPage({ params }: PageProps<"/downloads/[id
             </dl>
           </div>
           <p className="text-stone-400">
-            <a href={d.originalUrl} className={link}>Original listing on d2mods.info</a>
+            <a href={d.originalUrl} className={link}>{d.author ? "Author's release post on the Phrozen Keep" : "Original listing on d2mods.info"}</a>
           </p>
         </aside>
       </div>
