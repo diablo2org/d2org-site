@@ -499,10 +499,10 @@ export const servers: Server[] = [
   {
     slug: "d2dna",
     name: "D2DNA",
-    style: "Mixed-era realm, launcher in preview",
+    style: "Mixed-era seasonal realm, in beta",
     vanillaSimilarity: "vanilla-plus",
     summary:
-      "A 1.13c realm that mixes Diablo II's eras: Classic and Lord of Destruction, prepatch items, selected Resurrected uniques and runewords, and new endgame bosses. Its launcher is in preview.",
+      "A 1.13c realm that mixes Diablo II's eras: Classic and Lord of Destruction, prepatch items, selected Resurrected uniques and runewords, and new endgame bosses. In beta, with seasonal ladders.",
     description:
       "Added prepatch bases roll from a separate, translated 1.06 affix pool, while the original bases keep the modern one. The changelog starts in November 2026, with game files at D2DNA 1.7.27 and launcher preview 0.1.14 on 16 November 2026.",
     status: "active",
@@ -510,6 +510,7 @@ export const servers: Server[] = [
     discord: "https://discord.gg/29EjZGQM4n",
     versions: ["1.13c"],
     os: ["windows", "linux"],
+    ladder: true,
     customContent: true,
     lootChanges: true,
     endgame: "Colossal Ancients uber bosses and Terror Zones",
@@ -544,9 +545,10 @@ export const servers: Server[] = [
       { label: "D2DNA features", url: "https://d2dna.net/features" },
       { label: "D2DNA download", url: "https://d2dna.net/download" },
       { label: "D2DNA changelog", url: "https://d2dna.net/changelog" },
+      { label: "Kieran, to the DIABLO2.ORG staff (November 2026): seasonal ladders, in beta", url: "https://d2dna.net/" },
     ],
     lastVerified: "2026-11",
-    tags: ["d2dna", "prepatch", "1.06", "classic", "d2r items", "terror zones", "sunder charms", "1.13c"],
+    tags: ["d2dna", "beta", "seasonal", "ladder", "prepatch", "1.06", "classic", "d2r items", "terror zones", "sunder charms", "1.13c"],
     related: ["version:1.13c", "guide:private-servers-explained"],
     smaller: true,
   },
