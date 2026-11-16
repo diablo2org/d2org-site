@@ -496,6 +496,60 @@ export const servers: Server[] = [
     related: ["mod:d2up", "guide:private-servers-explained"],
     smaller: true,
   },
+  {
+    slug: "d2dna",
+    name: "D2DNA",
+    style: "Mixed-era realm, launcher in preview",
+    vanillaSimilarity: "vanilla-plus",
+    summary:
+      "A 1.13c realm that mixes Diablo II's eras: Classic and Lord of Destruction, prepatch items, selected Resurrected uniques and runewords, and new endgame bosses. Its launcher is in preview.",
+    description:
+      "Added prepatch bases roll from a separate, translated 1.06 affix pool, while the original bases keep the modern one. The changelog starts in November 2026, with game files at D2DNA 1.7.27 and launcher preview 0.1.14 on 16 November 2026.",
+    status: "active",
+    website: "https://d2dna.net/",
+    discord: "https://discord.gg/29EjZGQM4n",
+    versions: ["1.13c"],
+    os: ["windows", "linux"],
+    customContent: true,
+    lootChanges: true,
+    endgame: "Colossal Ancients uber bosses and Terror Zones",
+    launcher:
+      "Windows 64-bit launcher (preview) that turns an original Diablo II and Lord of Destruction install, 1.07 to 1.14d, into a separate 1.13c D2DNA folder, with signed automatic updates. Linux through Wine",
+    regions: ["Los Angeles", "Dallas", "Atlanta"],
+    services: [
+      {
+        label: "Armory",
+        url: "https://d2dna.net/armory",
+        description: "Characters on the realm.",
+        icon: "armory",
+      },
+      {
+        label: "Server status",
+        url: "https://d2dna.net/status",
+        description: "Game server uptime and a latency test per region.",
+      },
+    ],
+    changes: [
+      "Prepatch items: a translated 1.06 affix pool for added prepatch bases, and 1.08 uniques.",
+      "Resurrected 3.3 and 3.4 uniques, selected Reign of the Warlock uniques, and the patch 2.4 and 2.6 runewords.",
+      "Sunder Charms, Colossal Jewels, and Insight, Infinity, Obedience and Pride on more base types.",
+      "Colossal Ancients uber bosses, Terror Zones and Chronicle.",
+      "Shared stash, a stash for materials, runes and gems, automatic gold pickup, and refreshable, unlimited gambling.",
+      "Returning SuperUnique monsters, Tokens in Classic, 1.09-style Guided Arrow and teleport in town.",
+      "Cube recipes including Larzuk-style sockets and a six-skull rare reroll in Classic, and a 2 Zod and 2 Stone of Jordan recipe in the expansion.",
+      "D2GL with a widescreen fix, and BH maphack and loot filter.",
+    ],
+    sources: [
+      { label: "d2dna.net", url: "https://d2dna.net/" },
+      { label: "D2DNA features", url: "https://d2dna.net/features" },
+      { label: "D2DNA download", url: "https://d2dna.net/download" },
+      { label: "D2DNA changelog", url: "https://d2dna.net/changelog" },
+    ],
+    lastVerified: "2026-11",
+    tags: ["d2dna", "prepatch", "1.06", "classic", "d2r items", "terror zones", "sunder charms", "1.13c"],
+    related: ["version:1.13c", "guide:private-servers-explained"],
+    smaller: true,
+  },
 ];
 
 export const mainServers = servers.filter((s) => !s.smaller);
