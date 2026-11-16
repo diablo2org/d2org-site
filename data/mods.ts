@@ -6,32 +6,6 @@ import type { Mod } from "@/lib/types";
  */
 export const mods: Mod[] = [
   {
-    slug: "project-diablo-2",
-    name: "Project Diablo 2",
-    style: "vanilla-plus",
-    summary:
-      "A vanilla-plus mod with seasonal online ladders. It keeps the feel of Diablo II while adding endgame content, balance changes and quality-of-life features.",
-    description:
-      "Project Diablo 2 (PD2) builds on 1.13c. It keeps the classic game's pacing and look, and adds reworked skills, new uniques and sets, a map-based endgame, and features such as a built-in loot filter. It is primarily played online through its own realm and launcher.",
-    status: "active",
-    website: "https://www.projectdiablo2.com",
-    discord: "https://discord.com/invite/projectdiablo2",
-    versions: ["1.13c"],
-    os: ["windows"],
-    multiplayer: true,
-    ladder: true,
-    features: {
-      newItems: true,
-      newSkills: true,
-      endgame: true,
-      difficultyChanges: true,
-    },
-    installer: "Dedicated launcher",
-    tags: ["pd2", "seasonal", "ladder", "loot filter", "maps", "endgame"],
-    related: ["server:project-diablo-2", "version:1.13c", "guide:private-servers-explained"],
-    popular: true,
-  },
-  {
     slug: "median-xl",
     name: "Median XL",
     style: "total-conversion",
@@ -172,6 +146,32 @@ export const mods: Mod[] = [
     ],
     tags: ["d2up", "hd", "upscaled", "act 6", "act vi", "ureh", "1.14d", "ai", "agentic"],
     related: ["server:d2up", "version:1.14d"],
+  },
+  {
+    slug: "project-diablo-2",
+    name: "Project Diablo 2",
+    style: "vanilla-plus",
+    summary:
+      "A vanilla-plus mod with seasonal online ladders. It keeps the feel of Diablo II while adding endgame content, balance changes and quality-of-life features.",
+    description:
+      "Project Diablo 2 (PD2) builds on 1.13c. It keeps the classic game's pacing and look, and adds reworked skills, new uniques and sets, a map-based endgame, and features such as a built-in loot filter. It is primarily played online through its own realm and launcher.",
+    status: "active",
+    website: "https://www.projectdiablo2.com",
+    discord: "https://discord.com/invite/projectdiablo2",
+    versions: ["1.13c"],
+    os: ["windows"],
+    multiplayer: true,
+    ladder: true,
+    features: {
+      newItems: true,
+      newSkills: true,
+      endgame: true,
+      difficultyChanges: true,
+    },
+    installer: "Dedicated launcher",
+    tags: ["pd2", "seasonal", "ladder", "loot filter", "maps", "endgame"],
+    related: ["server:project-diablo-2", "version:1.13c", "guide:private-servers-explained"],
+    popular: true,
   },
 ];
 

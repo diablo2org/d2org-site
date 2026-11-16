@@ -8,35 +8,6 @@ import type { Server } from "@/lib/types";
  */
 export const servers: Server[] = [
   {
-    slug: "project-diablo-2",
-    name: "Project Diablo 2",
-    style: "Vanilla-plus seasonal ladder",
-    vanillaSimilarity: "vanilla-plus",
-    summary:
-      "One of the largest legacy Diablo II communities: seasonal ladders on a vanilla-plus ruleset with a map-based endgame.",
-    status: "active",
-    website: "https://www.projectdiablo2.com",
-    discord: "https://discord.com/invite/projectdiablo2",
-    versions: ["1.13c"],
-    os: ["windows"],
-    ladder: true,
-    seasonLength: "About 4 months, each with a balance and content update",
-    customContent: true,
-    lootChanges: true,
-    skillChanges: true,
-    endgame: "Maps, new uber content",
-    launcher: "Dedicated launcher",
-    changes: [
-      "Reworked and rebalanced skills to broaden viable builds.",
-      "New uniques, sets, runewords and crafting options.",
-      "A map-based endgame system.",
-      "Built-in loot filter and quality-of-life improvements.",
-    ],
-    tags: ["pd2", "seasonal", "ladder", "vanilla-plus"],
-    related: ["mod:project-diablo-2", "guide:private-servers-explained"],
-    popular: true,
-  },
-  {
     slug: "path-of-diablo",
     name: "Path of Diablo",
     style: "Vanilla-plus seasonal ladder",
@@ -261,6 +232,35 @@ export const servers: Server[] = [
 
   // Smaller realms
 
+  {
+    slug: "project-diablo-2",
+    name: "Project Diablo 2",
+    style: "Vanilla-plus seasonal ladder",
+    vanillaSimilarity: "vanilla-plus",
+    summary:
+      "One of the largest legacy Diablo II communities: seasonal ladders on a vanilla-plus ruleset with a map-based endgame.",
+    status: "active",
+    website: "https://www.projectdiablo2.com",
+    discord: "https://discord.com/invite/projectdiablo2",
+    versions: ["1.13c"],
+    os: ["windows"],
+    ladder: true,
+    seasonLength: "About 4 months, each with a balance and content update",
+    customContent: true,
+    lootChanges: true,
+    skillChanges: true,
+    endgame: "Maps, new uber content",
+    launcher: "Dedicated launcher",
+    changes: [
+      "Reworked and rebalanced skills to broaden viable builds.",
+      "New uniques, sets, runewords and crafting options.",
+      "A map-based endgame system.",
+      "Built-in loot filter and quality-of-life improvements.",
+    ],
+    tags: ["pd2", "seasonal", "ladder", "vanilla-plus"],
+    related: ["mod:project-diablo-2", "guide:private-servers-explained"],
+    popular: true,
+  },
   {
     slug: "usabattle-europebattle",
     name: "UsaBattle & EuropeBattle",
