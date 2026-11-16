@@ -42,7 +42,7 @@ export default async function DownloadPage({ params }: PageProps<"/downloads/[id
   const facts: [string, React.ReactNode][] = [
     ...(d.status === "available" ? [] : ([["Status", <DownloadStatusPill key="s" status={d.status} />]] as [string, React.ReactNode][])),
     ["Author", d.author],
-    ["File", d.filename &&<span className="font-mono text-[0.8rem] break-all">{d.filename}</span>],
+    ["File", !d.files && d.filename &&<span className="font-mono text-[0.8rem] break-all">{d.filename}</span>],
     ["Size", formatBytes(d.bytes)],
     ["Version", d.version],
     ["Uploaded", formatDate(d.uploaded)],
@@ -110,7 +110,28 @@ export default async function DownloadPage({ params }: PageProps<"/downloads/[id
 
         <aside className="grid content-start gap-6 text-sm">
           <div className="panel rounded-sm p-4">
-            {d.url ? (
+            {d.files && d.files.length > 1 ? (
+              <>
+                <ul className="grid gap-2">
+                  {d.files.map((f) => (
+                    <li key={f.filename}>
+                      {f.url ? (
+                        <a href={f.url} className="flex items-baseline justify-between gap-3 rounded-sm border border-stone-700 px-3 py-2 text-stone-100 hover:border-gold-700 hover:text-gold-300">
+                          <span>{f.label}</span>
+                          <span className="shrink-0 font-ui text-[0.8125rem] tabular-nums text-stone-400">{formatBytes(f.bytes)}</span>
+                        </a>
+                      ) : (
+                        <span className="flex items-baseline justify-between gap-3 rounded-sm border border-stone-800 px-3 py-2 text-stone-400">
+                          <span>{f.label}</span>
+                          <DownloadStatusPill status={f.status} />
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-2 text-[0.8125rem] leading-relaxed text-stone-400">From the Phrozen Keep&apos;s file mirror.</p>
+              </>
+            ) : d.url ? (
               <>
                 <a href={d.url} className="diablo-button mx-auto !flex">
                   Download {formatBytes(d.bytes)}
@@ -148,7 +169,7 @@ export default async function DownloadPage({ params }: PageProps<"/downloads/[id
             </dl>
           </div>
           <p className="text-stone-400">
-            <a href={d.originalUrl} className={link}>{d.author ? "Author's release post on the Phrozen Keep" : "Original listing on d2mods.info"}</a>
+            <a href={d.originalUrl} className={link}>{d.author ? "Author's release post on the Phrozen Keep" : d.category[0] === "Infinitum" ? "Original page on Infinitum" : "Original listing on d2mods.info"}</a>
           </p>
         </aside>
       </div>
